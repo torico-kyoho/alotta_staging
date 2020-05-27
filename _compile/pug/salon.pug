@@ -1,0 +1,707 @@
+extends ./_inc/_layout_inner.pug
+
+append vars
+	include ./_inc/_config.pug
+	- var key = 'salon';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+append innerVisual
+
+	#topmenuBox
+		ul
+			li: a(href="#salon_outline")
+				.icon: img(src=page.path+"assets/images/salon/top_icon01.png" alt="")
+				p サロン
+			li: a(href="#salon_interior")
+				.icon: img(src=page.path+"assets/images/salon/top_icon02.png" alt="")
+				p 店内
+			li: a(href="#salon_style")
+				.icon: img(src=page.path+"assets/images/salon/top_icon03.png" alt="")
+				p スタイル
+			li: a(href=page.path+"faq.html")
+				.icon: img(src=page.path+"assets/images/salon/top_icon04.png" alt="")
+				p Q&A
+
+
+
+	#innerVisual
+		.headTextArea.typeB
+			h1.title SALON
+			p.sub 完全個室型ヘアサロン
+
+			.textArea
+				p 美容機器商社・美容メーカー直営#[br]完全個室型ヘアサロン#[br]と、ショップ
+
+		.imgArea: .img: img(src=page.path+"assets/images/visual/visual_salon.jpg" alt="")
+
+
+	
+block contents
+
+
+	section#salon_outline
+		.inner
+
+			.titleStyle05.typeB
+				p.note HAIR SALON
+				p.sub 美容機器商社・美容メーカー#[br.sp][Torico Industries]直営
+				h2.title 完全個室型ヘアサロン
+				.square
+
+
+			.colLayout
+
+				.mapBox
+					.map: img(src=page.path+"assets/images/salon/outline_img01.jpg" alt="")
+
+				.textBox
+					.borderBox
+						.row
+							p.title SALON#[span サロン]
+							.btnArea: a.btnStyle02(href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000346915" target="_blank") ご予約はこちらから
+						.row
+							p.txt お電話でのご予約
+							a.phone(href="tel:0120900533") 0120-900-533
+						.row
+							p.txt 営業時間
+							ul
+								li 【平日・土曜日】10:00〜19:00最終受付
+								li 【日曜日・祝日】10:00〜18:00最終受付
+								li 【定休日】月曜日（祝日、当社指定日を除く）
+						.row
+							.textArea.gmap
+								p
+									|〒180－0004
+									br
+									|東京都武蔵野市吉祥寺本2-17-7
+									br
+									|（フォルムトミノ吉祥寺1F）
+							.btnArea: a.arrow(href="./access.html") ACCESS
+
+					.btnArea: a.btnStyle01(href="./shop.html") ショップについて
+
+
+	section#salon_about
+		.inner
+			.titleStyle01.scissors
+				h2.title ABOUT
+
+			.imgArea
+				.img: img(src=page.path+"assets/images/salon/about_img01.jpg" alt="")
+
+				.textArea
+					.vertical: img(src=page.path+"assets/images/salon/about_text01.png" alt="")
+
+
+	section#salon_works01.salon_works
+		.inner
+
+			.column
+				h2.titleStyle02 “あなたの時間”を過ごすための#[br.sp]完全個室ヘアサロン
+
+				.colLayout01
+					.imgArea
+						.img: img(src=page.path+"assets/images/salon/works_img01.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 1]
+							h3.midashi マイペースに美しくなる
+							p.note MY SPACE &amp; MY PACE
+
+						.textArea
+							p 完全個室の施術スペースは、お客様だけのプライベート空間。他の人の目を気にすることなく、なりたい自分になれる場所です。髪型や髪質、髪のクセ、スタイリングなど、髪に関するお悩みを、気兼ねなくスタイリストにご相談ください。美容には、ゆったりと心からくつろぐ時間も大切です。
+
+
+				.colLayout01
+					.imgArea
+						.img: img(src=page.path+"assets/images/salon/works_img02.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 2]
+							h3.midashi 仕事、読書、うたた寝…#[br]あなただけの時間を過ごす
+							p.note YOUR TIME
+
+						.textArea
+							p スタイリストとの気取らない会話、毎月楽しみにしている雑誌、お仕事のメールをチェック、窓から入るやさしい光に包まれてちょっぴりお昼寝。完全個室だからできる、あなたらしい自由な過ごし方。ここが美容室であることも忘れて、ゆったりと贅沢な時間をお過ごしください。
+
+
+				.colLayout01
+					.imgArea
+						.img: img(src=page.path+"assets/images/salon/works_img03.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 3]
+							h3.midashi お子様と、パートナーと、#[br]大切な人と一緒に
+							p.note WITH LOVED ONES
+
+						.textArea
+							p 入り口や店内にスロープを設置しており、ベビーカーもスムーズにご案内可能。お子様用のDVDや絵本もご用意しております。2名様用個室であれば、他のお客様に気兼ねすることなく、お子様と一緒にお過ごしいただくことができるほか、ご家族ご友人とご一緒に同室で施術を受けていただくこともできます。※1
+
+
+				.colLayout01
+					.imgArea
+						.img: img(src=page.path+"assets/images/salon/works_img04.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 4]
+							h3.midashi 髪のコンシェルジュとして#[br]ご相談してください
+							p.note HAIR CONCIERGE
+
+						.textArea
+							p まずはレセプションにてスタイリストソムリエが、ご要望や仕上がりのイメージを伺い、お客様に最適なスタイリストをご提案。さらに、髪型や施術内容については、個室内でスタイリストがカウンセリングを行います。髪に関するお悩みは、人それぞれです。経験豊富なスタッフに何でもご相談ください。※2
+
+
+				.colLayout01
+					.imgArea
+						.img: img(src=page.path+"assets/images/salon/works_img05.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 5]
+							h3.midashi “あなたの時間”を#[br.pc]快適にする充実の設備
+							p.note FACILITY
+
+						.textArea
+							p お客様に安心してお過ごしいただけるよう、各個室内にレセプション直通のハンディーフォンを設置。おひとりになった際に、ご質問やご要望があれば、ハンディーフォンでご連絡ください。また、サロンゲスト専用のWi-Fi環境もご用意。カラーやパーマの待ち時間に、パソコンやスマートフォンなどを快適にご利用いただけます。
+
+
+
+
+
+
+
+
+
+	section#salon_about2
+		.inner
+
+			.imgArea
+				.img: img(src=page.path+"assets/images/salon/about_img02.jpg" alt="")
+
+				.vertical: img(src=page.path+"assets/images/salon/about_text02.png" alt="")
+
+
+	section#salon_works02.salon_works
+		.inner
+
+
+			.column
+				h2.titleStyle02 美容機器・製品の商社&amp;メーカーとして#[br]その人にとって本当に良いモノを#[br]本当に良い使い方で使って欲しいと思っています。
+
+				.colLayout01
+					.imgArea
+						.img: img(src=page.path+"assets/images/salon/works_img06.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 1]
+							h3.midashi プロ仕様の機器、#[br]最新の技術を体感できる場所
+							p.note NEWEST &amp; HIGHEST
+
+						.textArea
+							p alottaで使用する機器は、美容用品の商社兼メーカーのトリコインダストリーズが選び抜いたものばかり。ドライヤーひとつとっても、新商品が次々と開発されており、プロ仕様の美容機器は進化しています。また、施術を行うスタッフの技術も常にアップデート。美容業界の最先端をお客様にお届けしています。
+
+
+				.colLayout01
+					.imgArea
+						.img: img(src=page.path+"assets/images/salon/works_img07.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 2]
+							h3.midashi トリートメント剤、カラー剤…#[br.sp]メーカーが本当に#[br.pc]オススメしたい#[br.sp]“良いモノ”だけを使用いたします
+							p.note BEST TOOL
+
+						.textArea
+							p カラー剤やパーマ剤には強い薬品が使用されているものもあり、間違った使い方をすると髪を痛めてしまいます。また、傷ついた髪を修復するトリートメント剤も、その成分は多種多様。メーカーとして自信を持ってオススメできる美容用品で、お客様の大切な髪を美しくするお手伝いをいたします。
+
+				.colLayout01
+					.imgArea
+						.img: img(src=page.path+"assets/images/salon/works_img08.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 3]
+							h3.midashi “ヘアデザインのプロ”でありながら#[br]“美容商品のプロ”として
+							p.note TOP NOTCH
+
+						.textArea
+							p 髪や頭皮に関する知識、カットやカラーの技術、お客様をおもてなしする心など、スタイリストとしてのスキルはもちろん、定期的に講習を実施することで、美容用品メーカーのスタッフとして、専門的な商品知識も身につけています。商品をより深く理解し、お客様に的確なアドバイスをさせていただきます。
+
+				.colLayout01
+					.imgArea
+						.img: img(src=page.path+"assets/images/salon/works_img09.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 4]
+							h3.midashi あなたのために最適な#[br]アフターフォローをご提案
+							p.note BEST AFTER-FOLLOW
+
+						.textArea
+							p カットやカラー、パーマで理想のヘアスタイルが完成しても、髪は毎日変化していくものです。しかし、正しい方法でアフターフォローをすることで、美しい状態をより長くキープすることは可能です。施術内容やお客様の髪質、髪の生え方に合わせて、最適なヘアケアやスタイリングをご提案いたします。
+
+				.colLayout01
+					.imgArea
+						.img: img(src=page.path+"assets/images/salon/works_img10.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 5]
+							h3.midashi 自分に合う商品が#[br.pc]きっと見つかる
+							p.note FAVORITE PRODUCT
+
+						.textArea
+							p 施術の際、通常のシャンプーに替えて、併設ショップで販売しているシャンプーをお試しいただくことができます。施術内容にそぐわない場合を除き、アウトバストリートメントやワックス、スプレーなどの試用も可能。お客様の髪質やお好みに合うかどうかを確かめていただき、ご購入いただく際の参考にしてください。
+
+
+
+			.btnArea: a.btnStyle01(href="./shop.html") サロン専売品販売ショップについて
+
+
+			.noteArea
+				ul
+					li ※1　2名様用個室をご利用の際は、おふたりのお客様を同じスタイリストが担当することも、おふたりのお客様をそれぞれ別のスタイリストが担当することも可能です。ご予約の際にご希望をお伝えください。
+					li ※2　スタイリストがカウンセリングした後、シャンプーやカラーはアシスタントが担当いたします。マンツーマン希望や女性アシスタント希望などのご要望があれば、ご予約の際にお伝えください。（スタッフ状況によってはご要望に沿えない場合もございますので、ご了承ください）
+
+
+
+
+
+	section#salon_reco
+		.inner
+			.titleStyle01
+				h2.title RECOMMEND
+				p.note オススメの方
+
+			.checkBox
+				.titleStyle04
+					p.note OSUSUME
+					h3.title こんな方にオススメ
+				ul
+					li スタイリストにもっと相談に乗ってもらいたい
+					li 周りの目が気になって、美容室ではいつも緊張する
+					li カラーに失敗して以来、髪が痛んでしまった
+					li いろいろ試したけど、自分に合うヘアスタイルがわからない
+					li 他の人に比べて、髪や頭皮がデリケート
+					li 小さい子どもがいるので、美容室になかなか行けない
+
+
+	section#salon_interior
+		.inner
+			.titleStyle01.scissors
+				h2.title INTERIOR
+				p.note 店内
+
+			.imgBox
+				.img: img(src=page.path+"assets/images/salon/interior_img01.jpg" alt="")
+				.img: a(href=page.path+"assets/images/salon/interior_img02_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/salon/interior_img02.jpg" alt="")
+				.img: a(href=page.path+"assets/images/salon/interior_img03_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/salon/interior_img03.jpg" alt="")
+				.img: a(href=page.path+"assets/images/salon/interior_img04_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/salon/interior_img04.jpg" alt="")
+				.img: a(href=page.path+"assets/images/salon/interior_img05_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/salon/interior_img05.jpg" alt="")
+				.img: a(href=page.path+"assets/images/salon/interior_img06_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/salon/interior_img06.jpg" alt="")
+				.img: a(href=page.path+"assets/images/salon/interior_img07_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/salon/interior_img07.jpg" alt="")
+				.img: a(href=page.path+"assets/images/salon/interior_img08_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/salon/interior_img08.jpg" alt="")
+				.img: a(href=page.path+"assets/images/salon/interior_img09_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/salon/interior_img09.jpg" alt="")
+				.img: a(href=page.path+"assets/images/salon/interior_img10_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/salon/interior_img10.jpg" alt="")
+				.img: a(href=page.path+"assets/images/salon/interior_img11_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/salon/interior_img11.jpg" alt="")
+				.img: a(href=page.path+"assets/images/salon/interior_img12_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/salon/interior_img12.jpg" alt="")
+
+
+	section#salon_garden
+		.inner
+			
+			.colLayout
+				.imgArea
+					.img: img(src=page.path+"assets/images/salon/garden_img01.jpg" alt="")
+
+					.flex
+						.img: img(src=page.path+"assets/images/salon/garden_img02.jpg" alt="")
+						.img: img(src=page.path+"assets/images/salon/garden_img03.jpg" alt="")
+
+				.textBox
+					.titleStyle01
+						h2.title GARDEN
+						p.note 庭園
+					.textArea
+						p alottaのガーデニング設計・施工は、人気テレビ番組「大改造!! 劇的 ビフォーアフター」にも出演された匠、金井良一さん率いる有限会社 プレイスケープさんにお願いしました。#[br]それぞれの個室から見える、奥行きを活かしたガーデニングデザインは昼と夜では違った印象に。#[br]お昼とは違う表情の光の庭もぜひお楽しみください！
+
+
+	section#salon_menu
+		.inner
+
+			.headImg
+				.titleStyle01
+					h2.title MENU
+
+				.img: img(src=page.path+"assets/images/salon/menu_hdimg.jpg" alt="")
+
+
+			.saleBox
+				.row
+					p.title
+						span サロン会員になると
+						span ショップでのお買い物が10%OFFに！
+					.textArea
+						p ショップでのお会計時にサロンの会員カードをご提示いただきますと全品10%割引いたします。
+
+				.row
+					p.title: span 次回予約で500円割引
+					.textArea
+						p サロンご来店時に次回予約をいただきますと、500円割引いたします。
+				.row
+					p.title: span ご紹介割引
+					.textArea
+						p お客様をご紹介いただくと、紹介されたお客様の施術料を初回50％OFF、ご紹介者様に1,000円割引クーポンをお渡しします。
+
+
+
+
+			.priceBoxArea
+
+				.colLayout
+					.priceBox
+						h3.title CUT#[span カット]
+						.priceList
+							dl
+								dt 一般
+								dd 5,000yen～
+							dl
+								dt 学生（中学・高校）
+								dd 4,000yen
+							dl
+								dt 小学生以下
+								dd 3,500yen
+
+						ul.noteBox
+							li ※シャンプー・ブロー込
+							li ※保護者様のご同伴が可能な場合、小学生以下のお子様の施術も承ります。(小学生のお客様のみでのご来店はお断りしております。）
+							li ※入り口やサロン内にスロープを設置しておりますので、ベビーカーでお越しでも、安心してご来店頂けます。
+
+
+					.priceBox
+						h3.title COLOR#[span カラー]
+						.priceList
+							dl
+								dt ワンメイク
+								dd 6,000yen
+							dl
+								dt ダブルカラー
+								dd 9,000〜12,000yen
+							dl
+								dt ハイブリーチ
+								dd 8,000〜9,000yen
+
+
+						.moreBtn: p.more MORE
+
+						.moreList
+							.priceList
+								dl
+									dt ウィービング
+									dd #[span オール]7,000〜9,000yen
+								dl
+									dt
+									dd #[span ハーフ]4,000〜7,000yen
+								dl
+									dt
+									dd #[span クォーター]3,000〜5,000yen
+
+								dl
+									dt マニキュア
+									dd 6,000yen
+								dl
+									dt 黒染め戻し
+									dd 10,000yen
+								dl
+									dt ポイントカラー
+									dd 1,500〜3,000yen
+								dl
+									dt イルミナカラー
+									dd ＋1,000yen
+								dl
+									dt ヘナカラーorハーブカラー
+									dd 7,000yen
+
+
+
+
+
+						ul.noteBox
+							li ※カラーメニューには前処理トリートメントが付いています。
+							li ※ヘナカラーorハーブカラーのみロング料金（+￥1,000）がかかります。
+							li ※リタッチは施術より2ケ月以内、ハイトリートメントとの併用、平日ご利用で￥2,000OFF
+
+
+					.priceBox
+						h3.title PERM#[span パーマ]
+						.priceList
+							dl
+								dt パーマ・ストレートパーマ
+								dd 7,000yen～
+							dl
+								dt デジタルパーマ
+								dd 10,000yen
+							dl
+								dt 縮毛矯正
+								dd 12,000yen
+
+						.moreBtn: p.more MORE
+
+						.moreList
+							.priceList
+								dl
+									dt ポイントパーマ
+									dd 3,500〜5,000yen
+								dl
+									dt ポイント縮毛矯正
+									dd 5,000〜8,000yen
+								dl
+									dt 特殊パーマ
+									dd 応相談
+
+						ul.noteBox
+							li ※前処理トリートメントが付いています。
+							li ※アイロンなしのストレートはコールドと同じ料金です。
+							li ※シャンプー・ブロー別の料金です。
+
+
+					.priceBox
+						h3.title TREATMENT#[span トリートメント]
+						.priceList
+							dl
+								dt ベーシック
+								dd 3,000yen
+							dl
+								dt ミドル
+								dd 5,000yen
+							dl
+								dt ハイ
+								dd 7,000yen
+							dl
+								dt スペシャル
+								dd 10,000yen
+
+						ul.noteBox
+							li ※シャンプー・ブロー別の料金です。
+
+
+
+					.priceBox
+						h3.title 美髪専科#[span ビハツセンカ]
+						.priceList
+							p.top 美髪スパ
+							dl
+								dt ライト20分
+								dd 4,000yen
+							dl
+								dt スタンダード40分
+								dd 6,000yen
+							dl
+								dt スペシャル60分
+								dd 8,000yen
+
+						.moreBtn: p.more MORE
+
+						.moreList
+							.priceList
+								p.top メンズグルーミングスパ
+								dl
+									dt ライト 20分
+									dd 4,000yen
+								dl
+									dt スタンダード 40分
+									dd 6,000yen
+								dl
+									dt スペシャル 60分
+									dd 8,000yen
+
+						ul.noteBox
+							li ※前処理トリートメントが付いています。
+							li ※メンズグルーミングスパは眉カット、イヤートリマーをサービスします。
+							li ※美髪スパ・メンズグルーミングスパはカット・カラー・パーマ同時施術時1000円OFF（フロントカット、ポイントカット、ポイントパーマ、トリートメントは除く）
+
+
+					.priceBox
+						h3.title OTHERS#[span その他]
+						.priceList
+							dl
+								dt フロントカット
+								dd 1,000yen
+							dl
+								dt シャンプー・ブロー
+								dd 3,000yen
+							dl
+								dt セット（アップ）
+								dd 5,000yen
+
+						.moreBtn: p.more MORE
+
+						.moreList
+							.priceList
+								dl
+									dt セット（ハーフ）
+									dd 3,500yen
+								dl
+									dt サボテンノーズワックス
+									dd 500yen
+
+						//- ul.noteBox
+						//- 	li ※シャンプー・ブロー別の料金です。
+						//- 	li ※ヘナカラーorハーブカラーのみロング料金（+￥1,000）がかかります。
+						//- 	li ※リタッチは施術より2ケ月以内、ハイトリートメントとの併用、平日ご利用で￥2,000OFF
+						//- 	li ※前処理トリートメントが付いています。
+
+
+					.priceBox
+						h3.title EYELASH EXTENSIONS#[span まつげエクステ]
+
+						.priceList
+							dl
+								dt 60本（40分）
+								dd 4,000yen
+							dl
+								dt 80本（60分）
+								dd 5,000yen
+							dl
+								dt 100本（60分）
+								dd 6,000yen
+							
+
+						.moreBtn: p.more MORE
+
+						.moreList
+							.priceList
+								dl
+									dt 120本（90分）
+									dd 7,000yen
+								dl
+									dt 140本（90分）
+									dd 8,000yen
+								dl
+									dt 160本～
+									dd 9,000yen〜
+								dl
+									dt 下まつげ 30本（30分）
+									dd 3,000yen
+								dl
+									dt カラー（2色まで）
+									dd ＋1,000yen
+								dl
+									dt オフ（10分）
+									dd 1,000yen
+		
+
+				.bottomArea
+					p 別途、消費税をいただいております。メニューの割引はございません。
+
+
+	section#salon_style
+		.inner
+
+			.colLayout
+				.textBox
+					.titleStyle01
+						h2.title STYLE
+						p.note スタイル
+
+					p.titleStyle INSTAGRAM
+
+					.textArea
+						p スタイリストのInstagramで最新のカットスタイルやおすすめのスタイル、スタイリング・アレンジの方法、最新アイテムのご使用方法をご紹介しております。ぜひCHECKしてみてください。
+
+					.btnArea
+						a.btnStyle01(href="https://www.instagram.com/yoshiki_.kitamura/" target="_blank") #[span.inst]スタイリスト北村のInstagram
+						a.btnStyle01(href="https://www.instagram.com/yoricococco/" target="_blank") #[span.inst]スタイリスト石橋のInstagram    
+
+
+				.imgBox
+					.img: img(src=page.path+"assets/images/salon/style_img01.jpg" alt="")
+					.img: img(src=page.path+"assets/images/salon/style_img02.jpg" alt="")
+					.img: img(src=page.path+"assets/images/salon/style_img03.jpg" alt="")
+					.img: img(src=page.path+"assets/images/salon/style_img04.jpg" alt="")
+					.img: img(src=page.path+"assets/images/salon/style_img05.jpg" alt="")
+					.img: img(src=page.path+"assets/images/salon/style_img06.jpg" alt="")
+					.img: img(src=page.path+"assets/images/salon/style_img07.jpg" alt="")
+					.img: img(src=page.path+"assets/images/salon/style_img08.jpg" alt="")
+					.img: img(src=page.path+"assets/images/salon/style_img09.jpg" alt="")
+
+
+
+
+
+	section#salon_voice
+		.inner
+
+			.titleStyle05.typeB
+				p.note REVIEW
+				h2.title お客様の声
+
+
+			.voiceArea
+
+				.colLayout
+					.img: img(src=page.path+"assets/images/salon/voice_img01.png" alt="")
+
+					.textBox
+						p.personal 女性/30代
+						dl.hukidashi
+							dt 悩みを相談できて、髪も気持ちもスッキリ
+							dd 初めて利用させていただきました。施術前のカウンセリングでは、ヘアスタイルだけでなく、施術中の時間をどのように過ごしたいかについての希望も聞いてくださり、私に合ったスタイリストさんを提案してくださいました。施術中、ずっと抱えていた髪の悩みをスタイリストさんに話すと、髪質や生え方などを見ながら、丁寧に説明してくださいました。これまで自分なりに調べていたのですが、知らない知識もあって、やっぱりプロに相談して良かったです。
+
+
+				.colLayout
+					.img: img(src=page.path+"assets/images/salon/voice_img02.png" alt="")
+
+					.textBox
+						p.personal 女性/20代
+						dl.hukidashi
+							dt 寂しがり屋の息子と一緒に過ごせて、私も安心でした
+							dd 息子を連れてキッズスペースのある美容室を利用した際、最初は機嫌よく遊んでいたようなのですが、後半寂しくなってしまったらしく、大声で泣いて、お店の方や周りのお客さんにご迷惑をおかけした経験があります。個室になっているこちらを今回利用してみたのですが、私の顔が見えて、すぐそばにいるから安心したのでしょうか、持参したおもちゃで大人しく遊んでくれていて、とても助かりました。個室もゆったりしていて、ホテルの一室でカットしてもらっているような優雅な気分が味わえました。
+
+
+
+				.colLayout
+					.img: img(src=page.path+"assets/images/salon/voice_img03.png" alt="")
+
+					.textBox
+						p.personal 女性/40代
+						dl.hukidashi
+							dt 行くのが楽しみになる美容室です
+							dd 美容室に行くと、どうしても肩に力が入ってしまうのですが、こちらのお店は個室で、リラックスして過ごすことができます。パーマを待つ間、ドリンクやお菓子をいただきながら、雑誌を読むのが、私のささやかな幸せです。部屋にスタイリストさんがいないときでも、気になることがあれば、レセプションに繋がるハンディーフォンが設置されているので安心。技術面も言うことなし。オススメしていただいたトリートメントがすごく良くて、ずっと気に入って使っています。
+
+
+				.colLayout
+					.img: img(src=page.path+"assets/images/salon/voice_img04.png" alt="")
+
+					.textBox
+						p.personal 男性/30代
+						dl.hukidashi
+							dt カウンセリングがとにかく丁寧
+							dd 気分を変えるために髪型を変えたかったのですが、どういうスタイルにするか決めずに行ったときも、顔や頭の形、髪質を見ながら、プロ目線でいろいろと提案をしてくれました。今までに挑戦したことのない髪型でしたが、結果は大満足。お任せしてみるものだなと思いました。あと、ヘッドスパが特に気に入っています。力加減もよくて、とても気持ちがいいので、ウトウトしてしまいます。終わった後は、頭皮だけじゃなくて、体がスッキリするような感覚です。
+
+
+				.colLayout
+					.img: img(src=page.path+"assets/images/salon/voice_img05.png" alt="")
+
+					.textBox
+						p.personal 男性/20代
+						dl.hukidashi
+							dt 初めて居心地がいい美容室に出会いました
+							dd 友人に薦められて、利用しました。あまり美容師さんと話すのは得意ではなかったのですが、個室だったからか、美容師さんの雰囲気のおかげかわかりませんが、自然に落ち着いて話せた気がします。いつも髪型をセットするのが面倒だと伝えると、少しでもセットが楽になるようにカットを工夫してくださいました。僕の髪質にあったスタイリング剤や簡単にできるセット方法も教えてもらいました。髪が伸びたらぜひまた、伺いたいと思います。
+
+
+
+
+			.btnArea
+				a.btnStyle01(href="./faq.html") ヘアサロンについて

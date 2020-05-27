@@ -1,0 +1,63 @@
+extends ../_inc/_layout_inner.pug
+
+append vars
+	include ../_inc/_config.pug
+	- var key = 'staff07';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+
+
+append innerVisual
+
+	#innerVisual
+		.headTextArea
+			h1.title STAFF
+			p.sub スタッフ
+
+
+
+block contents
+	section#staff_single
+		.inner
+
+			.colLayout
+				.img
+					img(src=page.path+"assets/images/staff/staff07.jpg" alt="")
+
+
+				.textBox
+					.nameArea
+						h2.position アシスタントリーダー・着付け師・スパニスト
+						p.name 小野
+
+					.infoArea
+						dl
+							dt 得意な技術
+							dd 着付け、スパ、ヘアアレンジ
+						dl
+							dt 取得資格・受賞歴
+							dd
+								ul
+									li ・美容師免許
+									li ・ハクビ京都きもの学院上級師範
+
+						dl
+							dt 趣味
+							dd 美容、ファッションの情報収集
+						dl
+							dt 休日の過ごし方
+							dd 友人と食事、買い物に行く
+						dl
+							dt メッセージ
+							dd 当サロンは、全10室の完全個室サロンに大型販売スペースを併設した今までにない美容室です。サロンの中では、個室でゆったりとスタイリストやアシスタントと過ごす時間を楽しんでいただけます。休日や仕事終わりには静かにゆったり過ごしたいという方にももちろんおススメです。#[br]また販売スペースにはたくさんの商品がそろっていて、お客様一人ひとりに合ったケア商品が見つけられると思います。私たちももちろん、そのお手伝いをさせていただきます。#[br]当店のスタッフは皆、知識が豊富で様々なお悩みに対応させて頂けると思います。私も７年間の美容師歴があります！安定した技術と専門的な知識で皆様の今更聞けない美容の基礎式、深刻なお悩みまでしっかりと対応させていただきます。#[br]着付けの資格も持っていますので、和服のコーディネイトや着物の扱い方、合わせてヘアセットなどもご相談承ります、ちょっとしたお悩みも歓迎いたしますので、一度ご来店ください。皆様のご来店お待ちしております。
+
+
+
+			.btnArea
+				.btn: a.btnStyle02.gray.back(href="./") スタッフ一覧ページへ戻る

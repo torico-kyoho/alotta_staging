@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+@import "./_core/_mixin.scss";
+
+
+
+
+/* =============================================
+- base
+================================================ */
+
+img{
+	width: 100%;
+}
+
+
+@include max-screen(767px) {
+	.pc{
+		display: none;
+	}
+}
+
+
+@include min-screen($tab) {
+	.sp{
+		display: none;
+	}
+	.pc{
+		display: block;
+	}
+}
+
+
+
+body{
+	color: #282828;
+	line-height: 1.8em;
+	font-size: 14px;
+	padding-top: 60px;
+}
+
+@include min-screen($tab) {
+	body{
+		font-size: 15px;
+		padding-top: 90px;
+	}
+}
+
+
+@include min-screen($pc) {
+	body{
+		line-height: 1.9em;
+		font-size: 16px;
+		letter-spacing: 0.05em;
+	}
+}
+
+
+.header_row{
+	background-color: #fff;
+}
+
+
+
+/* =============================================
+- parts
+================================================ */
+
+@import "./_parts.scss";
+
+
+section{
+	padding: 40px 20px;
+	@include min-screen(375px) {
+		padding: 50px 20px;
+	}
+	@include min-screen($tab) {
+		padding: 70px 25px;
+	}
+	@include min-screen($pc) {
+		padding: 100px 30px 100px 30px;
+	}
+	@include min-screen(1180px) {
+		padding: 140px 30px 140px 30px;
+	}
+	@include min-screen(1400px) {
+		padding: 160px 30px 160px 30px;
+	}
+}
+
+
+
+/* =============================================
+- salon
+================================================ */
+
+@import "./_page/_salon.scss";
+
+
+/* =============================================
+- shop
+================================================ */
+
+@import "./_page/_shop.scss";
+
+
+/* =============================================
+- staff
+================================================ */
+
+@import "./_page/_staff.scss";
+
+
+
+
+
+/* =============================================
+- topics
+================================================ */
+
+@import "./_page/_topics.scss";
+
+
+/* =============================================
+- access
+================================================ */
+
+@import "./_page/_access.scss";
+
+
+
+/* =============================================
+- privacy
+================================================ */
+
+@import "./_page/_privacy.scss";
+
+
+/* =============================================
+- sitemap
+================================================ */
+
+@import "./_page/_sitemap.scss";
+
+
+
+/* =============================================
+- company
+================================================ */
+
+@import "./_page/_company.scss";
+
+
+
+/* =============================================
+- faq
+================================================ */
+
+@import "./_page/_faq.scss";
+
+
+
+/* =============================================
+- contact
+================================================ */
+
+@import "./_page/contact/_index.scss";
+
+@import "./_page/contact/_form.scss";
+
+
+
+
+
+/* =============================================
+- IE
+================================================ */
+
+@media all and (-ms-high-contrast:none){
+
+}

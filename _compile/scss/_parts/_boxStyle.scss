@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+
+/*
+    Style01
+========================================================= */
+
+
+.boxStyle01{
+
+}
+
+
+
+@include min-screen($tab) {
+	.boxStyle01{
+
+	}
+}
+
+
+@include min-screen(1280px) {
+	.boxStyle01{
+
+	}
+}
+
+
+
+
+

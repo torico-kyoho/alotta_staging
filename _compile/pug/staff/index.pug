@@ -1,0 +1,136 @@
+extends ../_inc/_layout_inner.pug
+
+append vars
+	include ../_inc/_config.pug
+	- var key = 'staff';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+
+
+append innerVisual
+
+	#innerVisual
+		.headTextArea
+			h1.title STAFF
+			p.sub スタッフ
+
+
+
+block contents
+	section#staff
+		.inner
+
+			.staffArea
+
+				.box
+					.img: a(href="./staff01.html"): img(src=page.path+"assets/images/staff/arv_staff01.jpg" alt="")
+					.textArea
+						p.position 店長
+						p.name 野口
+
+
+				.box
+					.img: a(href="./staff02.html"): img(src=page.path+"assets/images/staff/arv_staff02.jpg" alt="")
+					.textArea
+						p.position スタイリスト
+						p.name 北村
+
+						.btnArea
+							a.btn(href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000346915&stylistId=T000435439" target="_blank") 指名して予約する
+
+				.box
+					.img: a(href="./staff03.html"): img(src=page.path+"assets/images/staff/arv_staff03.jpg" alt="")
+					.textArea
+						p.position スタイリスト
+						p.name 石橋
+
+						.btnArea
+							a.btn(href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000346915&stylistId=T000358533" target="_blank") 指名して予約する
+
+				.box
+					.img: a(href="./staff04.html"): img(src=page.path+"assets/images/staff/arv_staff04.jpg" alt="")
+					.textArea
+						p.position スタイリスト
+						p.name 永井
+
+						.btnArea
+							a.btn(href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000346915&stylistId=T000414696" target="_blank") 指名して予約する
+
+				.box
+					.img: a(href="./staff05.html"): img(src=page.path+"assets/images/staff/arv_staff05.jpg" alt="")
+					.textArea
+						p.position スタイリスト
+						p.name 阿部#[span.red 〈育休中〉]
+
+						//- .btnArea
+						//- 	a.btn(href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000346915&stylistId=T000352612" target="_blank") 指名して予約する
+
+				.box
+					.img: a(href="./staff06.html"): img(src=page.path+"assets/images/staff/arv_staff06.jpg" alt="")
+					.textArea
+						p.position ショップリーダー・#[br]スパニスト
+						p.name 鈴木
+
+						//- .btnArea
+						//- 	a.btn(href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000346915&stylistId=T000359152" target="_blank") 指名して予約する
+
+				.box
+					.img: a(href="./staff07.html"): img(src=page.path+"assets/images/staff/arv_staff07.jpg" alt="")
+					.textArea
+						p.position アシスタントリーダー・#[br]着付け師・スパニスト
+						p.name 小野
+
+
+
+				.box
+					.img: a(href="./staff08.html"): img(src=page.path+"assets/images/staff/arv_staff08.jpg" alt="")
+					.textArea
+						p.position アシスタント
+						p.name 島
+
+
+				.box
+					.img: a(href="./staff09.html"): img(src=page.path+"assets/images/staff/arv_staff09.jpg" alt="")
+					.textArea
+						p.position アシスタント・アイリスト
+						p.name 渡部
+
+
+				.box
+					.img: a(href="./staff10.html"): img(src=page.path+"assets/images/staff/arv_staff10.jpg" alt="")
+					.textArea
+						p.position レセプション
+						p.name 岡田
+
+
+				.box
+					.img: a(href="./staff11.html"): img(src=page.path+"assets/images/staff/arv_staff11.jpg" alt="")
+					.textArea
+						p.position レセプション
+						p.name 安田
+
+
+				.box
+					.img: a(href="./staff12.html"): img(src=page.path+"assets/images/staff/arv_staff12.jpg" alt="")
+					.textArea
+						p.position レセプション
+						p.name 仲地
+
+
+
+
+
+
+
+
+
+
+
+
+							

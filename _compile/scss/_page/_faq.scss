@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+
+/* =============================================
+- faq
+================================================ */
+
+
+#faq{
+	padding-top: 0px;
+	.inner{
+		max-width: 910px;
+		margin: 0 auto;
+	}
+	.column{
+		+ .column{
+			margin-top: 60px;
+		}
+	}
+	.faqList{
+		+ .faqList{
+			margin-top: 25px;
+		}
+	}
+	.faqList{
+		border-bottom:  1px solid #C8C8C8;
+		.midashi{
+			font-size: 18px;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		dl{
+			// padding: 20px 10px;
+			border-top:  1px solid #C8C8C8;
+			dt{
+				position: relative;
+				padding: 20px 40px 20px 25px;
+				cursor: pointer;
+				span{
+					font-family: $montserrat;
+					display: inline-block;
+					font-size: 16px;
+					padding-right: 10px;
+					position: absolute;
+					left: 0px;
+					top: 19px;
+				}
+				&:after,&:before{
+					content: "";
+					width: 14px;
+					height: 2px;
+					background-color: #C8C8C8;
+					position: absolute;
+					right: 15px;
+					top: 50%;
+					@include transition(all,0.3s,ease-in-out);
+					margin-top: -2px;
+				}
+				&:after{
+					@include rotate(90deg);
+				}
+				&.open{
+					&:after{
+						@include rotate(0deg);
+					}
+				}
+			}
+			dd{
+				// padding-top: 10px;
+				display: none;
+				padding: 0px 10px 20px 10px;
+			}
+		}
+	}
+}
+
+
+
+
+@include min-screen($tab) {
+	#faq{
+		.column{
+			+ .column{
+				margin-top: 80px;
+			}
+		}
+		.faqList{
+			+ .faqList{
+				margin-top: 60px;
+			}
+		}
+		.faqList{
+			.midashi{
+				font-size: 24px;
+				margin-bottom: 25px;
+			}
+			dl{
+				dt{
+					padding: 30px 60px 30px 80px;
+					font-size: 18px;
+					@include transition(all,0.2s,ease-in-out);
+					span{
+						font-size: 20px;
+						padding-right: 30px;
+						top: 29px;
+						left: 30px;
+					}
+					&:after,&:before{
+						width: 20px;
+						right: 15px;
+						margin-top: -2px;
+					}
+					&:hover{
+						background-color: #fafafa;
+					}
+				}
+				dd{
+					padding: 5px 80px 20px 80px;
+					font-size: 16px;
+					line-height: 2.0em;
+				}
+			}
+		}
+	}
+}
+
+
+
+@include min-screen(980px) {
+	#faq{
+		.column{
+			+ .column{
+				margin-top: 100px;
+			}
+		}
+	}
+}
+
+
+
+
+@include min-screen(1180px) {
+	#faq{
+		.column{
+			+ .column{
+				margin-top: 160px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+

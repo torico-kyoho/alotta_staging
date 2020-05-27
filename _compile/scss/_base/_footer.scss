@@ -1,0 +1,428 @@
+@charset "UTF-8";
+
+@import "../_core/_mixin.scss";
+
+#footer{
+	background-color: #282828;
+	color: #FFF;
+	padding: 50px 30px 30px 30px;
+	.ftlogo {
+		text-align: center;
+		margin-bottom: 40px;
+		a {
+			display: inline-block;
+		}
+	}
+	.flex {
+		.ft_salon {
+
+		}
+		.ft_shop {
+			margin-top: 40px;
+		}
+		.ttl {
+			margin-bottom: 5px;
+			.en {
+				font-size: 18px;
+				font-family: $montserrat;
+				letter-spacing: 0.2em;
+			}
+			.jp {
+				font-size: 12px;
+				margin-left: 5px;
+			}
+		}
+	}
+	.info {
+		font-size: 15px;
+		border-top: 1px solid #707070;
+		border-bottom: 1px solid #707070;
+		padding: 15px 0;
+		margin-bottom: 5px;
+		.box {
+			+ .box {
+				margin-top: 20px;
+			}
+		}
+		.sub {
+			margin-bottom: 4px;
+		}
+		.bg {
+			span {
+				font-size: 14px;
+				display: inline-block;
+				line-height: 1;
+				padding: 5px 10px;
+				background-color: #646262;
+			}
+		}
+		table {
+			width: 100%;
+			margin-top: 10px;
+			td {
+				text-align: right;
+			}
+		}
+	}
+	.phone {
+		color: #FFF;
+		@include flexbox;
+		align-items: center;
+		font-size: 23px;
+		font-family: $montserrat;
+		letter-spacing: 0.05em;
+		margin-bottom: 10px;
+		.icon {
+			position: relative;
+			top: 3px;
+			margin-right: 7px;
+		}
+	}
+	.ftLine{
+		margin-top: 20px;
+		img{
+			width: 100%;
+			max-width: 283px;
+		}
+		@include max-screen(767px) {
+			text-align: center;
+			border: 1px solid #fff;
+			// background-color: #00B900;
+		}
+	}
+	.snsLinks {
+		@include flexbox;
+		justify-content: center;
+		margin-bottom: 40px;
+		li {
+			padding: 0 8px;
+			box-sizing: border-box;
+			img,svg {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+	.ftLinks {
+		margin: 50px 0;
+		li {
+			text-align: center;
+			+ li {
+				margin-top: 20px;
+			}
+			a {
+				color: #FFF;
+			}
+		}
+	}
+	.copy {
+		font-size: 12px;
+		text-align: center;
+	}
+}
+
+
+@include min-screen(500px) {
+	#footer{
+		@include max-screen(767px) {
+			padding: 30px 20px;
+			.inner{
+				>.flex{
+					@include flexbox;
+					.ttl {
+						.en {
+							font-size: 16px;
+						}
+						.jp {
+							font-size: 11px;
+						}
+					}
+					.info table{
+						td,th{
+							font-size: 13px;
+						}
+					}
+					.ft_salon,.ft_shop{
+						width: 48%;
+					}
+					.ft_shop{
+						margin-top: 0px;
+						margin-left: 4%;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+@include min-screen($tab) {
+
+	#footer{
+		padding: 60px 40px;
+		.flex {
+			@include flexbox;
+			margin-left: -20px;
+			margin-right: -20px;
+			.ft_salon {
+				width: 60%;
+				padding: 0 20px;
+				box-sizing: border-box;
+				overflow: hidden;
+			}
+			.ft_shop {
+				width: 40%;
+				margin-top: 0px;
+				padding: 0 20px;
+				box-sizing: border-box;
+				overflow: hidden;
+			}
+			.ttl {
+				margin-bottom: 10px;
+				.en {
+					font-size: 25px;
+				}
+				.jp {
+					font-size: 12px;
+				}
+			}
+		}
+		.info {
+			.flex {
+				margin-left: -10px;
+				margin-right: -10px;
+				justify-content: space-between;
+			}
+			.box {
+				width: 50%;
+				padding: 0 10px;
+				+ .box {
+					margin-top: 0px;
+				}
+			}
+			table {
+				width: 100%;
+				font-size: 12px;
+			}
+			.sub {
+				margin-bottom: 4px;
+			}
+			.bg {
+				margin-bottom: -10px;
+				span {
+					font-size: 13px;
+					line-height: 1;
+					padding: 3px 5px;
+				}
+			}
+		}
+		.phone {
+		}
+		.snsLinks {
+			li {
+				padding: 0 18px;
+			}
+		}
+
+		.ftLinks {
+			margin: 60px 0;
+			@include flexbox;
+			justify-content: center;
+			li {
+				text-align: center;
+				+ li {
+					margin-top: 0px;
+					margin-left: 20px;
+					padding-left: 20px;
+					position: relative;
+					&:before {
+						content: "";
+						width: 1px;
+						height: 14px;
+						background-color: #FFF;
+						display: block;
+						position: absolute;
+						top: 50%;
+						left: 0;
+						transform: translateY(-50%);
+					}
+				}
+				a {
+					font-size: 14px;
+					opacity: 1;
+					@include transition(all, 0.2s,ease);
+					&:hover {
+						opacity: 0.7;
+					}
+				}
+			}
+		}
+
+		.copy {
+			font-size: 15px;
+		}
+
+		.phone {
+			pointer-events: none;
+		}
+		.ftLine{
+			margin-top: 20px;
+			@include transition(all,0.2s,ease-in-out);
+			border: 1px solid #fff;
+			display: inline-block;
+			img{
+				width: 100%;
+				max-width: 283px;
+			}
+			&:hover{
+				border-color: #00B900;
+				background-color: #00B900;
+			}
+		}
+	}
+}
+
+
+@include min-screen($pc) {
+	#footer{
+		padding: 60px 40px 30px 40px;
+		.inner {
+			max-width: 910px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.flex {
+			margin-left: -20px;
+			margin-right: -20px;
+			justify-content: space-between;
+			.ft_salon {
+				width: 570px;
+			}
+			.ft_shop {
+				width: 325px;
+				padding: 0 20px;
+			}
+			.ttl {
+				margin-bottom: 5px;
+				.en {
+					font-size: 25px;
+				}
+				.jp {
+					font-size: 12px;
+				}
+			}
+		}
+		.info {
+			.flex {
+				margin-left: -10px;
+				margin-right: -10px;
+				justify-content: space-between;
+			}
+			.box {
+				width: 50%;
+				padding: 0 10px;
+				+ .box {
+					margin-top: 0px;
+				}
+			}
+			table {
+				width: 100%;
+				font-size: 15px;
+			}
+			.sub {
+				margin-bottom: 4px;
+			}
+			.bg {
+				margin-bottom: -10px;
+				span {
+					font-size: 13px;
+					line-height: 1;
+					padding: 3px 5px;
+				}
+			}
+		}
+		.phone {
+			.icon {
+				img, svg {
+					width: 15px;
+				}
+			}
+		}
+		.snsLinks {
+			margin-bottom: 35px;
+			li {
+				padding: 0 18px;
+			}
+		}
+
+		.ftLinks {
+			margin: 60px 0 30px 0;
+			@include flexbox;
+			justify-content: center;
+		}
+
+		.copy {
+			font-size: 15px;
+		}
+	}
+}
+
+
+
+
+
+@include min-screen(980px) {
+	#footer{
+		.snsLinks{
+			li{
+				svg{
+					path,circle{
+						@include transition(all,0.2s,ease-in-out);
+					}
+				}
+				&:hover{
+					&:nth-child(1){
+						svg{
+							path,circle{
+								fill: #00acee;
+							}
+						}
+					}
+					&:nth-child(2){
+						svg{
+							path,circle{
+								fill: #5171b3;
+							}
+						}
+					}
+					&:nth-child(3){
+						svg{
+							path,circle{
+								fill: #CF2E92;
+							}
+						}
+					}
+					&:nth-child(4){
+						svg{
+							path,circle{
+								fill: #00B900;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+// IE10 ~ IE11
+
+_:-ms-input-placeholder, :root #footer .info .bg span {
+	@include min-screen($tab) {
+		padding-top: 5px;
+		padding-bottom: 0;
+	}
+}

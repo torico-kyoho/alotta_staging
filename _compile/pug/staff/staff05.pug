@@ -1,0 +1,63 @@
+extends ../_inc/_layout_inner.pug
+
+append vars
+	include ../_inc/_config.pug
+	- var key = 'staff05';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+
+
+append innerVisual
+
+	#innerVisual
+		.headTextArea
+			h1.title STAFF
+			p.sub スタッフ
+
+
+
+block contents
+	section#staff_single
+		.inner
+
+			.colLayout
+				.img
+					img(src=page.path+"assets/images/staff/staff05.jpg" alt="")
+
+
+				.textBox
+					.nameArea
+						h2.position スタイリスト
+						p.name 阿部#[span.red 〈育休中〉]
+
+					.infoArea
+						dl
+							dt スタイリスト歴
+							dd 8年
+						dl
+							dt 生年月日
+							dd 4月15日
+						dl
+							dt 得意なスタイル
+							dd かわいいショートスタイル、ラフなアップスタイル、もちろんパーティアップも出来ます!!
+						dl
+							dt 好きな言葉
+							dd いつまでも青春
+						dl
+							dt 趣味
+							dd 料理、ネコと遊ぶこと
+						dl
+							dt メッセージ
+							dd 大人になって、「10年前に戻れたらなー」って後悔したことありませんか?#[br]10年後の自分にとっては今日がその10年前です!#[br]なりたい自分を1日でも早く見つけませんか?まずは髪型から♪
+
+
+
+			.btnArea
+				.btn: a.btnStyle02.gray.back(href="./") スタッフ一覧ページへ戻る
+				//- .btn: a.btnStyle02(href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000346915&stylistId=T000352612" target="_blank") 指名して予約する

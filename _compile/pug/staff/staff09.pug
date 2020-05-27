@@ -1,0 +1,69 @@
+extends ../_inc/_layout_inner.pug
+
+append vars
+	include ../_inc/_config.pug
+	- var key = 'staff09';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+
+
+append innerVisual
+
+	#innerVisual
+		.headTextArea
+			h1.title STAFF
+			p.sub スタッフ
+
+
+
+block contents
+	section#staff_single
+		.inner
+
+			.colLayout
+				.img
+					img(src=page.path+"assets/images/staff/staff09.jpg" alt="")
+					.btn: a.btnStyle01(href="https://www.instagram.com/Watakou12.13/" target="_blank") #[span.inst]Instagramをチェック
+					.btn: a.btnStyle01(href="https://mobile.twitter.com/watakouwatakou" target="_blank") #[span.twt]Twitterをチェック
+
+
+				.textBox
+					.nameArea
+						h2.position アシスタント・アイリスト
+						p.name 渡部
+
+					.infoArea
+						dl
+							dt 得意な技術
+							dd イラスト、デッサン
+						dl
+							dt 得意なスタイル
+							dd デザインスタイル
+						dl
+							dt 取得資格・受賞歴
+							dd
+								ul
+									li ・美容師免許
+									li ・准看護師
+									li ・ジェルネイリスト
+									li ・アイリスト
+									li ・フェイシャリスト
+						dl
+							dt 趣味
+							dd カフェ巡り、日本酒
+						dl
+							dt 休日の過ごし方
+							dd ショッピング、カフェ
+						dl
+							dt メッセージ
+							dd 一人ひとりの希望や理想、ライフスタイルに合わせ、ベストスタイルを提案させていただきます！#[br]ぜひalottaでお待ちしています！
+
+
+			.btnArea
+				.btn: a.btnStyle02.gray.back(href="./") スタッフ一覧ページへ戻る

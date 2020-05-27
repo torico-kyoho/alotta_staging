@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+
+
+/* =============================================
+- privacy
+================================================ */
+
+
+
+#privacy{
+	padding-top: 0px;
+	.inner{
+		max-width: 910px;
+		margin: 0 auto;
+	}
+	.column{
+		+ .column{
+			margin-top: 40px;
+		}
+		.textArea{
+			+ .textArea{
+				margin-top: 15px;
+			}
+		}
+		ol{
+			li{
+				text-indent: -1.7em;
+				padding-left: 1.7em;
+				+ li{
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+@include min-screen($tab) {
+	#privacy{
+		.column{
+			+ .column{
+				margin-top: 60px;
+			}
+			.textArea{
+				+ .textArea{
+					margin-top: 25px;
+				}
+			}
+			ol{
+				li{
+					+ li{
+						margin-top: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+@include min-screen(980px) {
+	#privacy{
+		.column{
+			+ .column{
+				margin-top: 100px;
+			}
+			.textArea{
+				+ .textArea{
+					margin-top: 30px;
+				}
+				p{
+					line-height: 2.0em;
+				}
+			}
+			ol{
+				li{
+					+ li{
+						margin-top: 25px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

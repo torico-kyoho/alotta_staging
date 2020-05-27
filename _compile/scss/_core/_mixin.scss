@@ -1,0 +1,435 @@
+$sp 	: 640px;
+$tab 	: 768px;
+$pc 	: 980px;
+
+$serif: "Noto Serif JP","ヒラギノ明朝 ProN W2", "HiraMinProN-W2", "Yu Mincho", "YuMincho", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+
+$montserrat: 'Montserrat', sans-serif;
+
+$Shrikhand: 'Shrikhand', cursive;
+$Crimson: 'Crimson Text', serif;
+
+
+
+
+// メディアクエリ
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin screen($break-point-min, $break-point-max) {
+  @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
+}
+
+@mixin max-device-width($max-width, $max-device-width) {
+  @media only screen and (max-width: $max-width) and (max-device-width:$max-device-width){
+    @content;
+  }
+}
+
+@mixin placeholderColor($color) {
+	&:placeholder-shown {
+	    color: $color;
+	}
+	&::-webkit-input-placeholder {
+	    color:$color;
+	}
+	&:-moz-placeholder {
+	    color:$color;
+	    opacity: 1;
+	}
+	&::-moz-placeholder {
+	    color:$color;
+	    opacity: 1;
+	}
+	&:-ms-input-placeholder {
+	    color:$color;
+	}
+}
+
+// 背景画像
+@mixin fit-image ($img_path, $size) {
+	background-image: url($img_path);
+	background-position: center;
+	background-size: $size;
+	background-repeat: no-repeat;
+}
+
+// フォントアンチエイリアス
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// ボックスサイズ
+@mixin box-sizing($type)
+{
+	-webkit-box-sizing:$type;
+	-moz-box-sizing:$type;
+	box-sizing:$type;
+}
+
+// リンクカラー
+@mixin link-color($color) {
+     color: $color;
+     &:hover, &:active, &:focus {
+         color: lighten($color, 20%);
+     }
+}
+// リンクカラー
+@mixin btn-color($bgcolor) {
+	background-color: $bgcolor;
+     &:hover, &:active, &:focus {
+     	color: #FFF;
+         background-color: darken($bgcolor, 8%);
+     }
+}
+// 矢印
+@mixin arrow-right($w, $h, $color) {
+	content: "";
+	display: inline-block;
+	width: $w; height: $h;
+	border-top: 1px solid $color;
+	border-right: 1px solid $color;
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+// 角丸
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// 不透明度
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	filter: alpha(opacity=($opacity * 100));
+}
+
+// 三点リーダー
+@mixin line-clamp($size){
+    display: box;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: $size;
+    -webkit-box-orient: vertical;
+}
+
+// clearfix
+@mixin clearfix{
+  *zoom: 1;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// 円形
+@mixin circle {
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+}
+
+// remを使ったフォントサイズ
+@mixin rem-font-size($size) {
+	font-size:$size;
+	font-size: ($size / 16px) * 1rem;
+}
+
+// ボックスシャドウ
+@mixin box-shadow( $h: 10px , $v: 10px , $b: 0px , $s: 0px , $c: #000000 ) {
+	-webkit-box-shadow: $h $v $b $s $c;
+	-moz-box-shadow: $h $v $b $s $c;
+	box-shadow: $h $v $b $s $c;
+}
+
+// 要素のX座標
+@mixin xPos($x) {
+	-webkit-transform:translateX($x);
+	-moz-transform:translateX($x);
+	-ms-transform:translateX($x);
+	transform:translateX($x);
+	transform:translate3d($x, 0, 0)
+}
+
+// 要素のY座標
+@mixin yPos($y) {
+	-webkit-transform:translateY($y);
+	-moz-transform:translateY($y);
+	-ms-transform:translateY($y);
+	transform:translateY($y);
+	transform:translate3d(0, $y, 0)
+}
+
+// 天地の中央に配置
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+//ローテート
+@mixin rotate($values) {
+    transform: rotate($values);
+	-moz-transform: rotate($values);
+	-webkit-transform: rotate($values);
+	-o-transform: rotate($values);
+	-ms-transform: rotate($values);
+}
+
+
+// フレックスボックス
+@mixin flexbox {
+	display:-webkit-box; // old
+	display:-moz-box; // old
+	display:-ms-flexbox; // ie
+	display:-webkit-flex; // new
+	display:flex; // new
+}
+
+// モダンブラウザの旧仕様にも対応したflexの指定
+@mixin flex($values) {
+	-webkit-box-flex: $values;
+	-moz-box-flex: $values;
+	-ms-flex: $values;
+	-webkit-flex: $values;
+	flex: $values;
+}
+
+// flex-order（表示の順番）
+@mixin flex-order($order){
+	-webkit-box-ordinal-group: $order; // old
+	-moz-box-ordinal-group: $order; // old
+	-ms-flex-order: $order; // ie
+	-webkit-order: $order; // new
+	order: $order; // new
+}
+
+// flex-direction（表示の方向）
+@mixin flex-direction($direction) {
+	@if $direction == column {
+		-webkit-flex-direction:vertical;
+		-moz-flex-direction:vertical;
+		-ms-flex-direction:column;
+		-webkit-flex-direction:column;
+		flex-direction:column;
+	}
+@else {
+		-webkit-flex-direction:horizontal;
+		-moz-flex-direction:horizontal;
+		-ms-flex-direction:row;
+		-webkit-flex-direction:row;
+		flex-direction:row;
+	}
+}
+
+@mixin align-items($values) {
+    -webkit-align-items:$values;
+    -moz-align-items:$values;
+    align-items:$values;
+}
+
+@mixin justify-content($values) {
+    -webkit-justify-content:$values;
+    -moz-justify-content:$values;
+    justify-content:$values;
+}
+
+// グラデーション　（水平・垂直・円）
+@mixin gradient($start-color, $end-color, $orientation) {
+	background: $start-color;
+	@if $orientation == vertical {
+		// vertical
+		background: -moz-linear-gradient(top, $start-color 0%, $end-color 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start-color), color-stop(100%,$end-color));
+		background: -webkit-linear-gradient(top, $start-color 0%,$end-color 100%);
+		background: -o-linear-gradient(top, $start-color 0%,$end-color 100%);
+		background: -ms-linear-gradient(top, $start-color 0%,$end-color 100%);
+		background: linear-gradient(to bottom, $start-color 0%,$end-color 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=0 );
+	}
+	@else if $orientation == horizontal	{
+		// horizontal
+		background: -moz-linear-gradient(left, $start-color 0%, $end-color 100%);
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,$start-color), color-stop(100%,$end-color));
+		background: -webkit-linear-gradient(left, $start-color 0%,$end-color 100%);
+		background: -o-linear-gradient(left, $start-color 0%,$end-color 100%);
+		background: -ms-linear-gradient(left, $start-color 0%,$end-color 100%);
+		background: linear-gradient(to right, $start-color 0%,$end-color 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+	}
+	@else {
+		// radial
+		background: -moz-radial-gradient(center, ellipse cover, $start-color 0%, $end-color 100%);
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$start-color), color-stop(100%,$end-color));
+		background: -webkit-radial-gradient(center, ellipse cover, $start-color 0%,$end-color 100%);
+		background: -o-radial-gradient(center, ellipse cover, $start-color 0%,$end-color 100%);
+		background: -ms-radial-gradient(center, ellipse cover, $start-color 0%,$end-color 100%);
+		background: radial-gradient(ellipse at center, $start-color 0%,$end-color 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+	}
+}
+
+// ベンダープレフィックス：transition
+@mixin transition($transition-property, $transition-time, $method) {
+     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+          #{$prefix}transition: $transition-property $transition-time $method;
+     }
+}
+@mixin transition2($transition-property, $transition-time, $method, $delay) {
+     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+          #{$prefix}transition: $transition-property $transition-time $method $delay;
+     }
+}
+
+// ベンダープレフィックス：animation
+@mixin animation($animation-name) {
+	-webkit-animation: #{$animation-name};
+	-moz-animation: #{$animation-name};
+	animation: #{$animation-name};
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+
+
+
+
+
+/* =============================================
+- 追加
+================================================ */
+
+
+@mixin bg_harf {
+	background: #F0EDDC; /* Old browsers */
+	background: -moz-linear-gradient(270deg, #F0EDDC 0%, #F0EDDC 50%,#F8F6EA 50%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(270deg, #F0EDDC 0%, #F0EDDC 50%,#F8F6EA 50%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(90deg, #F0EDDC 0%, #F0EDDC 50%,#F8F6EA 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F0EDDC', endColorstr='#F8F6EA',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+@mixin bg_harf2 {
+	background: #E4EEF0; /* Old browsers */
+	background: -moz-linear-gradient(270deg, #E4EEF0 0%, #E4EEF0 50%,#E5F8FC 50%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(270deg, #E4EEF0 0%, #E4EEF0 50%,#E5F8FC 50%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(90deg, #E4EEF0 0%, #E4EEF0 50%,#E5F8FC 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E4EEF0', endColorstr='#E5F8FC',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+@mixin font-bold {
+	font-weight: 600;
+	@media screen and (min-width: 980px) {
+		font-weight: bold;
+	}
+}
+
+@mixin verticalText {
+	writing-mode: tb-rl; /* IE */
+	writing-mode: vertical-rl; /* Chrome */
+	white-space: nowrap;
+	width: 1em; /* firefox */
+	line-height: 1em; /* firefox */
+	text-orientation: upright;
+}
+
+
+@mixin arrow_down ($width, $height, $color){
+	content: "";
+	border-top: 1px solid;
+	border-right: 1px solid;
+	position: absolute;
+	-webkit-transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+	transform: rotate(135deg);
+	width: $width;
+	height: $height;
+	border-color: $color;
+}
+
+
+
+@mixin harfbg ($left_color, $right_color){
+	position: relative;
+	z-index: 1;
+	&:before,&:after{
+		content: "";
+		height: 100%;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
+	&:before{
+		width: 50%;
+		z-index: -1;
+		background-color: $left_color;
+	}
+	&:after{
+		width: 100%;
+		z-index: -2;
+		background-color: $right_color;
+	}
+}
+
+
+
+
+
+$easeInSine:     cubic-bezier(0.47,  0,     0.745, 0.715);
+$easeOutSine:    cubic-bezier(0.39,  0.575, 0.565, 1    );
+$easeInOutSine:  cubic-bezier(0.445, 0.05,  0.55,  0.95 );
+$easeInQuad:     cubic-bezier(0.55,  0.085, 0.68,  0.53 );
+$easeOutQuad:    cubic-bezier(0.25,  0.46,  0.45,  0.94 );
+$easeInOutQuad:  cubic-bezier(0.455, 0.03,  0.515, 0.955);
+
+$easeInCubic:    cubic-bezier(0.55,  0.055, 0.675, 0.19 );
+$easeOutCubic:   cubic-bezier(0.215, 0.61,  0.355, 1    );
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1    );
+$easeInQuart:    cubic-bezier(0.895, 0.03,  0.685, 0.22 );
+$easeOutQuart:   cubic-bezier(0.165, 0.84,  0.44,  1    );
+$easeInOutQuart: cubic-bezier(0.77,  0,     0.175, 1    );
+
+$easeInQuint:    cubic-bezier(0.755, 0.05,  0.855, 0.06 );
+$easeOutQuint:   cubic-bezier(0.23,  1,     0.32,  1    );
+$easeInOutQuint: cubic-bezier(0.86,  0,     0.07,  1    );
+$easeInExpo:     cubic-bezier(0.95,  0.05,  0.795, 0.035);
+$easeOutExpo:    cubic-bezier(0.19,  1,     0.22,  1    );
+$easeInOutExpo:  cubic-bezier(1,     0,     0,     1    );
+
+$easeInCirc:     cubic-bezier(0.6,   0.04,  0.98,  0.335);
+$easeOutCirc:    cubic-bezier(0.075, 0.82,  0.165, 1    );
+$easeInOutCirc:  cubic-bezier(0.785, 0.135, 0.15,  0.86 );
+$easeInBack:     cubic-bezier(0.6,  -0.28,  0.735, 0.045);
+$easeOutBack:    cubic-bezier(0.175, 0.885, 0.32,  1.275);
+$easeInOutBack:  cubic-bezier(0.68, -0.55,  0.265, 1.55 );

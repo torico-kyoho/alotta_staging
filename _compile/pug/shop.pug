@@ -1,0 +1,397 @@
+extends ./_inc/_layout_inner.pug
+
+append vars
+	include ./_inc/_config.pug
+	- var key = 'shop';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+append innerVisual
+
+	#topmenuBox
+		ul
+			li: a(href="#shop_about")
+				.icon: img(src=page.path+"assets/images/shop/top_icon01.png" alt="")
+				p ABOUT
+			li: a(href="#shop_interior")
+				.icon: img(src=page.path+"assets/images/shop/top_icon02.png" alt="")
+				p 店内
+			li: a(href="#shop_brand")
+				.icon: img(src=page.path+"assets/images/shop/top_icon03.png" alt="")
+				p 取扱ブランド
+			li: a(href="./faq.html")
+				.icon: img(src=page.path+"assets/images/shop/top_icon04.png" alt="")
+				p Q &amp; A
+
+	#innerVisual
+		.headTextArea.typeB
+			h1.title SHOP
+			p.sub サロン専売品販売ショップ
+
+			.textArea
+				p 美容機器商社・美容メーカー直営#[br]完全個室型ヘアサロン#[br]と、ショップ
+
+		.imgArea: .img: img(src=page.path+"assets/images/visual/visual_shop.jpg" alt="")
+
+
+	
+block contents
+
+
+	section#shop_outline
+		.inner
+
+			.titleStyle05.blue.typeC
+				p.note BEAUTY SHOP
+				p.sub 美容機器商社・美容メーカー#[br.sp][Torico Industries]直営
+				h2.title サロン専売品販売ショップ
+				.square
+
+
+			.colLayout
+
+				.mapBox
+					.map: img(src=page.path+"assets/images/shop/outline_img01.jpg" alt="サロン専売品販売ショップ")
+
+					.LineArea
+						.line: a(href="http://line.naver.jp/ti/p/d4uUfsc6Pf" target="_blank")
+							img.pc(src=page.path+"assets/images/shop/outline_line_text.png" alt="LINEに会員登録するとショップでのお買い物が５％ＯＦＦに！")
+							img.sp(src=page.path+"assets/images/shop/outline_line_text_sp.png" alt="LINEに会員登録するとショップでのお買い物が５％ＯＦＦに！")
+
+						.linetextArea
+							p ショップでのお会計時に、alotta公式LINEのトーク画面をご提示いただくことで、alotta価格からさらに5％割引いたします。
+							p.note ※サロン会員さまは、サロンカードのご提示で、alotta価格から10％割引いたします。
+
+
+				.textBox
+					.borderBox
+						.row
+							p.title SHOP#[span サロン専売品販売ショップ]
+						.row
+							p.txt 取り扱い商品に関するお問い合わせ
+							a.phone(href="tel:0422275091") 0422-27-5091
+						.row
+							p.txt 営業時間
+							p 10:00 ～ 19:30#[br] 年末年始休業・夏季休業あり
+
+						.row
+							.textArea.gmap
+								p
+									|〒180－0004
+									br
+									|東京都武蔵野市吉祥寺本2-17-7
+									br
+									|（フォルムトミノ吉祥寺1F）
+
+							.btnArea: a.arrow(href="./access.html") ACCESS
+
+					.btnArea: a.btnStyle01(href="./salon.html") ヘアサロンについて
+
+
+	section#shop_about
+		.inner
+
+			.imgArea
+				.img: img(src=page.path+"assets/images/shop/about_img01.jpg" alt="")
+
+
+
+	section#shop_works
+		.inner
+
+
+			.column
+				h2.titleStyle02 美容機器・製品の#[br.sp]商社&amp;メーカーとして#[br]本当にオススメしたいモノを#[br.sp]お届けしたい
+
+				.colLayout01
+					.imgArea
+						.img: img(src=page.path+"assets/images/shop/works_img01.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 1]
+							h3.midashi 5,000アイテム以上の#[br]プロユース品が勢揃い
+							p.note MORE THAN 5000 ITEMS.
+
+						.textArea
+							p 各美容品メーカーが日々研究を重ね、新たな商品を次々に開発しているため、プロユースのサロン専売品と言っても、数えきれないほどの商品が世の中にはあります。alottaでは常に美容業界の最新情報を収集し、取り扱う商品を厳選。常時5,000アイテム以上をサロン併設ショップで販売しています。
+
+
+				.colLayout01
+					.imgArea
+						.img: img(src=page.path+"assets/images/shop/works_img02.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 2]
+							h3.midashi プロとして本当にオススメしたい#[br]“最新”と“最高”の商品を厳選
+							p.note NEWEST &amp; HIGHEST
+
+						.textArea
+							p メーカーやディストリビューターからの説明や講習によって身につけた商品知識だけでなく、実際に併設のヘアサロンで数多くの商品を使用しています。その経験に基づいて、本当に優れたものだけを厳選。新しい商品も使用感をチェックした上で、常に最新と最高の商品をお客様にご提供いたします。
+
+
+				.colLayout01#jump02
+					.imgArea
+						.img: img(src=page.path+"assets/images/shop/works_img03.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 3]
+							h3.midashi 自分にぴったりのアイテムを#[br]一緒に探してくれるコンシェルジュとして
+							p.note HAIR CONCIERGE
+
+						.textArea
+							p サロン専売品は、髪や頭皮に関する基本知識のあるプロが使うことを前提としているため、市販品に比べて専門性が高く、髪質や髪の状態に合わせて使うことで初めて効果が得られるものがほとんどです。私たちは、髪の悩みをしっかり伺い、お客様一人ひとりにぴったりな商品をご提案しています。
+
+
+				.colLayout01
+					.imgArea
+						.img: img(src=page.path+"assets/images/shop/works_img04.jpg" alt="")
+
+					.textBox
+						.titleStyle03
+							p.number #[span.txt POINT]#[span.num 4]
+							h3.midashi 本当に自分に合う商品なのかを#[br]併設ヘアサロンでお試し
+							p.note WITH HAIR SALON
+
+						.textArea
+							p ショップで試してみたいアウトバストリートメントやワックス、スプレーなどがあれば、併設ヘアサロンでの施術時、試用していただくことができます。お客様の髪質やお好みに合うかどうかをしっかりと確かめていただいた上で、ご購入いただけます。
+
+
+			.btnArea: a.btnStyle01(href="./salon.html") ヘアサロンについて
+
+
+
+
+
+	section#shop_interior
+		.inner
+			.titleStyle01.door
+				h2.title INTERIOR
+				p.note 店内
+
+			.imgBox
+				.img: img(src=page.path+"assets/images/shop/interior_img01.jpg" alt="")
+				.img: a(href=page.path+"assets/images/shop/interior_img02_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/shop/interior_img02.jpg" alt="")
+				.img: a(href=page.path+"assets/images/shop/interior_img03_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/shop/interior_img03.jpg" alt="")
+				.img: a(href=page.path+"assets/images/shop/interior_img04_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/shop/interior_img04.jpg" alt="")
+				.img: a(href=page.path+"assets/images/shop/interior_img05_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/shop/interior_img05.jpg" alt="")
+				.img: a(href=page.path+"assets/images/shop/interior_img06_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/shop/interior_img06.jpg" alt="")
+				.img: a(href=page.path+"assets/images/shop/interior_img07_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/shop/interior_img07.jpg" alt="")
+				.img: a(href=page.path+"assets/images/shop/interior_img08_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/shop/interior_img08.jpg" alt="")
+				.img: a(href=page.path+"assets/images/shop/interior_img09_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/shop/interior_img09.jpg" alt="")
+				.img: a(href=page.path+"assets/images/shop/interior_img10_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/shop/interior_img10.jpg" alt="")
+				.img: a(href=page.path+"assets/images/shop/interior_img11_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/shop/interior_img11.jpg" alt="")
+				.img: a(href=page.path+"assets/images/shop/interior_img12_l.jpg" data-lity="data-lity"): img(src=page.path+"assets/images/shop/interior_img12.jpg" alt="")
+
+
+
+
+
+	section#shop_brand
+		.inner
+
+			.titleStyle01.door
+				h2.title BRAND
+				p.note お取り扱いブランド
+
+
+			.brandArea
+
+				.brand
+					.img: a(href="https://www.torico.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo01.jpg" alt="")
+					p.txt アイビル
+				.brand
+					.img: a(href="http://www.amatora.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo02.jpg" alt="")
+					p.txt アマトラ
+				.brand
+					.img: a(href="https://www.aderans.co.jp/mens/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo03.jpg" alt="")
+					p.txt アデランス
+				.brand
+					.img: a(href="https://www.arimino.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo04.jpg" alt="")
+					p.txt アリミノ
+				.brand
+					.img: a(href="https://andnine.jp/keshiki/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo05.jpg" alt="")
+					p.txt アンドナイン
+				.brand
+					.img: a(href="http://www.iriya.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo06.jpg" alt="")
+					p.txt イリヤ
+				.brand
+					.img: a(href="https://www.wella.com/professional/jp-JP/home" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo07.jpg" alt="")
+					p.txt ウエラ プロフェッショナルズ
+				.brand
+					.img: a(href="http://wella-salonfinder.jp/sp/special/sp.html" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo08.jpg" alt="")
+					p.txt SP（ウエラ）
+				.brand
+					.img: a(href="https://www.mtg.gr.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo09.jpg" alt="")
+					p.txt MTG
+				.brand
+					.img: a(href="https://ndot.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo10.jpg" alt="")
+					p.txt N.（ナプラ）
+				.brand
+					.img: a(href="https://www.genuine.tv/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo11.jpg" alt="")
+					p.txt NBAA
+				.brand
+					.img: a(href="http://ancels-colorbutter.com/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo12.jpg" alt="")
+					p.txt エンシェールズカラーバター
+				.brand
+					.img: a(href="https://www.techno-eight.co.jp/oggi-otto/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo13.jpg" alt="")
+					p.txt オッジィオット
+				.brand
+					.img: a(href="http://www.calatas-shampoo.com/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo14.jpg" alt="")
+					p.txt カラタス
+				.brand
+					.img: a(href="https://createion.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo15.jpg" alt="")
+					p.txt クレイツ
+				.brand
+					.img: a(href="https://www.kerastase.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo16.jpg" alt="")
+					p.txt ケラスターゼ
+				.brand
+					.img: a(href="http://www.cota.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo17.jpg" alt="")
+					p.txt コタ
+				.brand
+					.img: a(href="https://www.s-aqua.info/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo18.jpg" alt="")
+					p.txt サイエンスアクア
+				.brand
+					.img: a(href="http://www.fine-cosmetics.com/top.htm" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo19.jpg" alt="")
+					p.txt 阪本高生堂
+				.brand
+					.img: a(href="https://sunnyplace-hairope.com/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo20.jpg" alt="")
+					p.txt サニープレイス
+				.brand
+					.img: a(href="http://suncall-net.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo21.jpg" alt="")
+					p.txt サンコール
+				.brand
+					.img: a(href="http://www.sanbi.net/?gclid=EAIaIQobChMI8JPWpNuj6AIVBKyWCh0ITQ-JEAAYASAAEgLCDfD_BwE" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo22.jpg" alt="")
+					p.txt サンビ
+				.brand
+					.img: a(href="https://www.shiseido-professional.com/ja_jp" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo23.jpg" alt="")
+					p.txt 資生堂#[br]プロフェッショナル
+				.brand
+					.img: a(href="https://www.shuuemura.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo24.jpg" alt="")
+					p.txt シュウウエムラ
+				.brand
+					.img: a(href="http://www.schwarzkopf-professional.jp/skp/jp/jp/home.html" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo25.jpg" alt="")
+					p.txt シュワルツコフ#[br]プロフェッショナル
+				.brand
+					.img: a(href="https://www.stargazer-products.com/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo26.jpg" alt="")
+					p.txt スターゲイザー
+				.brand
+					.img: a(href="https://www.beautyexperience.com/throw/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo27.jpg" alt="")
+					p.txt スロー#[br](ビューティーエクスペリエンス)
+				.brand
+					.img: a(href="https://www.seibutohatsu.com/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo28.jpg" alt="")
+					p.txt 西部頭髪
+				.brand
+					.img: a(href="https://cefinecosmetics.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo29.jpg" alt="")
+					p.txt セフィーヌ
+				.brand
+					.img: a(href="http://www.davines.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo30.jpg" alt="")
+					p.txt ダヴィネス
+				.brand
+					.img: a(href="https://www.chacott-jp.com/news/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo31.jpg" alt="")
+					p.txt チャコット
+				.brand
+					.img: a(href="https://www.beautyexperience.com/deeplayer/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo32.jpg" alt="")
+					p.txt ディープレイヤー#[br]（ビューティエクスペリエンス）
+				.brand
+					.img: a(href="https://denis.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo33.jpg" alt="")
+					p.txt DENIS
+				.brand
+					.img: a(href="https://www.demi.nicca.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo34.jpg" alt="")
+					p.txt デミ
+				.brand
+					.img: a(href="http://dr-jr.com/tokio-ie.html#spa" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo35.jpg" alt="")
+					p.txt トキオ
+				.brand
+					.img: a(href="http://www.napla.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo36.jpg" alt="")
+					p.txt ナプラ
+				.brand
+					.img: a(href="https://www.no3.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo37.jpg" alt="")
+					p.txt ナンバースリー
+				.brand
+					.img: a(href="https://paimore.com/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo38.jpg" alt="")
+					p.txt パイモア
+				.brand
+					.img: a(href="http://www.pacific-products.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo39.jpg" alt="")
+					p.txt パシフィック#[br]プロダクツ
+				.brand
+					.img: a(href="https://www.hazuki-l.co.jp/hazuki/hazukiloupe.html" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo40.jpg" alt="")
+					p.txt ハズキルーペ
+				.brand
+					.img: a(href="http://www.hahonico.com/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo41.jpg" alt="")
+					p.txt ハホニコ
+				.brand
+					.img: a(href="http://www.fiole.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo42.jpg" alt="")
+					p.txt フィヨーレ
+				.brand
+					.img: a(href="https://www.mikuchi.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo43.jpg" alt="")
+					p.txt フォード
+				.brand
+					.img: a(href="https://flowdia.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo44.jpg" alt="")
+					p.txt フローディア(デミ)
+				.brand
+					.img: a(href="https://theproduct.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo45.jpg" alt="")
+					p.txt プロダクト
+				.brand
+					.img: a(href="https://www.hoyu-professional.com/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo46.jpg" alt="")
+					p.txt ホーユー
+				.brand
+					.img: a(href="https://www.hongo-jp.com/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo47.jpg" alt="")
+					p.txt ホンゴ
+				.brand
+					.img: a(href="http://www.newayjapan.com/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo48.jpg" alt="")
+					p.txt ニューウェイジャパン
+				.brand
+					.img: a(href="https://www.manicpanic.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo49.jpg" alt="")
+					p.txt マニックパニック
+				.brand
+					.img: a(href="http://www.mitsuyoshi-make.com/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo50.jpg" alt="")
+					p.txt 三善
+				.brand
+					.img: a(href="https://www.milbon.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo51.jpg" alt="")
+					p.txt ミルボン
+				.brand
+					.img: a(href="http://www.mucota.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo52.jpg" alt="")
+					p.txt ムコタ
+				.brand
+					.img: a(href="https://forcise.info/moroccanoil/about/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo53.jpg" alt="")
+					p.txt モロッカン
+				.brand
+					.img: a(href="https://www.real-chemical.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo54.jpg" alt="")
+					p.txt リアル科学
+				.brand
+					.img: a(href="http://littlescientist.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo55.jpg" alt="")
+					p.txt リトル#[br]サイエンティスト
+				.brand
+					.img: a(href="https://www.lumielina.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo56.jpg" alt="")
+					p.txt リュミエリーナ
+				.brand
+					.img: a(href="https://www.lebel.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo57.jpg" alt="")
+					p.txt ルベル
+				.brand
+					.img: a(href="https://www.loretta-jp.com/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo58.jpg" alt="")
+					p.txt ロレッタ
+				.brand
+					.img: a(href="http://www.yspark.co.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo59.jpg" alt="")
+					p.txt YSパーク
+				.brand
+					.img: a(href="https://onestopinc.jp/" target="_blank"): img(src=page.path+"assets/images/shop/brand_logo60.jpg" alt="")
+					p.txt ワンストップ
+
+
+
+			.lineArea
+				.line: a(href="http://line.naver.jp/ti/p/d4uUfsc6Pf" target="_blank")
+					img.sp(src=page.path+"assets/images/shop/line_bunner_sp.png" alt="LINEに会員登録するとショップでのお買い物が５％ＯＦＦに！")
+					img.pc(src=page.path+"assets/images/shop/line_bunner.png" alt="LINEに会員登録するとショップでのお買い物が５％ＯＦＦに！")
+
+				.linetextArea
+					p ショップでのお会計時に、alotta公式LINEのトーク画面をご提示いただくことで、alotta価格からさらに5％割引いたします。
+					p.note ※サロン会員さまは、サロンカードのご提示で、alotta価格から10％割引いたします。

@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+
+.btnArea{
+	text-align: center;
+	&.ar_right{
+		text-align: right;
+		width: 100%;
+	}
+}
+
+
+/*-----------------------------------------------------------------
+	style01
+----------------------------------------------------------------- */
+
+
+.btnStyle01{
+	color: #282828;
+	padding: 13px 20px;
+	border: 1px solid #707070;
+	display: inline-block;
+	width: 100%;
+	max-width: 260px;
+	text-align: center;
+	position: relative;
+	&:before{
+		content: "";
+		width: 40px;
+		height: 1px;
+		background-color: #707070;
+		position: absolute;
+		right: -22px;
+		top: 50%;
+	}
+	&:after{
+		content: "";
+		width: 8px;
+		height: 1px;
+		background-color: #707070;
+		position: absolute;
+		right: -28px;
+		top: 50%;
+		margin-top: 2px;
+		transform: rotate(35deg) translateX(-100%);
+	}
+	.inst{
+		display: inline-block;
+		background-image: url(../images/common/icon_inst.png);
+		background-size: cover;
+		width: 25px;
+		height: 25px;
+		position: relative;
+		top: 5px;
+		margin-right: 10px;
+	}
+	.twt{
+		display: inline-block;
+		background-image: url(../images/common/icon_twt.png);
+		background-size: cover;
+		width: 25px;
+		height: 25px;
+		position: relative;
+		top: 5px;
+		margin-right: 10px;
+	}
+}
+
+
+
+@include min-screen($tab) {
+	.btnStyle01{
+		max-width: 280px;
+		@include transition(all,0.2s,ease-in-out);
+		&:after,&:before{
+			@include transition(all,0.2s,ease-in-out);
+		}
+		&:hover{
+			background-color: #282828;
+			color: #fff;
+			&:after,&:before{
+				margin-right: -5px;
+			}
+		}
+	}
+}
+
+// IE10 ~ IE11
+
+_:-ms-input-placeholder, :root .btnStyle01 {
+	@include min-screen($tab) {
+		padding: 15px 20px 11px 20px;
+	}
+}
+
+
+
+/*-----------------------------------------------------------------
+	style02
+----------------------------------------------------------------- */
+
+
+.btnStyle02{
+	color: #282828;
+	padding: 13px 20px;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	position: relative;
+	background-color: #B58D32;
+	color: #fff;
+	&:before{
+		content: "";
+		width: 25px;
+		height: 1px;
+		background-color: #fff;
+		position: absolute;
+		right: 15px;
+		top: 50%;
+	}
+	&:after{
+		content: "";
+		width: 8px;
+		height: 1px;
+		background-color: #fff;
+		position: absolute;
+		right: 9px;
+		top: 50%;
+		margin-top: 2px;
+		transform: rotate(35deg) translateX(-100%);
+	}
+	&.gray{
+		background-color: #F0F0F0;
+		color: #707070;
+		&:after,&:before{
+			background-color: #707070;
+		}
+	}
+	&.back{
+		&:before{
+			left: 15px;
+		}
+		&:after{
+			left: 9px;
+			transform: rotate(145deg) translateX(-100%);
+		}
+	}
+}
+
+
+
+@include min-screen($tab) {
+	.btnStyle02{
+		@include transition(all,0.2s,ease-in-out);
+		font-size: 16px;
+		padding: 1.0em 20px;
+		&:before{
+			width: 40px;
+		}
+		&:after,&:before{
+			@include transition(all,0.2s,ease-in-out);
+		}
+		&:hover{
+			background-color: #cea64c;
+			&:after,&:before{
+				margin-right: -5px;
+			}
+			&.gray{
+				background-color: #fbfbfb;
+			}
+		}
+		&.back{
+			&:hover{
+				&:after,&:before{
+					margin-left: -5px;
+				}
+			}
+		}
+	}
+}
+
+
+
+/*-----------------------------------------------------------------
+	arrow
+----------------------------------------------------------------- */
+
+a.arrow{
+	letter-spacing: 0.2em;
+	position: relative;
+	padding-right: 45px;
+	display: inline-block;
+	@include font-smoothing();
+	color: #707070;
+	font-family: $montserrat;
+	&:before{
+		content: "";
+		width: 40px;
+		height: 1px;
+		background-color: #707070;
+		position: absolute;
+		right: 0px;
+		top: 50%;
+	}
+	&:after{
+		content: "";
+		width: 8px;
+		height: 1px;
+		background-color: #707070;
+		position: absolute;
+		right: -6px;
+		top: 50%;
+		margin-top: 2px;
+		transform: rotate(35deg) translateX(-100%);
+	}
+}
+
+
+
+
+@include min-screen($tab) {
+	a.arrow{
+		@include transition(all,0.4s,ease-in-out);
+		font-size: 15px;
+		&:hover{
+			color: #707070;
+			transform: translateX(10px);
+		}
+	}
+}

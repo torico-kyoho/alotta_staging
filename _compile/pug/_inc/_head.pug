@@ -1,0 +1,52 @@
+head
+	meta(charset="utf-8")
+	meta(http-equiv="X-UA-Compatible", content="IE=edge")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	meta(name="format-detection", content="telephone=no")
+	title #{page.title}
+	link(rel="icon" type="image/png" href=page.path+"assets/images/favicon.png")
+	block meta
+	meta(content=page.description, name="description")
+	meta(content=page.keywords, name="keywords")
+
+	meta(property="og:url" content=page.url)
+	meta(property="og:site_name" content="alotta【アロッタ】｜吉祥寺の完全個室型ヘアサロンとショップ")
+	meta(property="og:title" content=page.title)
+	meta(property="og:description" content=page.description)
+	meta(property="og:image" content=page.image)
+	meta(content="website", property="og:type")
+	meta(content="ja_JP", property="og:locale")
+
+	meta(name="twitter:card" content="summary_large_image")
+	meta(name="twitter:title" content=page.title)
+	meta(name="twitter:description" content=page.description)
+	meta(name="twitter:image" content=page.image)
+	
+	block css
+		link(href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet")
+		link(rel="stylesheet", href=page.path+"assets/css/core.css")
+		link(rel="stylesheet", href=page.path+"assets/css/style.css")
+	
+	link(rel="stylesheet", href=page.path+"assets/css/anime.css")
+
+	block js
+		script(type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+		script(type='text/javascript' src=page.path+"assets/js/lity.js")
+		script(type='text/javascript' src=page.path+"assets/js/scripts.js")
+		script(type='text/javascript' src=page.path+"assets/js/desvg.js")
+	
+	script(type='text/javascript' src=page.path+"assets/js/anime/ScrollMagic.min.js")
+	script(type='text/javascript' src=page.path+"assets/js/anime/anime.js")
+	script.
+		window.addEventListener('load', function(){
+			deSVG('.svg', true);
+		});
+	
+	// Google Tag Manager
+	script.
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-PGPPGN5');
+	// End Google Tag Manager

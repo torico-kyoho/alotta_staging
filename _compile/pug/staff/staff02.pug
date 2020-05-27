@@ -1,0 +1,68 @@
+extends ../_inc/_layout_inner.pug
+
+append vars
+	include ../_inc/_config.pug
+	- var key = 'staff02';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+
+
+append innerVisual
+
+	#innerVisual
+		.headTextArea
+			h1.title STAFF
+			p.sub スタッフ
+
+
+
+block contents
+	section#staff_single
+		.inner
+
+			.colLayout
+				.img
+					img(src=page.path+"assets/images/staff/staff02.jpg" alt="")
+					.btn: a.btnStyle01(href="https://www.instagram.com/yoshiki_.kitamura/" target="_blank") #[span.inst]Instagramをチェック
+
+
+				.textBox
+					.nameArea
+						h2.position スタイリスト
+						p.name 北村
+
+					.infoArea
+						dl
+							dt スタイリスト歴
+							dd 11年
+						dl
+							dt 得意な技術
+							dd カット、髪質改善、パーマ
+						dl
+							dt 得意なスタイル
+							dd トレンドやお客様のライフスタイルに合わせたまとまりやすいスタイル。ナチュラルなスタイルの中に1人ひとりに似合わせた個性のあるスタイル。男性はパーマスタイル。
+						dl
+							dt 取得資格・受賞歴
+							dd ネイリスト検定3級
+
+						dl
+							dt 趣味
+							dd 音楽、漫画、サッカー
+						dl
+							dt 休日の過ごし方
+							dd 音楽鑑賞、ショッピング、サッカー
+						dl
+							dt メッセージ
+							dd とにかくお客様への接客には力を入れております。お客様に合わせた接客で最大限、髪のお悩みを解決できるように、少しでも日々のスタイリングが楽に楽しくキレイにできるように、日々の生活が楽しく幸せになるように、可愛くカッコよくなるように全力で接客技術をしていきます。alottaの個室空間でぜひ、お気軽に髪のご相談をお聞かせいただけると嬉しいです。こだわりの空間や薬剤、北村のこだわりの接客技術をぜひ体感してみてください。お客様のご来店・ご予約を心よりお待ちしております。#[br]お2人部屋もございますので、お子様連れやお友達同士、カップルでのご来店も大歓迎です。
+
+
+
+			.btnArea
+				.btn: a.btnStyle02.gray.back(href="./") スタッフ一覧ページへ戻る
+				.btn: a.btnStyle02(href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000346915&stylistId=T000358533" target="_blank") 指名して予約する

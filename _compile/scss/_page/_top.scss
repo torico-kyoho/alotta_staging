@@ -1,0 +1,1172 @@
+@import "../_core/_mixin.scss";
+
+
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+//　TOP
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+#visual {
+  padding-top: 60px;
+  position: relative;
+
+  #copy {
+    width: 80vw;
+    height: 80vw;;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFF;
+    border-radius: 100%;
+    margin-top: 25px;
+    .inner {
+      width: 100%;
+      height: 100%;
+      // position: relative;
+      @include flexbox;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .box {
+      margin-top: -5vw;
+      .icon {
+        text-align: center;
+        line-height: 1;
+        width: 20px;
+        margin: 0 auto 20px auto;
+      }
+      h1, h2 {
+        text-align: center;
+        padding: 0 40px;
+      }
+      h1 {
+        margin-bottom: 4vw;
+      }
+      img {
+        width: 67%;
+        max-width: 100%;
+        height: auto;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+@include min-screen(600px) {
+  #visual {
+    @include min-screen($tab) {
+      padding-top: 0px;
+    }
+    #copy {
+      width: 464px;
+      height: 464px;
+      .box {
+        .inner {
+          h1 {
+            margin-bottom: 25px;
+            margin-top: -22px;
+          }
+        }
+        margin-top: -22px;
+        h1 {
+          margin-bottom: 25px;
+        }
+        img {
+          width: 228px;
+        }
+      }
+    }
+  }
+}
+
+#hoverBtn {
+  a {
+    display: block;
+    width: 120px;
+    text-align: center;
+    font-family: $montserrat;
+    color: #282828;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 50%;
+    @include transition(all, 0.4s, ease);
+    span {
+      width: 100%;
+      display: block;
+      text-align: center;
+      line-height: 1;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 18px;
+        background-image: url(../images/icon-arrow@2x.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(-90deg) translate(0px, 0px);
+        margin: 0 auto 10px auto;
+        @include transition(all, 0.4s, ease);
+      }
+    }
+    &.salon {
+      left: -20px;
+      margin-top: -10px;
+      transform: rotate(-90deg);
+      &:hover {
+        color: #989377;
+        span:before {
+          transform: rotate(-90deg) translateX(5px);
+        }
+      }
+    }
+    &.shop {
+      right: -20px;
+      margin-top: -15px;
+      transform: rotate(90deg);
+      &:hover {
+        color: #7cabb5;
+        span:before {
+          transform: rotate(-90deg) translateX(5px);
+        }
+      }
+    }
+
+    @include max-screen(459px) {
+      font-size: 11px;
+      span {
+        transform: scale(0.7);
+      }
+      &.salon {
+        left: -35px;
+        margin-top: -15px;
+      }
+      &.shop {
+        right: -35px;
+        margin-top: -15px;
+      }
+    }
+  }
+}
+
+
+
+#sldeLeft {
+  width: 100vw;
+  height: calc(42.7vh - 30px);
+}
+#sldeRight {
+  width: 100vw;
+  height: calc(42.7vh - 30px);
+}
+
+
+#slider {
+	// @include flexbox;
+	.sliderBox {
+		.box {
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 130%;
+		}
+	}
+	.slick-list,
+	.slick-track {
+		height: 100%;
+	}
+}
+
+
+
+#scrollBtn {
+  display: block;
+  width: 68px;
+  height: 68px;
+  border: 1px solid #282828;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -34px;
+  cursor: pointer;
+  @include transition(all, 0.2s, ease);
+  span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    @include flexbox;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &:after {
+      content: "";
+      width: 15px;
+      height: 15px;
+      display: block;
+      border-top: 1px solid #282828;
+      border-right: 1px solid #282828;
+      transform: rotate(135deg);
+      margin-top: -5px;
+    }
+  }
+  &:hover {
+    background-color: rgba(255,255,255,0.3);
+  }
+}
+
+
+@include min-screen($tab) {
+  #slider {
+    padding-top: 0;
+    #sldeLeft,
+    #sldeRight {
+      width: 100vw;
+      height: 50vh;
+    }
+    .sliderBox {
+  		.box {
+  			background-size: cover;
+  		}
+  	}
+  }
+}
+
+@include min-screen($pc) {
+
+  #slider {
+    @include flexbox;
+    transition: transform 0.7s ease-in-out;
+    transform: translateX(0vw);
+    #sldeLeft,
+    #sldeRight {
+      position: relative;
+      overflow: hidden;
+      width: 50vw;
+      height: 100vh;
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        transition: background-color 0.7s ease-in-out;
+        z-index: 2;
+      }
+    }
+    &.salon {
+      transform: translateX(5vw);
+      #sldeRight {
+        &:before {
+          background-color: rgba(248,246,234,0.92);
+        }
+      }
+    }
+    &.shop {
+      transform: translateX(-5vw);
+      #sldeLeft {
+        &:before {
+          background-color: rgba(229,248,252,0.92);
+        }
+      }
+    }
+  }
+
+  #slider {
+    margin: 0 -5vw;
+  }
+  #sldeLeft {
+    width: 55vw !important;
+  }
+  #sldeRight {
+    width: 55vw !important;
+  }
+
+}
+
+// IE10 ~ IE11
+
+_:-ms-input-placeholder, :root #slider {
+  margin: 0 0vw !important;
+}
+_:-ms-input-placeholder, :root #sldeLeft {
+  width: 50vw !important;
+}
+_:-ms-input-placeholder, :root #slider.salon {
+  transform: translateX(0vw) !important;
+}
+_:-ms-input-placeholder, :root #sldeRight {
+  width: 50vw !important;
+}
+_:-ms-input-placeholder, :root #slider.shop {
+  transform: translateX(0vw) !important;
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+//　Title
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+.topTitleStyle01 {
+  .note {
+    font-size: 14px;
+    text-align: center;
+    font-family: $montserrat;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.75;
+  }
+}
+
+@include min-screen($tab) {
+  .topTitleStyle01 {
+    .note {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 24px;
+      text-align: center;
+      line-height: 1.75;
+      letter-spacing: 0.1em;
+    }
+    br.none {
+      display: none;
+    }
+  }
+}
+@include min-screen($pc) {
+  .topTitleStyle01 {
+    .title {
+      font-size: 33px;
+      line-height: 2;
+    }
+  }
+}
+
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+//　btnStyle01
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+@import "./_parts/_btnStyle.scss";
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+//　about
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+#about {
+  padding: 50px 20px 50px 20px;
+  .topTitleStyle01 {
+    margin-bottom: 25px;
+  }
+  @include min-screen($tab) {
+    padding: 60px 30px 60px 30px;
+    .topTitleStyle01 {
+      margin-bottom: 50px;
+    }
+  }
+  @include min-screen($pc) {
+    padding: 100px 30px 120px 30px;
+    .topTitleStyle01 {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.slonmap {
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  figure {
+    text-align: center;
+    img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@include min-screen($tab) {
+  .slonmap {
+    margin-bottom: 50px;
+  }
+}
+@include min-screen($pc) {
+  .slonmap {
+    margin-bottom: 70px;
+  }
+}
+
+.alotta_info {
+  .box {
+    + .box {
+      margin-top: 60px;
+    }
+  }
+  .box_header {
+    margin-bottom: 30px;
+    &:after {
+      content: "";
+      width: 40px;
+      height: 4px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 30px;
+    }
+    .sub {
+      font-size: 12px;
+      text-align: center;
+      font-family: $montserrat;
+      letter-spacing: 0.15em;
+      margin-bottom: 15px;
+    }
+    .icon {
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .title {
+      text-align: center;
+      font-size: 18px;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  .salon {
+    .box_header:after {
+      background-color: #F0EDDC;
+    }
+  }
+  .shop {
+    .box_header:after {
+      background-color: #E5F8FC;
+    }
+  }
+
+  .box_body {
+    p {
+      text-align: justify;
+      line-height:2.1;
+    }
+    .btnArea {
+      margin-top: 40px;
+    }
+  }
+}
+
+@include min-screen($tab) {
+  .alotta_info {
+    @include flexbox;
+    .box {
+      width: 50%;
+      padding: 0 30px;
+      box-sizing: border-box;
+      position: relative;
+      padding-bottom: 80px;
+      .btnArea{
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+      }
+      + .box {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+@include min-screen($pc) {
+  .alotta_info {
+    justify-content: space-between;
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    .box {
+      width: 440px;
+      padding-bottom: 100px;
+    }
+    .box_header {
+      margin-bottom: 40px;
+      &:after {
+        margin-top: 30px;
+      }
+      .sub {
+        margin-bottom: 30px;
+      }
+      .icon {
+        margin-bottom: 7px;
+      }
+      .title {
+        font-size: 24px;
+      }
+    }
+
+    .box_body {
+      p {
+        font-size: 16px;
+        line-height:2;
+      }
+      .btnArea {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+
+
+
+
+/* =============================================
+- hair_salon
+================================================ */
+
+#hair_salon{
+  padding-bottom: 40px;
+  .titleStyle01{
+    margin-left: 20px;
+  }
+  .imgArea{
+    position: relative;
+    &:after{
+      content: "";
+      width: 40%;
+      height: 100%;
+      position: absolute;
+      right: 0px;
+      top: -30%;
+      background-color: #F0EDDC;
+      z-index: -1;
+    }
+  }
+  .img{
+    max-width: 80%;
+    position: relative;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+
+
+@include min-screen($tab) {
+  #hair_salon{
+    padding-bottom: 60px;
+    .titleStyle01{
+      margin-bottom: 20px;
+    }
+    .imgArea{
+      &:after{
+        width: 50%;
+        top: -40%;
+      }
+    }
+    .img{
+      max-width: 80%;
+    }
+  }
+}
+
+
+
+@include min-screen(980px) {
+  #hair_salon{
+    padding-bottom: 80px;
+    .titleStyle01{
+      margin-bottom: 40px;
+    }
+    .imgArea{
+      &:after{
+        width: 50%;
+        top: -50%;
+      }
+    }
+    .img{
+      max-width: 80%;
+    }
+  }
+}
+
+
+@include min-screen(1180px) {
+  #hair_salon{
+    padding-top: 40px;
+    .imgArea{
+      &:after{
+        width: 52%;
+      }
+    }
+  }
+}
+
+
+@include min-screen(1400px) {
+  #hair_salon{
+    padding-bottom: 120px;
+    padding-top: 70px;
+    .inner{
+      max-width: 1520px;
+      margin: 0 auto;
+    }
+    .titleStyle01{
+      margin-bottom: 40px;
+      margin-left: 210px;
+    }
+    .imgArea{
+      &:after{
+        width: 760px;
+        top: -50%;
+      }
+    }
+    .img{
+      width: 95%;
+      max-width: 1310px;
+    }
+  }
+}
+
+
+
+
+
+
+/* =============================================
+- hair_salonbox
+================================================ */
+
+
+#hair_salonbox{
+  padding: 0px 20px 40px 20px;
+  .col{
+    .img{
+       margin: 0px auto;
+      img{
+        width: 100%;
+      }
+    }
+    .textBox{
+      margin-top: 20px;
+    }
+    .btn{
+      margin-top: 10px;
+    }
+    + .col{
+      margin-top: 30px;
+    }
+    .titleStyle03{
+      @include max-screen(767px) {
+        p,.title,.midashi{
+          text-align: center;
+        }
+      }
+    }
+  }
+  @include max-screen(767px) {
+    .colLayout_type01{
+      .img{
+        width: 50%;
+      }
+    }
+    .colLayout_type02{
+      .img{
+        width: 70%;
+      }
+    }
+  }
+  .btnArea{
+    margin-top: 40px;
+  }
+}
+
+
+@include min-screen($tab) {
+  #hair_salonbox{
+    padding: 0px 25px 60px 25px;
+    .btnStyle01{
+      max-width: 440px;
+    }
+    .col{
+      @include flexbox;
+      @include align-items(flex-end);
+      .img{
+         margin: 0px;
+        img{
+          width: 100%;
+        }
+      }
+      .textBox{
+        margin-top: 0px;
+        flex: 1;
+        padding: 0px 40px;
+        margin-bottom: -60px;
+      }
+      .btn{
+        margin-top: 10px;
+      }
+      + .col{
+        margin-top: 100px;
+      }
+    }
+    .colLayout_type01{
+      .imgArea{
+        width: 35%;
+      }
+    }
+    .colLayout_type02{
+      flex-direction: row-reverse;
+      .imgArea{
+        width: 40%;
+      }
+    }
+    .btnArea{
+      margin-top: 120px;
+    }
+  }
+}
+
+
+
+@include min-screen(980px) {
+  #hair_salonbox{
+    padding: 0px 40px 80px 40px;
+    .inner{
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .col{
+      .textBox{
+        padding: 0px 70px;
+        margin-bottom: -60px;
+      }
+      .btn{
+        margin-top: 20px;
+      }
+      + .col{
+        margin-top: 130px;
+      }
+    }
+    .colLayout_type01{
+      .imgArea{
+        width: 40%;
+      }
+    }
+    .colLayout_type02{
+      .imgArea{
+        width: 45%;
+      }
+    }
+    .btnArea{
+      margin-top: 130px;
+    }
+  }
+}
+
+
+
+
+
+@include min-screen(1180px) {
+  #hair_salonbox{
+    padding: 0px 40px 120px 40px;
+    .inner{
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .titleStyle03 .midashi{
+      font-size: 30px;
+    }
+    .col{
+      .textBox{
+        padding: 0px 70px;
+        margin-bottom: -60px;
+      }
+      .btn{
+        margin-top: 20px;
+      }
+      + .col{
+        margin-top: 230px;
+      }
+    }
+    .colLayout_type01{
+      .imgArea{
+        width: 530px;
+      }
+      .textBox{
+        padding: 0px 55px 0px 135px;
+        margin-bottom: -100px;
+      }
+    }
+    .colLayout_type02{
+      padding-bottom: 140px;
+      .imgArea{
+        width: 570px;
+      }
+      .textBox{
+        padding: 0px 95px 0px 55px;
+        margin-bottom: -160px;
+      }
+    }
+    .btnArea{
+      margin-top: 130px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =============================================
+- beauty_shop
+================================================ */
+
+#beauty_shop{
+  padding-bottom: 40px;
+  .titleStyle01{
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    text-align: right;
+    .title,.note{
+      text-align: right;
+      position: relative;
+    }
+    .title{
+       padding-left: 30px;
+       display: inline-block;
+       &:before{
+        content: "";
+        width: 19px;
+        height: 27px;
+        background-image: url(../images/icon_scissors.png);
+        background-size: cover;
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        @include rotate(-90deg);
+        margin-top: -13px;
+      }
+    }
+  }
+  .imgArea{
+    position: relative;
+    &:after{
+      content: "";
+      width: 40%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: -30%;
+      background-color: #E5F8FC;
+      z-index: -1;
+    }
+  }
+  .img{
+    max-width: 80%;
+    margin-left: auto;
+    position: relative;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+
+
+@include min-screen($tab) {
+  #beauty_shop{
+    padding-bottom: 60px;
+    .titleStyle01{
+      margin-bottom: 20px;
+      .title{
+          padding-left: 40px;
+        }
+    }
+    .imgArea{
+      &:after{
+        width: 50%;
+        top: -40%;
+      }
+    }
+    .img{
+      max-width: 80%;
+    }
+  }
+}
+
+
+
+@include min-screen(980px) {
+  #beauty_shop{
+    padding-bottom: 80px;
+    .titleStyle01{
+      margin-bottom: 40px;
+      margin-right: 80px;
+    }
+    .imgArea{
+      &:after{
+        width: 50%;
+        top: -50%;
+      }
+    }
+    .img{
+      max-width: 80%;
+    }
+  }
+}
+
+
+@include min-screen(1180px) {
+  #beauty_shop{
+    padding-top: 80px;
+    .imgArea{
+      &:after{
+        width: 52%;
+      }
+    }
+  }
+}
+
+
+@include min-screen(1400px) {
+  #beauty_shop{
+    padding-bottom: 120px;
+    padding-top: 150px;
+    .inner{
+      max-width: 1520px;
+      margin: 0 auto;
+    }
+    .titleStyle01{
+      margin-bottom: 40px;
+      margin-right: 210px;
+    }
+    .imgArea{
+      &:after{
+        width: 760px;
+        top: -50%;
+      }
+    }
+    .img{
+      width: 80%;
+      max-width: 1310px;
+    }
+  }
+}
+
+
+
+
+
+
+
+/* =============================================
+- beauty_shopbox
+================================================ */
+
+
+#beauty_shopbox{
+  padding: 0px 20px 20px 20px;
+  .col{
+    .img{
+       margin: 0px auto;
+      img{
+        width: 100%;
+      }
+    }
+    .textBox{
+      margin-top: 20px;
+    }
+    .btn{
+      margin-top: 10px;
+    }
+    + .col{
+      margin-top: 30px;
+    }
+    .titleStyle03{
+      @include max-screen(767px) {
+        p,.title,.midashi{
+          text-align: center;
+        }
+      }
+    }
+  }
+  @include max-screen(767px) {
+    .colLayout_type01{
+      .img{
+        width: 50%;
+      }
+    }
+    .colLayout_type02{
+      .img{
+        width: 70%;
+      }
+    }
+  }
+  .btnArea{
+    margin-top: 40px;
+  }
+  .btnStyle01{
+    max-width: 450px;
+  }
+}
+
+
+@include min-screen($tab) {
+  #beauty_shopbox{
+    padding: 0px 25px 20px 25px;
+    .col{
+      @include flexbox;
+      @include align-items(flex-end);
+      .img{
+         margin: 0px;
+        img{
+          width: 100%;
+        }
+      }
+      .textBox{
+        margin-top: 0px;
+        flex: 1;
+        padding: 0px 40px;
+      }
+      .btn{
+        margin-top: 10px;
+      }
+      + .col{
+        margin-top: 60px;
+      }
+    }
+    .colLayout_type01{
+      flex-direction: row-reverse;
+      .imgArea{
+        width: 35%;
+      }
+    }
+    .colLayout_type02{
+      @include align-items(flex-start);
+      .imgArea{
+        width: 45%;
+        margin-left: -25px;
+      }
+      .textBox{
+        margin-top: 40px;
+      }
+    }
+    .btnArea{
+      margin-top: 20px;
+    }
+  }
+}
+
+
+
+@include min-screen(980px) {
+  #beauty_shopbox{
+    padding: 0px 40px 20px 40px;
+    .inner{
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .col{
+      .textBox{
+        padding: 0px 70px;
+      }
+      .btn{
+        margin-top: 20px;
+      }
+      + .col{
+        margin-top: 80px;
+      }
+    }
+    .colLayout_type01{
+      .imgArea{
+        width: 40%;
+      }
+    }
+    .colLayout_type02{
+      .imgArea{
+        width: 45%;
+        margin-left: -40px;
+      }
+    }
+    .btnArea{
+      margin-top: 20px;
+    }
+  }
+}
+
+
+
+
+
+@include min-screen(1180px) {
+  #beauty_shopbox{
+    padding: 0px 40px 20px 40px;
+    .inner{
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .titleStyle03 .midashi{
+      font-size: 30px;
+    }
+    .col{
+      .textBox{
+        padding: 0px 70px;
+        margin-bottom: -60px;
+      }
+      .btn{
+        margin-top: 20px;
+      }
+      + .col{
+        margin-top: 160px;
+      }
+    }
+    .colLayout_type01{
+      .imgArea{
+        width: 530px;
+      }
+      .textBox{
+        padding: 0px 135px 0px 55px;
+      }
+    }
+    .colLayout_type02{
+      padding-bottom: 140px;
+      .imgArea{
+        width: 55%;
+        margin-left: -10%;
+        @include min-screen(1520px) {
+          width: 740px;
+          margin-left: -210px;
+        }
+      }
+      .textBox{
+        margin-top: 100px;
+        padding: 0px 55px 0px 135px;
+      }
+    }
+    .btnArea{
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+doctype html
+
+block vars
+	
+html(lang="ja")
+	
+	include ./_head.pug
+	
+	body(id=key+"_page")
+		// Google Tag Manager (noscript)
+		noscript
+			iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PGPPGN5" height="0" width="0" style="display:none;visibility:hidden")
+		// End Google Tag Manager (noscript)
+
+		#wrap
+			include ./_header.pug
+						
+			block innerVisual
+
+			block breadcrumb
+
+			main#main
+				block contents
+			
+			include ./_footer.pug

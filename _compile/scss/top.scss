@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+@import "./_core/_mixin.scss";
+
+
+
+
+/* =============================================
+- base
+================================================ */
+
+
+@include max-screen(767px) {
+	.pc{
+		display: none;
+	}
+}
+
+
+@include min-screen($tab) {
+	.sp{
+		display: none;
+	}
+	.pc{
+		display: block;
+	}
+}
+
+
+@include min-screen($tab) {
+	body{
+		font-size: 15px;
+	}
+}
+
+
+@include min-screen($pc) {
+	body{
+		line-height: 1.9em;
+		font-size: 16px;
+		letter-spacing: 0.05em;
+	}
+}
+
+
+
+/* =============================================
+- parts
+================================================ */
+
+@import "./_parts/_textStyle.scss";
+
+@import "./_parts/_btnStyle.scss";
+
+
+
+
+/* =============================================
+- TOP
+================================================ */
+
+@import "./_page/_top.scss";
+
+
+
+/* =============================================
+- IE
+================================================ */
+
+@media all and (-ms-high-contrast:none){
+
+}

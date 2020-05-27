@@ -1,0 +1,51 @@
+extends ../_inc/_layout_inner.pug
+
+append vars
+	include ../_inc/_config.pug
+	- var key = 'contact';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+
+
+append innerVisual
+
+	#innerVisual
+		.headTextArea
+			h1.title CONTACT
+			p.sub お問い合わせ
+
+
+
+block contents
+	section#contact
+		.inner
+
+			.column
+				h2.titleStyle06 フォームでのお問い合わせ
+				.btnArea
+					a.btnStyle01(href="./form.php") お問い合わせはこちらから
+
+				.noteArea
+					p ※こちらのフォームではサロンのご予約は承っておりません。ご予約につきましては、サロンまでお電話を頂くか、WEB予約をご利用下さい。
+					p ※お問い合わせ頂いた内容をスタッフが確認後、ご連絡させて頂きます。
+
+
+
+			.column
+				h2.titleStyle06 電話でのお問い合わせ
+				.phoneArea
+					.row
+						p.txt サロンへのお問い合わせ
+						a.phone(href="tel:0422275321") 0422-275-321
+					.row
+						p.txt 併設ショップへのお問い合わせ
+						a.phone(href="tel:0422275091") 0422-27-5091
+
+				.noteArea
+					p ※サロンへのご予約は0120-900-533へお願いします。

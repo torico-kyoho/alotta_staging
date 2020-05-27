@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+
+
+
+
+/* =============================================
+- visual
+================================================ */
+
+
+_:-ms-input-placeholder, :root #slider {
+  margin: 0 0vw !important;
+}
+_:-ms-input-placeholder, :root #sldeLeft {
+  width: 50vw !important;
+}
+_:-ms-input-placeholder, :root #slider.salon {
+  transform: translateX(0vw) !important;
+}
+_:-ms-input-placeholder, :root #sldeRight {
+  width: 50vw !important;
+}
+_:-ms-input-placeholder, :root #slider.shop {
+  transform: translateX(0vw) !important;
+}
+
+
+
+/* =============================================
+- SCRIPT
+================================================ */

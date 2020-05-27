@@ -1,0 +1,94 @@
+extends ./_inc/_layout_inner.pug
+
+append vars
+	include ./_inc/_config.pug
+	- var key = 'sitemap';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+
+
+append innerVisual
+
+	#innerVisual
+		.headTextArea
+			h1.title SITEMAP
+			p.sub サイトマップ
+
+
+
+block contents
+	section#sitemap
+		.inner
+
+			.LinkArea
+
+				.column
+					.row
+						p.parent HOME
+						ul.childLink
+							li: a(href="./index.html") トップページ
+							li: a(href="./index.html#hair_salon") ヘアサロン
+							li: a(href="./index.html#beauty_shop") 直営ショップ
+
+					.row
+						p.parent サロン
+						ul.childLink
+							li: a(href="./salon.html#salon_outline") 完全個室型サロン
+							li: a(href="./salon.html#salon_about") ABOUT
+							li: a(href="./salon.html#salon_reco") こんな方におすすめ
+							li: a(href="./salon.html#salon_interior") 店内
+							li: a(href="./salon.html#salon_menu") メニュー
+							li: a(href="./salon.html#salon_style") スタイル
+
+					.row
+						p.parent ショップ
+						ul.childLink
+							li: a(href="./shop.html#shop_outline") サロン専売販売ショップ
+							li: a(href="./shop.html#shop_about") ABOUT
+							li: a(href="./shop.html#shop_interior") 店内
+							li: a(href="./shop.html#shop_brand") お取り扱いブランド
+							//- li: a(href="./shop.html") メニュー
+							//- li: a(href="./shop.html") スタイル
+
+
+
+				.column
+					.row
+						p.parent スタッフ
+						ul.childLink
+							li: a(href="./staff/") スタッフ
+
+					.row
+						p.parent 採用
+						ul.childLink
+							li: a(href="./recruit/") 採用トップ
+							li: a(href="./recruit/works.html") alottaの働き方
+							li: a(href="./recruit/recruit.html") 募集要項
+							li: a(href="./recruit/voice/") スタッフの声
+							li: a(href="./recruit/faq.html") よくあるご質問
+							li: a(href="./recruit/entry/") エントリーフォーム
+
+					.row
+						p.parent トピックス
+						ul.childLink
+							li: a(href="./topics.html") トピックス
+
+					.row
+						p.parent アクセス
+						ul.childLink
+							li: a(href="./access.html") アクセス
+
+					.row
+						p.parent インフォメーション
+						ul.childLink
+							li: a(href="./contact/") お問い合わせ
+							li: a(href="./privacy.html") 個人情報保護方針
+							li: a(href="./company.html") 運営会社
+							li: a(href="./sitemap.html") サイトマップ
+							li: a(href="./faq.html") よくあるご質問

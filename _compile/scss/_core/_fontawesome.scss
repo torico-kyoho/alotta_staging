@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+
+/* Webフォント */
+
+// @import url(https://fonts.googleapis.com/css?family=Sawarabi+Mincho);
+
+// @import url(https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400&display=swap);
+
+@import url(//fonts.googleapis.com/css?family=Crimson+Text|Shrikhand&display=swap);
+
+
+/* sans-serif */
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue Regular");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue Regular");
+  font-weight: 200;
+}
+
+/* monospace */
+@font-face {
+  font-family: "SourceHanCodeJP-Regular";
+  src: local("SourceHanCodeJP-Regular");
+}
+@font-face {
+  font-family: "Myrica M";
+  src: local("Myrica M");
+}
+@font-face {
+  font-family: "MyricaM M";
+  src: local("MyricaM M");
+}
+@font-face {
+  font-family: "Ricty Diminished Discord";
+  src: local("Ricty Diminished Discord");
+}
+@font-face {
+  font-family: "Migu 1M";
+  src: local("Migu 1M");
+}
+@font-face {
+  font-family: "Rounded M+ 1m regular";
+  src: local("Rounded M+ 1m regular");
+}
+@font-face {
+  font-family: "Rounded Mgen+ 1m regular";
+  src: local("Rounded Mgen+ 1m regular");
+}
+@font-face {
+  font-family: "VL ゴシック";
+  src: local("VL ゴシック");
+}
+
+@font-face {
+font-family: 'Archer Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Archer Bold'), url('../fonts/Archer-Bold-Pro.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'ArcherPro Bold';
+font-style: normal;
+font-weight: normal;
+src: local('ArcherPro Bold'), url('../fonts/ArcherPro-Bold_0.woff') format('woff');
+}
+
+
+$sans-serif: "Yu Gothic", YuGothic, "Hiragino Sans", "Hiragino Kaku Gothic Std", 'Hiragino Kaku Gothic Pro',  Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+
+$serif: "Noto Serif JP","ヒラギノ明朝 ProN W2", "HiraMinProN-W2", "Yu Mincho", "YuMincho", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+$monospace: "SourceHanCodeJP-Regular", "Myrica M", "MyricaM M", "Ricty Diminished Discord", "Migu 1M", "Rounded M+ 1m regular", "Rounded Mgen+ 1m regular", "M+ 1m", "VL ゴシック", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+// $ie-font: Verdana, Meiryo, sans-serif;
+// $ie-font: Verdana, Meiryo, sans-serif;
+
+@mixin font-family($font-family:sans-serif) {
+  @if $font-family == sans-serif {
+    font-family: $sans-serif;
+
+    // IE10以上 ↓
+    @media all and (-ms-high-contrast: none) {
+      & {
+        font-family: $sans-serif;
+      }
+    }
+  } @else if $font-family == serif {
+    font-family: $serif;
+  } @else if $font-family == monospace {
+    font-family: $monospace;
+  }
+}
+
+body {
+  @include font-family(sans-serif);
+}

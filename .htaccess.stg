@@ -1,0 +1,10 @@
+AddType application/x-httpd-php .php
+AddType application/x-httpd-php-source .phps
+Options +Includes
+AddHandler server-parsed html
+
+# Google VR View
+Header set Access-Control-Allow-Origin "https://storage.googleapis.com"
+Header set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+Header set Access-Control-Allow-Headers "Origin, Authorization, Accept"
+Header set Access-Control-Allow-Credentials true

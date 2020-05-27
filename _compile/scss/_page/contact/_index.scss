@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+
+
+/* =============================================
+- contact
+================================================ */
+
+
+
+#contact{
+	padding-top: 0px;
+	.inner{
+		max-width: 530px;
+		margin: 0 auto;
+	}
+	.btnArea{
+		margin-top: 45px;
+	}
+	.column{
+		+ .column{
+			margin-top: 40px;
+		}
+		.phoneArea{
+			.row{
+				+ .row{
+					margin-top: 10px;
+				}
+			}
+		}
+		.txt{
+			margin-bottom: 8px;
+		}
+		.phone{
+			position: relative;
+			font-size: 24px;
+			font-family: $montserrat;
+			padding-left: 20px;
+			letter-spacing: 0.05em;
+			color: #282828;
+			&:before{
+				content: "";
+				width: 15px;
+				height: 20px;
+				background-image: url(../images/icon_phone2.png);
+				background-size: cover;
+				position: absolute;
+				left: 0px;
+				top: 5px;
+			}
+			&.sm{
+				font-size: 22px;
+			}
+		}
+		.noteArea{
+			font-size: 14px;
+			margin-top: 25px;
+			p{
+				line-height: 1.6em;
+				text-indent: -1em;
+				padding-left: 1em;
+				+ p{
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+@include min-screen($tab) {
+	#contact{
+		.btnArea{
+			margin-top: 45px;
+			margin-bottom: 45px;
+		}
+		.btnStyle01{
+			max-width: 380px;
+		}
+		.column{
+			+ .column{
+				margin-top: 80px;
+			}
+			.phoneArea{
+				@include flexbox;
+				@include justify-content(space-between);
+				.row{
+					width: 240px;
+					+ .row{
+						margin-top: 0px;
+					}
+				}
+			}
+			.phone{
+				font-size: 29px;
+				padding-left: 30px;
+				&:before{
+					width: 22px;
+					height: 30px;
+					top: 3px;
+				}
+			}
+			.noteArea{
+				font-size: 14px;
+				margin-top: 25px;
+				p{
+					line-height: 1.6em;
+					text-indent: -1em;
+					padding-left: 1em;
+					+ p{
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// IE10 ~ IE11
+
+_:-ms-input-placeholder, :root #contact .column .phone:before {
+	@include min-screen($tab) {
+		top: 3px;
+	}
+}

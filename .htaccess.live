@@ -1,0 +1,39 @@
+AddType application/x-httpd-php .php
+AddType application/x-httpd-php-source .phps
+Options +Includes
+AddHandler server-parsed html
+
+RewriteEngine On
+# Force HTTPS
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^/?(.*) https://%{HTTP_HOST}/$1 [R,L]
+
+# Redirect
+RewriteBase /
+RewriteRule ^company/recruit_reception.php$ https://www.alotta-hair.com/recruit/ [R=301,L]
+RewriteRule ^company/privacy.php$ https://www.alotta-hair.com/privacy.html [R=301,L]
+RewriteRule ^company/recruit_stylist-assistant.php$ https://www.alotta-hair.com/recruit/recruit.html [R=301,L]
+RewriteRule ^menu/(.*) https://www.alotta-hair.com/salon.html [R=301,L]
+RewriteRule ^concept/salon.php$ https://www.alotta-hair.com/salon.html [R=301,L]
+RewriteRule ^style/(.*)  https://www.alotta-hair.com/salon.html [R=301,L]
+RewriteRule ^staff/stylist_kitamura.php$ https://www.alotta-hair.com/staff/staff02.html [R=301,L]
+RewriteRule ^staff/stylist_tamura.php$ https://www.alotta-hair.com/staff/staff05.html [R=301,L]
+RewriteRule ^staff/assistant_ono.php$ https://www.alotta-hair.com/staff/staff07.html [R=301,L]
+RewriteRule ^staff/reception_nakachi.php$ https://www.alotta-hair.com/staff/staff12.html [R=301,L]
+RewriteRule ^staff/stylist_nagai.php$ https://www.alotta-hair.com/staff/staff04.html [R=301,L]
+RewriteRule ^staff/assistant_watanabe.php$ https://www.alotta-hair.com/staff/staff09.html [R=301,L]
+RewriteRule ^staff/stylist_ishibashi.php$ https://www.alotta-hair.com/staff/staff03.html [R=301,L]
+RewriteRule ^staff/assistant_suzuki.php$ https://www.alotta-hair.com/staff/staff06.html [R=301,L]
+RewriteRule ^staff/reception_okada.php$ https://www.alotta-hair.com/staff/staff10.html [R=301,L]
+RewriteRule ^staff/assistant_amano.php$ https://www.alotta-hair.com/staff/ [R=301,L]
+RewriteRule ^staff/reception_yasuda.php$ https://www.alotta-hair.com/staff/staff11.html [R=301,L]
+RewriteRule ^staff/reception_iino.php$ https://www.alotta-hair.com/staff/ [R=301,L]
+RewriteRule ^staff/assistant_nagai.php$ https://www.alotta-hair.com/staff/staff04.html [R=301,L]
+
+ErrorDocument 404 /404.html
+
+# Google VR View
+Header set Access-Control-Allow-Origin "https://storage.googleapis.com"
+Header set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+Header set Access-Control-Allow-Headers "Origin, Authorization, Accept"
+Header set Access-Control-Allow-Credentials true

@@ -1,0 +1,104 @@
+extends ./_inc/_layout_inner.pug
+
+append vars
+	include ./_inc/_config.pug
+	- var key = 'company';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+append innerVisual
+
+	#innerVisual
+		.headTextArea
+			h1.title COMPANY PROFILE
+			p.sub 運営会社
+
+		.imgArea: .img: img(src=page.path+"assets/images/visual/visual_company.jpg" alt="")
+
+
+	
+block contents
+	section#company
+		.inner
+
+			.tableStyle01
+				table
+					tr
+						th 名称
+						td 株式会社 トリコインダストリーズ
+					tr
+						th 住所
+						td 〒556-0022 大阪市浪速区桜川2丁目9番4号
+					tr
+						th 代表取締役社長
+						td 村島 有治
+					tr
+						th 電話番号
+						td 06-6568-0731
+					tr
+						th FAX番号
+						td 06-6568-0145
+					tr
+						th 創業
+						td 1972年1月
+					tr
+						th 設立
+						td 1975年5月
+					tr
+						th 資本金
+						td 10,000,000円
+					tr
+						th 取引金融機関
+						td
+							|三菱東京UFJ銀行 難波支店
+							br
+							|三井住友銀行 難波支店
+							br
+							|みずほ銀行 難波支店
+							br
+							|りそな銀行 桜川支店
+
+					tr
+						th 事業内容
+						td
+							|理美容専門商社、理美容雑貨及び家電メーカー、美容業
+							br
+							|・デンマンブラシ総代理店
+							br
+							|・オリジナルブランド「AIVIL（アイビル）」「シーマ」の企画製造販売
+							br
+							|・ショップ併設型美容室の経営・国内向けメーカー直営ECサイト運営
+							br
+							|主な取扱商品は、ヘアアイロン、ブラシ、ドライヤー、カットマネキン、アイラッシュ、
+							br
+							|日本製ハサミ、シェイバーブレード、ノーズワックスなど
+							br
+							|主な取引地域は、国内、米国、英国、中国など
+					tr
+						th(rowspan="2") 支店
+						td
+							|東京支店
+							br
+							|〒150-0001
+							br
+							|東京都渋谷区神宮前5丁目9番13号喜多重ビル3F
+							br
+							|電話番号：03-6418-6650
+							br
+							|FAX：03-6418-6656
+					tr
+						td
+							|三重工場
+							br
+							|〒516-0002
+							br
+							|三重県伊勢市馬瀬町1107番
+							br
+							|電話番号：0596-31-2230
+							br
+							|FAX：0596-36-8150

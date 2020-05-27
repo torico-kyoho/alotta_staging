@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+
+
+
+
+/*
+    innerVisual
+========================================================= */
+
+
+#innerVisual{
+	.headTextArea{
+		padding: 30px 20px 50px 20px;
+		@include font-smoothing();
+		position: relative;
+		.title{
+			font-family: $montserrat;
+			font-size: 25px;
+			letter-spacing: 0.02em;
+		}
+		.sub{
+			font-size: 15px;
+			letter-spacing: 0.05em;
+			margin-top: 3px;
+		}
+		.textArea{
+			margin-top: 15px;
+			@include flexbox;
+			@include justify-content(flex-end);
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+			p{
+				display: inline-block;
+			}
+		}
+		&.typeB{
+			padding: 30px 20px 100px 20px;
+			.title{
+				font-size: 30px;
+			}
+			.sub{
+				font-size: 16px;
+			}
+		}
+	}
+	.imgArea{
+		.img{
+			text-align: center;
+		}
+	}
+}
+
+
+
+@include min-screen($tab) {
+	#innerVisual{
+		.headTextArea{
+			padding: 60px 50px 60px 50px;
+			.title{
+				font-size: 35px;
+				letter-spacing: 0.05em;
+			}
+			.sub{
+				font-size: 17px;
+				margin-top: 15px;
+			}
+			.textArea{
+				margin-top: 15px;
+				bottom: 40px;
+				right: 50px;
+				p{
+					font-size: 18px;
+					letter-spacing: 0.03em;
+				}
+			}
+			&.typeB{
+				padding: 60px 50px 100px 50px;
+				.title{
+					font-size: 45px;
+				}
+				.sub{
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+
+
+@include min-screen($pc) {
+	#innerVisual{
+		.headTextArea{
+			padding: 100px 70px 110px 70px;
+			.title{
+				font-size: 40px;
+			}
+			.sub{
+				font-size: 20px;
+				margin-top: 20px;
+			}
+			.textArea{
+				margin-top: 20px;
+				bottom: 40px;
+				right: 70px;
+				p{
+					font-size: 20px;
+					line-height: 1.9em;
+				}
+			}
+			&.typeB{
+				padding: 100px 70px 110px 70px;
+				.title{
+					font-size: 60px;
+				}
+				.sub{
+					font-size: 21px;
+				}
+			}
+		}
+	}
+}
+
+
+
+@include min-screen(1180px) {
+	#innerVisual{
+		.headTextArea{
+			padding: 150px 100px 150px 100px;
+			max-width: 1300px;
+			margin: 0 auto;
+			.title{
+				font-size: 50px;
+			}
+			.sub{
+				font-size: 24px;
+				margin-top: 30px;
+			}
+			.textArea{
+				margin-top: 30px;
+				bottom: 60px;
+				right: 100px;
+				p{
+					font-size: 24px;
+					line-height: 1.9em;
+				}
+			}
+			&.typeB{
+				padding: 150px 100px 150px 100px;
+				.title{
+					font-size: 80px;
+				}
+				.sub{
+					margin-top: 40px;
+					font-size: 24px;
+				}
+			}
+		}
+	}
+}
+
+
+

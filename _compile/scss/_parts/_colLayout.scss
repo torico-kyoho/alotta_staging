@@ -1,0 +1,327 @@
+@charset "UTF-8";
+
+
+
+
+
+/*
+    Layout01
+========================================================= */
+
+
+.colLayout01{
+	.textBox{
+		margin-top: 20px;
+	}
+}
+
+
+@include min-screen($tab) {
+	.colLayout01{
+		@include flexbox;
+		flex-direction: row-reverse;
+		.imgArea{
+			width: 40%;
+		}
+		.textBox{
+			flex: 1;
+			padding-right: 30px;
+			margin-top: 0px;
+		}
+	}
+}
+
+
+@include min-screen(980px) {
+	.colLayout01{
+		max-width: 910px;
+		margin: 0 auto;
+		.imgArea{
+			width: 380px;
+		}
+		.textBox{
+			padding-right: 55px;
+		}
+	}
+}
+
+
+
+
+/*
+    Layout02
+========================================================= */
+
+
+
+.colLayout02{
+	.textBox{
+		margin-top: 20px;
+	}
+}
+
+
+@include min-screen($tab) {
+	.colLayout02{
+		@include flexbox;
+		flex-direction: row-reverse;
+		.imgArea{
+			width: 40%;
+		}
+		.textBox{
+			flex: 1;
+			padding-right: 30px;
+			margin-top: 0px;
+		}
+	}
+}
+
+
+@include min-screen(980px) {
+	.colLayout02{
+		max-width: 910px;
+		margin: 0 auto;
+		.imgArea{
+			width: 340px;
+		}
+		.textBox{
+			padding-right: 45px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+/*
+    Layout03
+========================================================= */
+
+
+
+.colLayout03{
+	.textBox{
+		margin-top: 20px;
+	}
+}
+
+
+@include min-screen($tab) {
+	.colLayout03{
+		@include flexbox;
+		.imgArea{
+			width: 40%;
+		}
+		.textBox{
+			flex: 1;
+			padding-left: 30px;
+			margin-top: 0px;
+		}
+		&:nth-child(even){
+			flex-direction: row-reverse;
+			.textBox{
+				padding-left: 0px;
+				padding-right: 30px;
+			}
+		}
+	}
+}
+
+
+@include min-screen(980px) {
+	.colLayout03{
+		max-width: 910px;
+		margin: 0 auto;
+		.imgArea{
+			width: 435px;
+		}
+		.textBox{
+			padding-left: 40px;
+		}
+		&:nth-child(even){
+			.textBox{
+				padding-left: 0px;
+				padding-right: 40px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+/*
+    Layout04
+========================================================= */
+
+
+
+.colLayout04{
+	.imgArea{
+		.img{
+			position: relative;
+			z-index: 1;
+			&:after{
+				content: "";
+				width: 100%;
+				height: 100%;
+				background-color: #EEF8EA;
+				position: absolute;
+				left: -20px;
+				top: -20px;
+				z-index: -1;
+			}
+		}
+	}
+	.textBox{
+		margin-top: 35px;
+		.btnArea{
+			margin-top: 20px;
+		}
+	}
+	&.reverse{
+		.imgArea{
+			.img{
+				&:after{
+					left: auto;
+					top: auto;
+					right: -20px;
+					bottom: -20px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+@include min-screen($tab) {
+	.colLayout04{
+		@include flexbox;
+		.imgArea{
+			width: 40%;
+			.img{
+				&:after{
+					left: -25px;
+					top: -25px;
+				}
+			}
+		}
+		.textBox{
+			flex: 1;
+			padding-left: 30px;
+			margin-top: 0px;
+			.btnArea{
+				margin-top: 30px;
+			}
+		}
+		&.reverse{
+			flex-direction: row-reverse;
+			.imgArea{
+				.img{
+					&:after{
+						right: -25px;
+						bottom: -25px;
+					}
+				}
+			}
+			.textBox{
+				padding-left: 0px;
+				padding-right: 30px;
+			}
+		}
+	}
+}
+
+
+
+
+
+@include min-screen(980px) {
+	.colLayout04{
+		.imgArea{
+			width: 50%;
+			.img{
+				&:after{
+					left: -30px;
+					top: -30px;
+				}
+			}
+		}
+		.textBox{
+			padding-left: 50px;
+			.btnArea{
+				margin-top: 40px;
+				.btnStyle01{
+					max-width: 100%;
+				}
+			}
+		}
+		&.reverse{
+			.imgArea{
+				.img{
+					&:after{
+						right: -30px;
+						bottom: -30px;
+					}
+				}
+			}
+			.textBox{
+				padding-left: 0px;
+				padding-right: 50px;
+			}
+		}
+	}
+}
+
+
+
+@include min-screen(1080px) {
+	.colLayout04{
+		max-width : 1030px;
+		margin: 0 auto;
+		.imgArea{
+			width: 570px;
+			.img{
+				&:after{
+					left: -210px;
+					top: -50px;
+				}
+			}
+		}
+		.textBox{
+			padding-left: 55px;
+		}
+		&.reverse{
+			.imgArea{
+				.img{
+					&:after{
+						right: -210px;
+						bottom: -50px;
+					}
+				}
+			}
+			.textBox{
+				padding-left: 0px;
+				padding-right: 55px;
+			}
+		}
+	}
+}
+
+
+
+
+
+

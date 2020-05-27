@@ -1,0 +1,46 @@
+extends ./_inc/_layout_inner.pug
+
+append vars
+	include ./_inc/_config.pug
+	- var key = 'topics';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+
+
+append innerVisual
+
+	#innerVisual
+		.headTextArea
+			h1.title TOPICS
+			p.sub トピックス
+
+
+
+block contents
+	section#topics
+		.inner
+
+			article.post
+				.date
+					p 2020.03.25
+				.title
+					p ホームページをリニューアルしました。
+
+
+			//- article.post
+			//- 	.date
+			//- 		p 2020.05.05
+			//- 	.title
+			//- 		p 社員研修の為、2/10(土)～2/14(水)は休業させて頂きます。
+
+			//- article.post
+			//- 	.date
+			//- 		p 2020.05.05
+			//- 	.title
+			//- 		a(href="") ヘッドスパが美髪専科に変わりました。

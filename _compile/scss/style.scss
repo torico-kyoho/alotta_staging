@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+@import "./_core/_mixin.scss";
+
+body{
+	color: #000;
+	line-height: 1.9em;
+	font-size: 14px;
+	display: block;
+	overflow-x: hidden;
+	margin: 0;
+	@include font-smoothing;
+}
+
+#wrap{
+	overflow:hidden;
+}
+
+
+
+
+/* =============================================
+- FOOTER
+================================================ */
+
+@import "./_base/_footer.scss";
+@import "./_base/_bottomEntry.scss";
+
+
+
+/* =============================================
+- HEADER
+================================================ */
+
+
+@include max-screen(767px) {
+	@import "./_base/_header_sp.scss";
+}
+
+@include min-screen($tab) {
+	@import "./_base/_header_pc.scss";
+}
+
+
+@include min-screen($tab) {
+	.scrollOn{
+		#header{
+			background-color: #fff;
+		}
+	}
+}

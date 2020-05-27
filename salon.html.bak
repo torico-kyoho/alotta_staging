@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>サロン｜吉祥寺の完全個室型ヘアサロンalotta【アロッタ】</title>
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+    <meta content="吉祥寺のヘアサロンalotta【アロッタ】は、お客様に“あなただけのプライベートな時間”を過ごしていただくために、ひとつの部屋・おひとりの席・ひとりの美容師のスタイルで、最新の商品と最高の技術をお届けする美容室です。" name="description">
+    <meta content="吉祥寺 個室 美容院,吉祥寺 ヘアサロン 個室,吉祥寺 サロン 有名,吉祥寺 ヘッドスパ" name="keywords">
+    <meta property="og:url" content="http://www.alotta-hair.com/salon.html">
+    <meta property="og:site_name" content="alotta【アロッタ】｜吉祥寺の完全個室型ヘアサロンとショップ">
+    <meta property="og:title" content="サロン｜吉祥寺の完全個室型ヘアサロンalotta【アロッタ】">
+    <meta property="og:description" content="吉祥寺のヘアサロンalotta【アロッタ】は、お客様に“あなただけのプライベートな時間”を過ごしていただくために、ひとつの部屋・おひとりの席・ひとりの美容師のスタイルで、最新の商品と最高の技術をお届けする美容室です。">
+    <meta property="og:image" content="http://www.alotta-hair.com/assets/images/ogp.jpg">
+    <meta content="website" property="og:type">
+    <meta content="ja_JP" property="og:locale">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="サロン｜吉祥寺の完全個室型ヘアサロンalotta【アロッタ】">
+    <meta name="twitter:description" content="吉祥寺のヘアサロンalotta【アロッタ】は、お客様に“あなただけのプライベートな時間”を過ごしていただくために、ひとつの部屋・おひとりの席・ひとりの美容師のスタイルで、最新の商品と最高の技術をお届けする美容室です。">
+    <meta name="twitter:image" content="http://www.alotta-hair.com/assets/images/ogp.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/core.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/inner.css">
+    <link rel="stylesheet" href="./assets/css/anime.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/lity.js"></script>
+    <script type="text/javascript" src="./assets/js/scripts.js"></script>
+    <script type="text/javascript" src="./assets/js/desvg.js"></script>
+    <script type="text/javascript" src="./assets/js/inner.js"></script>
+    <script type="text/javascript" src="./assets/js/anime/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="./assets/js/anime/anime.js"></script>
+    <script>
+      window.addEventListener('load', function(){
+      	deSVG('.svg', true);
+      });
+
+    </script>
+    <!-- Google Tag Manager-->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PGPPGN5');
+    </script>
+    <!-- End Google Tag Manager-->
+  </head>
+  <body id="salon_page">
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGPPGN5" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript)-->
+    <div id="wrap">
+      <header id="header">
+        <div class="header_row">
+          <h1 class="logo"><a href="./"><img src="./assets/images/logo.png" srcset="./assets/images/logo.png 1x,./assets/images/logo@2x.png 2x" alt="個室型ヘアサロンとショップ アロッタ - alotta -"></a></h1>
+          <div class="navigation">
+            <div class="inner">
+              <nav>
+                <ul class="gnav">
+                  <li class="active"><a href="./salon.html"><span class="jp">サロン</span><span class="en">SALON</span></a></li>
+                  <li><a href="./shop.html"><span class="jp">ショップ</span><span class="en">SHOP</span></a></li>
+                  <li><a href="./staff/"><span class="jp">スタッフ</span><span class="en">STAFF</span></a></li>
+                  <li><a href="./recruit/"><span class="jp">採用</span><span class="en">RECRUITE</span></a></li>
+                  <li><a href="./topics.html"><span class="jp">トピックス</span><span class="en">TOPICS</span></a></li>
+                  <li><a href="./access.html"><span class="jp">アクセス</span><span class="en">ACCESS</span></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="link_reserve"><a href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000346915" target="_blank"><span class="jp">予約</span><span class="en">RESERVE</span></a></div>
+          <div id="nav_btn">
+            <button type="button"><span></span><span></span><span></span></button>
+          </div>
+        </div>
+      </header>
+      <div id="topmenuBox">
+        <ul>
+          <li><a href="#salon_outline">
+              <div class="icon"><img src="./assets/images/salon/top_icon01.png" alt=""></div>
+              <p>サロン</p></a></li>
+          <li><a href="#salon_interior">
+              <div class="icon"><img src="./assets/images/salon/top_icon02.png" alt=""></div>
+              <p>店内</p></a></li>
+          <li><a href="#salon_style">
+              <div class="icon"><img src="./assets/images/salon/top_icon03.png" alt=""></div>
+              <p>スタイル</p></a></li>
+          <li><a href="./faq.html">
+              <div class="icon"><img src="./assets/images/salon/top_icon04.png" alt=""></div>
+              <p>Q&A</p></a></li>
+        </ul>
+      </div>
+      <div id="innerVisual">
+        <div class="headTextArea typeB">
+          <h1 class="title">SALON</h1>
+          <p class="sub">完全個室型ヘアサロン</p>
+          <div class="textArea">
+            <p>美容機器商社・美容メーカー直営<br>完全個室型ヘアサロン<br>と、ショップ</p>
+          </div>
+        </div>
+        <div class="imgArea">
+          <div class="img"><img src="./assets/images/visual/visual_salon.jpg" alt=""></div>
+        </div>
+      </div>
+      <main id="main">
+        <section id="salon_outline">
+          <div class="inner">
+            <div class="titleStyle05 typeB">
+              <p class="note">HAIR SALON</p>
+              <p class="sub">美容機器商社・美容メーカー<br class="sp">[Torico Industries]直営</p>
+              <h2 class="title">完全個室型ヘアサロン</h2>
+              <div class="square"></div>
+            </div>
+            <div class="colLayout">
+              <div class="mapBox">
+                <div class="map"><img src="./assets/images/salon/outline_img01.jpg" alt=""></div>
+              </div>
+              <div class="textBox">
+                <div class="borderBox">
+                  <div class="row">
+                    <p class="title">SALON<span>サロン</span></p>
+                    <div class="btnArea"><a class="btnStyle02" href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000346915" target="_blank">ご予約はこちらから</a></div>
+                  </div>
+                  <div class="row">
+                    <p class="txt">お電話でのご予約</p><a class="phone" href="tel:0120900533">0120-900-533</a>
+                  </div>
+                  <div class="row">
+                    <p class="txt">営業時間</p>
+                    <ul>
+                      <li>【平日・土曜日】10:00〜19:00最終受付</li>
+                      <li>【日曜日・祝日】10:00〜18:00最終受付</li>
+                      <li>【定休日】月曜日（祝日、当社指定日を除く）</li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <div class="textArea gmap">
+                      <p>〒180－0004<br>東京都武蔵野市吉祥寺本2-17-7<br>（フォルムトミノ吉祥寺1F）</p>
+                    </div>
+                    <div class="btnArea"><a class="arrow" href="./access.html">ACCESS</a></div>
+                  </div>
+                </div>
+                <div class="btnArea"><a class="btnStyle01" href="./shop.html">ショップについて</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="salon_about">
+          <div class="inner">
+            <div class="titleStyle01 scissors">
+              <h2 class="title">ABOUT</h2>
+            </div>
+            <div class="imgArea">
+              <div class="img"><img src="./assets/images/salon/about_img01.jpg" alt=""></div>
+              <div class="textArea">
+                <div class="vertical"><img src="./assets/images/salon/about_text01.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="salon_works" id="salon_works01">
+          <div class="inner">
+            <div class="column">
+              <h2 class="titleStyle02">“あなたの時間”を過ごすための<br class="sp">完全個室ヘアサロン</h2>
+              <div class="colLayout01">
+                <div class="imgArea">
+                  <div class="img"><img src="./assets/images/salon/works_img01.jpg" alt=""></div>
+                </div>
+                <div class="textBox">
+                  <div class="titleStyle03">
+                    <p class="number"><span class="txt">POINT</span><span class="num">1</span></p>
+                    <h3 class="midashi">マイペースに美しくなる</h3>
+                    <p class="note">MY SPACE &amp; MY PACE</p>
+                  </div>
+                  <div class="textArea">
+                    <p>完全個室の施術スペースは、お客様だけのプライベート空間。他の人の目を気にすることなく、なりたい自分になれる場所です。髪型や髪質、髪のクセ、スタイリングなど、髪に関するお悩みを、気兼ねなくスタイリストにご相談ください。美容には、ゆったりと心からくつろぐ時間も大切です。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="colLayout01">
+                <div class="imgArea">
+                  <div class="img"><img src="./assets/images/salon/works_img02.jpg" alt=""></div>
+                </div>
+                <div class="textBox">
+                  <div class="titleStyle03">
+                    <p class="number"><span class="txt">POINT</span><span class="num">2</span></p>
+                    <h3 class="midashi">仕事、読書、うたた寝…<br>あなただけの時間を過ごす</h3>
+                    <p class="note">YOUR TIME</p>
+                  </div>
+                  <div class="textArea">
+                    <p>スタイリストとの気取らない会話、毎月楽しみにしている雑誌、お仕事のメールをチェック、窓から入るやさしい光に包まれてちょっぴりお昼寝。完全個室だからできる、あなたらしい自由な過ごし方。ここが美容室であることも忘れて、ゆったりと贅沢な時間をお過ごしください。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="colLayout01">
+                <div class="imgArea">
+                  <div class="img"><img src="./assets/images/salon/works_img03.jpg" alt=""></div>
+                </div>
+                <div class="textBox">
+                  <div class="titleStyle03">
+                    <p class="number"><span class="txt">POINT</span><span class="num">3</span></p>
+                    <h3 class="midashi">お子様と、パートナーと、<br>大切な人と一緒に</h3>
+                    <p class="note">WITH LOVED ONES</p>
+                  </div>
+                  <div class="textArea">
+                    <p>入り口や店内にスロープを設置しており、ベビーカーもスムーズにご案内可能。お子様用のDVDや絵本もご用意しております。2名様用個室であれば、他のお客様に気兼ねすることなく、お子様と一緒にお過ごしいただくことができるほか、ご家族ご友人とご一緒に同室で施術を受けていただくこともできます。※1</p>
+                  </div>
+                </div>
+              </div>
+              <div class="colLayout01">
+                <div class="imgArea">
+                  <div class="img"><img src="./assets/images/salon/works_img04.jpg" alt=""></div>
+                </div>
+                <div class="textBox">
+                  <div class="titleStyle03">
+                    <p class="number"><span class="txt">POINT</span><span class="num">4</span></p>
+                    <h3 class="midashi">髪のコンシェルジュとして<br>ご相談してください</h3>
+                    <p class="note">HAIR CONCIERGE</p>
+                  </div>
+                  <div class="textArea">
+                    <p>まずはレセプションにてスタイリストソムリエが、ご要望や仕上がりのイメージを伺い、お客様に最適なスタイリストをご提案。さらに、髪型や施術内容については、個室内でスタイリストがカウンセリングを行います。髪に関するお悩みは、人それぞれです。経験豊富なスタッフに何でもご相談ください。※2</p>
+                  </div>
+                </div>
+              </div>
+              <div class="colLayout01">
+                <div class="imgArea">
+                  <div class="img"><img src="./assets/images/salon/works_img05.jpg" alt=""></div>
+                </div>
+                <div class="textBox">
+                  <div class="titleStyle03">
+                    <p class="number"><span class="txt">POINT</span><span class="num">5</span></p>
+                    <h3 class="midashi">“あなたの時間”を<br class="pc">快適にする充実の設備</h3>
+                    <p class="note">FACILITY</p>
+                  </div>
+                  <div class="textArea">
+                    <p>お客様に安心してお過ごしいただけるよう、各個室内にレセプション直通のハンディーフォンを設置。おひとりになった際に、ご質問やご要望があれば、ハンディーフォンでご連絡ください。また、サロンゲスト専用のWi-Fi環境もご用意。カラーやパーマの待ち時間に、パソコンやスマートフォンなどを快適にご利用いただけます。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="salon_about2">
+          <div class="inner">
+            <div class="imgArea">
+              <div class="img"><img src="./assets/images/salon/about_img02.jpg" alt=""></div>
+              <div class="vertical"><img src="./assets/images/salon/about_text02.png" alt=""></div>
+            </div>
+          </div>
+        </section>
+        <section class="salon_works" id="salon_works02">
+          <div class="inner">
+            <div class="column">
+              <h2 class="titleStyle02">美容機器・製品の商社&amp;メーカーとして<br>その人にとって本当に良いモノを<br>本当に良い使い方で使って欲しいと思っています。</h2>
+              <div class="colLayout01">
+                <div class="imgArea">
+                  <div class="img"><img src="./assets/images/salon/works_img06.jpg" alt=""></div>
+                </div>
+                <div class="textBox">
+                  <div class="titleStyle03">
+                    <p class="number"><span class="txt">POINT</span><span class="num">1</span></p>
+                    <h3 class="midashi">プロ仕様の機器、<br>最新の技術を体感できる場所</h3>
+                    <p class="note">NEWEST &amp; HIGHEST</p>
+                  </div>
+                  <div class="textArea">
+                    <p>alottaで使用する機器は、美容用品の商社兼メーカーのトリコインダストリーズが選び抜いたものばかり。ドライヤーひとつとっても、新商品が次々と開発されており、プロ仕様の美容機器は進化しています。また、施術を行うスタッフの技術も常にアップデート。美容業界の最先端をお客様にお届けしています。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="colLayout01">
+                <div class="imgArea">
+                  <div class="img"><img src="./assets/images/salon/works_img07.jpg" alt=""></div>
+                </div>
+                <div class="textBox">
+                  <div class="titleStyle03">
+                    <p class="number"><span class="txt">POINT</span><span class="num">2</span></p>
+                    <h3 class="midashi">トリートメント剤、カラー剤…<br class="sp">メーカーが本当に<br class="pc">オススメしたい<br class="sp">“良いモノ”だけを使用いたします</h3>
+                    <p class="note">BEST TOOL</p>
+                  </div>
+                  <div class="textArea">
+                    <p>カラー剤やパーマ剤には強い薬品が使用されているものもあり、間違った使い方をすると髪を痛めてしまいます。また、傷ついた髪を修復するトリートメント剤も、その成分は多種多様。メーカーとして自信を持ってオススメできる美容用品で、お客様の大切な髪を美しくするお手伝いをいたします。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="colLayout01">
+                <div class="imgArea">
+                  <div class="img"><img src="./assets/images/salon/works_img08.jpg" alt=""></div>
+                </div>
+                <div class="textBox">
+                  <div class="titleStyle03">
+                    <p class="number"><span class="txt">POINT</span><span class="num">3</span></p>
+                    <h3 class="midashi">“ヘアデザインのプロ”でありながら<br>“美容商品のプロ”として</h3>
+                    <p class="note">TOP NOTCH</p>
+                  </div>
+                  <div class="textArea">
+                    <p>髪や頭皮に関する知識、カットやカラーの技術、お客様をおもてなしする心など、スタイリストとしてのスキルはもちろん、定期的に講習を実施することで、美容用品メーカーのスタッフとして、専門的な商品知識も身につけています。商品をより深く理解し、お客様に的確なアドバイスをさせていただきます。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="colLayout01">
+                <div class="imgArea">
+                  <div class="img"><img src="./assets/images/salon/works_img09.jpg" alt=""></div>
+                </div>
+                <div class="textBox">
+                  <div class="titleStyle03">
+                    <p class="number"><span class="txt">POINT</span><span class="num">4</span></p>
+                    <h3 class="midashi">あなたのために最適な<br>アフターフォローをご提案</h3>
+                    <p class="note">BEST AFTER-FOLLOW</p>
+                  </div>
+                  <div class="textArea">
+                    <p>カットやカラー、パーマで理想のヘアスタイルが完成しても、髪は毎日変化していくものです。しかし、正しい方法でアフターフォローをすることで、美しい状態をより長くキープすることは可能です。施術内容やお客様の髪質、髪の生え方に合わせて、最適なヘアケアやスタイリングをご提案いたします。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="colLayout01">
+                <div class="imgArea">
+                  <div class="img"><img src="./assets/images/salon/works_img10.jpg" alt=""></div>
+                </div>
+                <div class="textBox">
+                  <div class="titleStyle03">
+                    <p class="number"><span class="txt">POINT</span><span class="num">5</span></p>
+                    <h3 class="midashi">自分に合う商品が<br class="pc">きっと見つかる</h3>
+                    <p class="note">FAVORITE PRODUCT</p>
+                  </div>
+                  <div class="textArea">
+                    <p>施術の際、通常のシャンプーに替えて、併設ショップで販売しているシャンプーをお試しいただくことができます。施術内容にそぐわない場合を除き、アウトバストリートメントやワックス、スプレーなどの試用も可能。お客様の髪質やお好みに合うかどうかを確かめていただき、ご購入いただく際の参考にしてください。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btnArea"><a class="btnStyle01" href="./shop.html">サロン専売品販売ショップについて</a></div>
+            <div class="noteArea">
+              <ul>
+                <li>※1　2名様用個室をご利用の際は、おふたりのお客様を同じスタイリストが担当することも、おふたりのお客様をそれぞれ別のスタイリストが担当することも可能です。ご予約の際にご希望をお伝えください。</li>
+                <li>※2　スタイリストがカウンセリングした後、シャンプーやカラーはアシスタントが担当いたします。マンツーマン希望や女性アシスタント希望などのご要望があれば、ご予約の際にお伝えください。（スタッフ状況によってはご要望に沿えない場合もございますので、ご了承ください）</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="salon_reco">
+          <div class="inner">
+            <div class="titleStyle01">
+              <h2 class="title">RECOMMEND</h2>
+              <p class="note">オススメの方</p>
+            </div>
+            <div class="checkBox">
+              <div class="titleStyle04">
+                <p class="note">OSUSUME</p>
+                <h3 class="title">こんな方にオススメ</h3>
+              </div>
+              <ul>
+                <li>スタイリストにもっと相談に乗ってもらいたい</li>
+                <li>周りの目が気になって、美容室ではいつも緊張する</li>
+                <li>カラーに失敗して以来、髪が痛んでしまった</li>
+                <li>いろいろ試したけど、自分に合うヘアスタイルがわからない</li>
+                <li>他の人に比べて、髪や頭皮がデリケート</li>
+                <li>小さい子どもがいるので、美容室になかなか行けない</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="salon_interior">
+          <div class="inner">
+            <div class="titleStyle01 scissors">
+              <h2 class="title">INTERIOR</h2>
+              <p class="note">店内</p>
+            </div>
+            <div class="imgBox">
+              <div class="img"><img src="./assets/images/salon/interior_img01.jpg" alt=""></div>
+              <div class="img"><a href="./assets/images/salon/interior_img02_l.jpg" data-lity="data-lity"><img src="./assets/images/salon/interior_img02.jpg" alt=""></a></div>
+              <div class="img"><a href="./assets/images/salon/interior_img03_l.jpg" data-lity="data-lity"><img src="./assets/images/salon/interior_img03.jpg" alt=""></a></div>
+              <div class="img"><a href="./assets/images/salon/interior_img04_l.jpg" data-lity="data-lity"><img src="./assets/images/salon/interior_img04.jpg" alt=""></a></div>
+              <div class="img"><a href="./assets/images/salon/interior_img05_l.jpg" data-lity="data-lity"><img src="./assets/images/salon/interior_img05.jpg" alt=""></a></div>
+              <div class="img"><a href="./assets/images/salon/interior_img06_l.jpg" data-lity="data-lity"><img src="./assets/images/salon/interior_img06.jpg" alt=""></a></div>
+              <div class="img"><a href="./assets/images/salon/interior_img07_l.jpg" data-lity="data-lity"><img src="./assets/images/salon/interior_img07.jpg" alt=""></a></div>
+              <div class="img"><a href="./assets/images/salon/interior_img08_l.jpg" data-lity="data-lity"><img src="./assets/images/salon/interior_img08.jpg" alt=""></a></div>
+              <div class="img"><a href="./assets/images/salon/interior_img09_l.jpg" data-lity="data-lity"><img src="./assets/images/salon/interior_img09.jpg" alt=""></a></div>
+              <div class="img"><a href="./assets/images/salon/interior_img10_l.jpg" data-lity="data-lity"><img src="./assets/images/salon/interior_img10.jpg" alt=""></a></div>
+              <div class="img"><a href="./assets/images/salon/interior_img11_l.jpg" data-lity="data-lity"><img src="./assets/images/salon/interior_img11.jpg" alt=""></a></div>
+              <div class="img"><a href="./assets/images/salon/interior_img12_l.jpg" data-lity="data-lity"><img src="./assets/images/salon/interior_img12.jpg" alt=""></a></div>
+            </div>
+          </div>
+        </section>
+        <section id="salon_garden">
+          <div class="inner">
+            <div class="colLayout">
+              <div class="imgArea">
+                <div class="img"><img src="./assets/images/salon/garden_img01.jpg" alt=""></div>
+                <div class="flex">
+                  <div class="img"><img src="./assets/images/salon/garden_img02.jpg" alt=""></div>
+                  <div class="img"><img src="./assets/images/salon/garden_img03.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="textBox">
+                <div class="titleStyle01">
+                  <h2 class="title">GARDEN</h2>
+                  <p class="note">庭園</p>
+                </div>
+                <div class="textArea">
+                  <p>alottaのガーデニング設計・施工は、人気テレビ番組「大改造!! 劇的 ビフォーアフター」にも出演された匠、金井良一さん率いる有限会社 プレイスケープさんにお願いしました。<br>それぞれの個室から見える、奥行きを活かしたガーデニングデザインは昼と夜では違った印象に。<br>お昼とは違う表情の光の庭もぜひお楽しみください！</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="salon_menu">
+          <div class="inner">
+            <div class="headImg">
+              <div class="titleStyle01">
+                <h2 class="title">MENU</h2>
+              </div>
+              <div class="img"><img src="./assets/images/salon/menu_hdimg.jpg" alt=""></div>
+            </div>
+            <div class="saleBox">
+              <div class="row">
+                <p class="title"><span>サロン会員になると</span><span>ショップでのお買い物が10%OFFに！</span></p>
+                <div class="textArea">
+                  <p>ショップでのお会計時にサロンの会員カードをご提示いただきますと全品10%割引いたします。</p>
+                </div>
+              </div>
+              <div class="row">
+                <p class="title"><span>次回予約で500円割引</span></p>
+                <div class="textArea">
+                  <p>サロンご来店時に次回予約をいただきますと、500円割引いたします。</p>
+                </div>
+              </div>
+              <div class="row">
+                <p class="title"><span>ご紹介割引</span></p>
+                <div class="textArea">
+                  <p>お客様をご紹介いただくと、紹介されたお客様の施術料を初回50％OFF、ご紹介者様に1,000円割引クーポンをお渡しします。</p>
+                </div>
+              </div>
+            </div>
+            <div class="priceBoxArea">
+              <div class="colLayout">
+                <div class="priceBox">
+                  <h3 class="title">CUT<span>カット</span></h3>
+                  <div class="priceList">
+                    <dl>
+                      <dt>一般</dt>
+                      <dd>5,000yen～</dd>
+                    </dl>
+                    <dl>
+                      <dt>学生（中学・高校）</dt>
+                      <dd>4,000yen</dd>
+                    </dl>
+                    <dl>
+                      <dt>小学生以下</dt>
+                      <dd>3,500yen</dd>
+                    </dl>
+                  </div>
+                  <ul class="noteBox">
+                    <li>※シャンプー・ブロー込</li>
+                    <li>※保護者様のご同伴が可能な場合、小学生以下のお子様の施術も承ります。(小学生のお客様のみでのご来店はお断りしております。）</li>
+                    <li>※入り口やサロン内にスロープを設置しておりますので、ベビーカーでお越しでも、安心してご来店頂けます。</li>
+                  </ul>
+                </div>
+                <div class="priceBox">
+                  <h3 class="title">COLOR<span>カラー</span></h3>
+                  <div class="priceList">
+                    <dl>
+                      <dt>ワンカラー&nbsp;</dt>
+                      <dd>6,000yen</dd>
+                    </dl>
+                    <dl>
+                      <dt>ダブルカラー</dt>
+                      <dd>9,000〜12,000yen</dd>
+                    </dl>
+                    <dl>
+                      <dt>ブリーチ</dt>
+                      <dd>10,000yen</dd>
+                    </dl>
+                  </div>
+                  <div class="moreBtn">
+                    <p class="more">MORE</p>
+                  </div>
+                  <div class="moreList">
+                    <div class="priceList">
+                      <dl>
+                        <dt>ウィービング</dt>
+                        <dd><span>オール</span>7,000〜9,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt></dt>
+                        <dd><span>ハーフ</span>4,000〜7,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt></dt>
+                        <dd><span>クォーター</span>3,000〜5,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>マニキュア</dt>
+                        <dd>6,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>黒染め戻し</dt>
+                        <dd>10,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>ポイントカラー</dt>
+                        <dd>1,500〜3,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>イルミナカラー</dt>
+                        <dd>＋1,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>ヘナカラーorハーブカラー</dt>
+                        <dd>7,000yen</dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <ul class="noteBox">
+                    <li>※カラーメニューには前処理トリートメントが付いています。</li>
+                    <li>&nbsp;</li>
+                  </ul>
+                </div>
+                <div class="priceBox">
+                  <h3 class="title">PERM<span>パーマ</span></h3>
+                  <div class="priceList">
+                    <dl>
+                      <dt>パーマ・ストレートパーマ</dt>
+                      <dd>7,000yen～</dd>
+                    </dl>
+                    <dl>
+                      <dt>デジタルパーマ</dt>
+                      <dd>10,000yen</dd>
+                    </dl>
+                    <dl>
+                      <dt>縮毛矯正</dt>
+                      <dd>12,000yen</dd>
+                    </dl>
+                  </div>
+                  <div class="moreBtn">
+                    <p class="more">MORE</p>
+                  </div>
+                  <div class="moreList">
+                    <div class="priceList">
+                      <dl>
+                        <dt>ポイントパーマ</dt>
+                        <dd>3,500〜5,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>ポイント縮毛矯正</dt>
+                        <dd>5,000〜8,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>特殊パーマ</dt>
+                        <dd>応相談</dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <ul class="noteBox">
+                    <li>※前処理トリートメントが付いています。</li>
+                    <li>※アイロンなしのストレートはコールドと同じ料金です。</li>
+                    <li>※シャンプー・ブロー別の料金です。</li>
+                  </ul>
+                </div>
+                <div class="priceBox">
+                  <h3 class="title">TREATMENT<span>トリートメント</span></h3>
+                  <div class="priceList">
+                    <dl>
+                      <dt>ベーシック</dt>
+                      <dd>3,000yen</dd>
+                    </dl>
+                    <dl>
+                      <dt>ミドル</dt>
+                      <dd>5,000yen</dd>
+                    </dl>
+                    <dl>
+                      <dt>ハイ</dt>
+                      <dd>7,000yen</dd>
+                    </dl>
+                    <dl>
+                      <dt>スペシャル</dt>
+                      <dd>10,000yen</dd>
+                    </dl>
+                  </div>
+                  <ul class="noteBox">
+                    <li>※シャンプー・ブロー別の料金です。</li>
+                  </ul>
+                </div>
+                <div class="priceBox">
+                  <h3 class="title">美髪専科<span>ビハツセンカ</span></h3>
+                  <div class="priceList">
+                    <p class="top">美髪スパ</p>
+                    <dl>
+                      <dt>ライト20分</dt>
+                      <dd>4,000yen</dd>
+                    </dl>
+                    <dl>
+                      <dt>スタンダード40分</dt>
+                      <dd>6,000yen</dd>
+                    </dl>
+                    <dl>
+                      <dt>スペシャル60分</dt>
+                      <dd>8,000yen</dd>
+                    </dl>
+                  </div>
+                  <div class="moreBtn">
+                    <p class="more">MORE</p>
+                  </div>
+                  <div class="moreList">
+                    <div class="priceList">
+                      <p class="top">メンズグルーミングスパ</p>
+                      <dl>
+                        <dt>ライト 20分</dt>
+                        <dd>4,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>スタンダード 40分</dt>
+                        <dd>6,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>スペシャル 60分</dt>
+                        <dd>8,000yen</dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <ul class="noteBox">
+                    <li>※前処理トリートメントが付いています。</li>
+                    <li>※メンズグルーミングスパは眉カット、イヤートリマーをサービスします。</li>
+                    <li>※美髪スパ・メンズグルーミングスパはカット・カラー・パーマ同時施術時1000円OFF</li>
+                  </ul>
+                </div>
+                <div class="priceBox">
+                  <h3 class="title">OTHERS<span>その他</span></h3>
+                  <div class="priceList">
+                    <dl>
+                      <dt>フロントカット</dt>
+                      <dd>1,000yen</dd>
+                    </dl>
+                    <dl>
+                      <dt>シャンプー・ブロー</dt>
+                      <dd>3,000yen</dd>
+                    </dl>
+                    <dl>
+                      <dt>セット（アップ）</dt>
+                      <dd>5,000yen</dd>
+                    </dl>
+                  </div>
+                  <div class="moreBtn">
+                    <p class="more">MORE</p>
+                  </div>
+                  <div class="moreList">
+                    <div class="priceList">
+                      <dl>
+                        <dt>セット（ハーフ）</dt>
+                        <dd>3,500yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>サボテンノーズワックス</dt>
+                        <dd>500yen</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="priceBox">
+                  <h3 class="title">EYELASH EXTENSIONS<span>まつげエクステ</span></h3>
+                  <div class="priceList">
+                    <dl>
+                      <dt>60本（40分）</dt>
+                      <dd>3,800yen</dd>
+                    </dl>
+                    <dl>
+                      <dt>80本（60分）</dt>
+                      <dd>4,500yen</dd>
+                    </dl>
+                    <dl>
+                      <dt>100本（60分）</dt>
+                      <dd>5,000yen</dd>
+                    </dl>
+                  </div>
+                  <div class="moreBtn">
+                    <p class="more">MORE</p>
+                  </div>
+                  <div class="moreList">
+                    <div class="priceList">
+                      <dl>
+                        <dt>120本（90分）</dt>
+                        <dd>7,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>140本（90分）</dt>
+                        <dd>8,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>160本～</dt>
+                        <dd>9,000yen〜</dd>
+                      </dl>
+                      <dl>
+                        <dt>下まつげ 30本（30分）</dt>
+                        <dd>3,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>カラー（2色まで）</dt>
+                        <dd>＋1,000yen</dd>
+                      </dl>
+                      <dl>
+                        <dt>オフ（10分）</dt>
+                        <dd>1,000yen</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottomArea">
+                <p>別途、消費税をいただいております。メニューの割引はございません。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="salon_style">
+          <div class="inner">
+            <div class="colLayout">
+              <div class="textBox">
+                <div class="titleStyle01">
+                  <h2 class="title">STYLE</h2>
+                  <p class="note">スタイル</p>
+                </div>
+                <p class="titleStyle">INSTAGRAM</p>
+                <div class="textArea">
+                  <p>スタイリストのInstagramで最新のカットスタイルやおすすめのスタイル、スタイリング・アレンジの方法、最新アイテムのご使用方法をご紹介しております。ぜひCHECKしてみてください。</p>
+                </div>
+                <div class="btnArea"><a class="btnStyle01" href="https://www.instagram.com/yoshiki_.kitamura/" target="_blank"><span class="inst"></span>スタイリスト北村のInstagram</a><a class="btnStyle01" href="https://www.instagram.com/yoricococco/" target="_blank"><span class="inst"></span>スタイリスト石橋のInstagram    </a></div>
+              </div>
+              <div class="imgBox">
+                <div class="img"><img src="./assets/images/salon/style_img01.jpg" alt=""></div>
+                <div class="img"><img src="./assets/images/salon/style_img02.jpg" alt=""></div>
+                <div class="img"><img src="./assets/images/salon/style_img03.jpg" alt=""></div>
+                <div class="img"><img src="./assets/images/salon/style_img04.jpg" alt=""></div>
+                <div class="img"><img src="./assets/images/salon/style_img05.jpg" alt=""></div>
+                <div class="img"><img src="./assets/images/salon/style_img06.jpg" alt=""></div>
+                <div class="img"><img src="./assets/images/salon/style_img07.jpg" alt=""></div>
+                <div class="img"><img src="./assets/images/salon/style_img08.jpg" alt=""></div>
+                <div class="img"><img src="./assets/images/salon/style_img09.jpg" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="salon_voice">
+          <div class="inner">
+            <div class="titleStyle05 typeB">
+              <p class="note">REVIEW</p>
+              <h2 class="title">お客様の声</h2>
+            </div>
+            <div class="voiceArea">
+              <div class="colLayout">
+                <div class="img"><img src="./assets/images/salon/voice_img01.png" alt=""></div>
+                <div class="textBox">
+                  <p class="personal">女性/30代</p>
+                  <dl class="hukidashi">
+                    <dt>悩みを相談できて、髪も気持ちもスッキリ</dt>
+                    <dd>初めて利用させていただきました。施術前のカウンセリングでは、ヘアスタイルだけでなく、施術中の時間をどのように過ごしたいかについての希望も聞いてくださり、私に合ったスタイリストさんを提案してくださいました。施術中、ずっと抱えていた髪の悩みをスタイリストさんに話すと、髪質や生え方などを見ながら、丁寧に説明してくださいました。これまで自分なりに調べていたのですが、知らない知識もあって、やっぱりプロに相談して良かったです。</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="colLayout">
+                <div class="img"><img src="./assets/images/salon/voice_img02.png" alt=""></div>
+                <div class="textBox">
+                  <p class="personal">女性/20代</p>
+                  <dl class="hukidashi">
+                    <dt>寂しがり屋の息子と一緒に過ごせて、私も安心でした</dt>
+                    <dd>息子を連れてキッズスペースのある美容室を利用した際、最初は機嫌よく遊んでいたようなのですが、後半寂しくなってしまったらしく、大声で泣いて、お店の方や周りのお客さんにご迷惑をおかけした経験があります。個室になっているこちらを今回利用してみたのですが、私の顔が見えて、すぐそばにいるから安心したのでしょうか、持参したおもちゃで大人しく遊んでくれていて、とても助かりました。個室もゆったりしていて、ホテルの一室でカットしてもらっているような優雅な気分が味わえました。</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="colLayout">
+                <div class="img"><img src="./assets/images/salon/voice_img03.png" alt=""></div>
+                <div class="textBox">
+                  <p class="personal">女性/40代</p>
+                  <dl class="hukidashi">
+                    <dt>行くのが楽しみになる美容室です</dt>
+                    <dd>美容室に行くと、どうしても肩に力が入ってしまうのですが、こちらのお店は個室で、リラックスして過ごすことができます。パーマを待つ間、ドリンクやお菓子をいただきながら、雑誌を読むのが、私のささやかな幸せです。部屋にスタイリストさんがいないときでも、気になることがあれば、レセプションに繋がるハンディーフォンが設置されているので安心。技術面も言うことなし。オススメしていただいたトリートメントがすごく良くて、ずっと気に入って使っています。</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="colLayout">
+                <div class="img"><img src="./assets/images/salon/voice_img04.png" alt=""></div>
+                <div class="textBox">
+                  <p class="personal">男性/30代</p>
+                  <dl class="hukidashi">
+                    <dt>カウンセリングがとにかく丁寧</dt>
+                    <dd>気分を変えるために髪型を変えたかったのですが、どういうスタイルにするか決めずに行ったときも、顔や頭の形、髪質を見ながら、プロ目線でいろいろと提案をしてくれました。今までに挑戦したことのない髪型でしたが、結果は大満足。お任せしてみるものだなと思いました。あと、ヘッドスパが特に気に入っています。力加減もよくて、とても気持ちがいいので、ウトウトしてしまいます。終わった後は、頭皮だけじゃなくて、体がスッキリするような感覚です。</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="colLayout">
+                <div class="img"><img src="./assets/images/salon/voice_img05.png" alt=""></div>
+                <div class="textBox">
+                  <p class="personal">男性/20代</p>
+                  <dl class="hukidashi">
+                    <dt>初めて居心地がいい美容室に出会いました</dt>
+                    <dd>友人に薦められて、利用しました。あまり美容師さんと話すのは得意ではなかったのですが、個室だったからか、美容師さんの雰囲気のおかげかわかりませんが、自然に落ち着いて話せた気がします。いつも髪型をセットするのが面倒だと伝えると、少しでもセットが楽になるようにカットを工夫してくださいました。僕の髪質にあったスタイリング剤や簡単にできるセット方法も教えてもらいました。髪が伸びたらぜひまた、伺いたいと思います。</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="btnArea"><a class="btnStyle01" href="./faq.html">ヘアサロンについて</a></div>
+          </div>
+        </section>
+      </main>
+      <div id="bottom_entry">
+        <div class="inner">
+          <div class="textBox">
+            <div class="titleArea">
+              <h2 class="title">RESERVE</h2>
+              <p class="note">サロンのご予約はこちら</p>
+            </div>
+            <div class="column">
+              <div class="row">
+                <p class="midashi">お子様連れ、ご家族、男性一人でもお気軽にご来店ください。</p>
+                <div class="textArea">
+                  <p>サロンへのご予約は以下の予約フォーム（24時間受付）よりお願いします。</p>
+                  <div class="btnArea"><a class="btnStyle02" href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000346915" target="_blank">Webでのご予約はこちらから</a></div>
+                  <div class="phoneArea">
+                    <div class="it">
+                      <p>お電話でのご予約はこちらから<br>（受付時間 10:00〜19:00）</p>
+                    </div>
+                    <div class="it"><a class="phone" href="tel:0120900533">0120-900-533</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="accessArea">
+                  <p class="label">アクセス</p>
+                  <p class="root">中央線・総武線 吉祥寺駅北口より徒歩6分</p>
+                  <p class="address">〒180－0004 東京都武蔵野市吉祥寺本町2-17-7（フォルムトミノ吉祥寺1F）</p>
+                </div>
+                <div class="accessArea">
+                  <p class="label">受付時間</p>
+                  <p class="root">10:00〜19:00（日・祝は18:00最終受付）</p>
+                  <p class="address">月曜日定休（当社指定日を除く）</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="inner">
+          <p class="ftlogo"><a href="./"><img src="./assets/images/logo_f_w.png" srcset="./assets/images/logo_f_w.png 1x,./assets/images/logo_f_w@2x.png 2x" alt="個室型ヘアサロンとショップ アロッタ - alotta -"></a></p>
+          <ul class="snsLinks">
+            <li><a href="https://twitter.com/alotta_hair" target="_blank"><img class="svg" src="./assets/images/icon-03.svg"></a></li>
+            <li><a href="https://www.facebook.com/HAIR-SALON-alotta-167313416984433/" target="_blank"><img class="svg" src="./assets/images/icon-01.svg"></a></li>
+            <li><a href="https://www.instagram.com/alotta_hair/" target="_blank"><img class="svg" src="./assets/images/icon-02.svg"></a></li>
+            <li><a href="http://line.naver.jp/ti/p/d4uUfsc6Pf" target="_blank"><img class="svg" src="./assets/images/icon-04.svg"></a></li>
+          </ul>
+          <div class="flex">
+            <div class="ft_salon">
+              <p class="ttl"><span class="en">SALON</span><span class="jp">サロン</span></p>
+              <p class="tel"><a class="phone" href="tel:0422275321"><span class="icon"><img class="svg" src="./assets/images/icon-phone.svg"></span><span>0422-27-5321</span></a></p>
+              <div class="info">
+                <p class="sub">受付時間</p>
+                <div class="flex">
+                  <div class="box">
+                    <p class="bg"><span>平日・土曜日</span></p>
+                    <table>
+                      <tr>
+                        <th>カット</th>
+                        <td>10:00〜19:00</td>
+                      </tr>
+                      <tr>
+                        <th>＋パーマorカラー </th>
+                        <td>10:00〜18:00</td>
+                      </tr>
+                      <tr>
+                        <th>＋カラー＋パーマ</th>
+                        <td>10:00〜17:00</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="box">
+                    <p class="bg"><span>日曜日・祝日</span></p>
+                    <table>
+                      <tr>
+                        <th>カット</th>
+                        <td>10:00〜18:00</td>
+                      </tr>
+                      <tr>
+                        <th>＋パーマorカラー </th>
+                        <td>10:00〜17:00</td>
+                      </tr>
+                      <tr>
+                        <th>＋カラー＋パーマ</th>
+                        <td>10:00〜16:00</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <p>月曜日定休（当社指定日を除く）</p>
+            </div>
+            <div class="ft_shop">
+              <p class="ttl"><span class="en">SHOP</span><span class="jp">サロン専売品販売ショップ</span></p>
+              <p class="tel"><a class="phone" href="tel:0422275091"><span class="icon"><img class="svg" src="./assets/images/icon-phone.svg"></span><span>0422-27-5091</span></a></p>
+              <div class="info">
+                <p>営業時間 10:00～19:30</p>
+              </div>
+              <p>年末年始休業・夏季休業あり</p>
+              <div class="ftLine"><a href="http://line.naver.jp/ti/p/d4uUfsc6Pf" target="_blank"><img src="./assets/images/common/ftLine.png" alt="LINEに会員登録するとショップでのお買い物が５％ＯＦＦに！"></a></div>
+            </div>
+          </div>
+          <ul class="ftLinks">
+            <li><a href="./contact/">お問い合わせ</a></li>
+            <li><a href="./privacy.html">個人情報保護方針</a></li>
+            <li><a href="./sitemap.html">サイトマップ</a></li>
+            <li><a href="./company.html">運営会社</a></li>
+            <li><a href="./faq.html">よくあるご質問</a></li>
+          </ul>
+          <p class="copy">Copyright&amp;copy alotta-hair.com　All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

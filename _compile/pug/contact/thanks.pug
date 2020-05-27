@@ -1,0 +1,41 @@
+extends ../_inc/_layout_form.pug
+
+append vars
+	include ../_inc/_config.pug
+	- var key = 'form';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+
+
+append innerVisual
+
+	//- #innerVisual
+	//- 	.headTextArea
+	//- 		h1.title CONTACT
+	//- 		p.sub お問い合わせ
+
+
+
+block contents
+	section#contact_form
+		.inner
+
+			.formHead
+				h1.title 送信を完了しました
+
+
+
+			.thankBlock
+				.textArea
+					p この度はお問い合わせ頂きありがとうございます。#[br]担当者が確認の上、ご連絡差し上げます。ご連絡まで今しばらくお待ち下さい。
+
+				.btnArea
+					a.btnStyle02.gray.back(href="../") トップページに戻る
+				
+			

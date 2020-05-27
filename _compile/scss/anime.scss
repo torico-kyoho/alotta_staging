@@ -1,0 +1,1158 @@
+@charset "utf-8";
+
+@import "./_core/_mixin.scss";
+
+
+body:not(.iosCri) {
+
+
+/* =============================================
+- loading
+================================================ */
+
+@include min-screen($tab) {
+	&.top #header {
+		opacity: 0;
+		transform: translateY(-90px);
+		transition: opacity 1s ease-in-out 3s, transform 1s ease-in-out 3s;
+	}
+	&.onload.top {
+		#header {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+}
+
+#visual {
+	#loading {
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+	  z-index: 99;
+	  .left {
+	    width: 100vw;
+	    height: calc(42.7vh - 30px);
+	    background-color: #F0EDDC;
+			transition: opacity 0.8s ease-in-out 2.5s;
+			@include min-screen($tab) {
+				height: 50vh;
+			}
+	  }
+	  .right {
+	    width: 100vw;
+	    height: calc(42.7vh - 30px);
+	    background-color: #E5F8FC;
+			transition: opacity 0.8s ease-in-out 2.5s;
+			@include min-screen($tab) {
+				height: 50vh;
+			}
+	  }
+		@include min-screen($pc) {
+			@include flexbox;
+			flex-wrap: wrap;
+			.left,
+			.right {
+		    width: 50vw;
+		    height: 100vh;
+		  }
+		}
+	}
+	#copy {
+		z-index: 100;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease-in-out;
+		h1 {
+			opacity: 0;
+			transform: translateY(13vw);
+			transition: opacity 1s ease-in-out 0.2s, transform 1s ease-in-out 0.5s;
+			@include min-screen($tab) {
+				transform: translateY(50px);
+			}
+		}
+		.icon {
+			opacity: 0;
+			transition: opacity 0.7s ease-in-out 1.5s;
+		}
+		h2 {
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out 1.5s;
+		}
+		#hoverBtn {
+			.salon {
+				opacity: 0;
+				transform: rotate(-90deg) translateY(10px);
+				transition: opacity 0.7s ease-in-out 1.8s;
+			}
+			.shop {
+				opacity: 0;
+				transform: rotate(90deg) translateY(10px);
+				transition: opacity 0.7s ease-in-out 1.8s;
+			}
+		}
+	}
+	#scrollBtn {
+		z-index: 99;
+		opacity: 0;
+		transition: opacity 0.7s ease-in-out 1.5s;
+	}
+}
+
+&.onload {
+	#visual {
+		#loading {
+		  .left {
+				opacity: 0;
+		  }
+		  .right {
+				opacity: 0;
+		  }
+		}
+		#copy {
+			opacity: 1;
+			visibility: visible;
+			h1 {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			.icon {
+				opacity: 1;
+			}
+			h2 {
+				opacity: 1;
+			}
+			#hoverBtn {
+				.salon {
+					opacity: 1;
+					transform: rotate(-90deg) translateY(0px);
+				}
+				.shop {
+					opacity: 1;
+					transform: rotate(90deg) translateY(0px);
+				}
+			}
+		}
+		#scrollBtn {
+			opacity: 1;
+		}
+	}
+}
+
+
+
+/* =============================================
+- TOP
+================================================ */
+
+
+.slonmap {
+	opacity: 0;
+	transform: translateY(40px);
+	&.on {
+		opacity: 1;
+		transform: translateY(0px);
+		transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+	}
+}
+
+
+.topTitleStyle01 {
+	opacity: 0;
+	transform: translateY(20px);
+	&.on {
+		opacity: 1;
+		transform: translateY(0px);
+		transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+	}
+}
+
+.alotta_info {
+	.box {
+		.box_header {
+			.sub {
+				opacity: 0;
+				transform: translateY(20px);
+				transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+			}
+			.title {
+				opacity: 0;
+				@include transition2(opacity, 0.8s, ease-in-out,0.5s);
+			}
+			&:after {
+				width: 0;
+				@include transition2(width, 0.6s, ease-in-out, 1s);
+			}
+		}
+		.box_body {
+			opacity: 0;
+			@include transition2(opacity,1s, ease-in-out,0.8s);
+		}
+		&.on {
+			.box_header {
+				.sub {
+					opacity: 1;
+					transform: translateY(0px);
+				}
+				.title {
+					opacity: 1;
+				}
+				&:after {
+					width: 30px;
+				}
+			}
+			.box_body {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+#beauty_shop,
+#hair_salon {
+	.titleStyle01 {
+		opacity: 0;
+		transform: translateX(-50px);
+		transition: opacity 1s ease-in-out 0.6s, transform 1s ease-in-out 0.6s;
+	}
+	.imgArea {
+		.img {
+			opacity: 0;
+			transform: translate(-120px, 80px);
+			transition: opacity 1.6s ease-in-out, transform 1.6s ease-in-out;
+		}
+		&:after {
+			opacity: 0;
+			transform: translate(80px, 80px);
+			transition: opacity 1.6s ease-in-out, transform 1.6s ease-in-out;
+		}
+	}
+	&.on {
+		.titleStyle01 {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+		.imgArea {
+			.img {
+				opacity: 1;
+				transform: translate(0px, 0px);
+			}
+			&:after {
+				opacity: 1;
+				transform: translate(0px, 0px);
+			}
+		}
+	}
+}
+
+#beauty_shopbox,
+#hair_salonbox {
+	.col {
+		.imgArea {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 1.3s ease-in-out, transform 1.6s ease-in-out;
+		}
+		.textBox {
+			opacity: 0;
+	    transform: translate(30px,40px) scale(1.05);
+			transition: opacity 1.6s ease-in-out, transform 1.6s ease-in-out;
+		}
+		&.on {
+			.imgArea {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			.textBox {
+				opacity: 1;
+				transform: translate(0px,0px) scale(1);
+		    // transform: translate(0px,0px) scale(1);
+			}
+		}
+	}
+}
+
+
+/* =============================================
+- SALON
+================================================ */
+
+
+.headTextArea.typeB {
+	.title, .sub {
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+	}
+	.textArea {
+		opacity: 0;
+		transform: translateX(40px);
+		transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+	}
+	&.on {
+		.title, .sub {
+			opacity: 1;
+		}
+		.textArea {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+}
+
+.titleStyle05 {
+	.sub, .title {
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+	}
+	.note {
+		opacity: 0;
+		transition: opacity 1s ease-in-out 0.3s;
+	}
+	.square {
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+		&:before {
+			opacity: 0;
+			margin-left: -8px;
+			transition: opacity 1s ease-in-out, margin 1s ease-in-out;
+		}
+		&:after {
+			opacity: 0;
+			margin-left: -8px;
+			transition: opacity 1s ease-in-out, margin 1s ease-in-out;
+		}
+	}
+	&.on {
+		.sub, .title {
+			opacity: 1;
+		}
+		.note {
+			opacity: 1;
+		}
+		.square {
+			opacity: 1;
+			&:before {
+				opacity: 1;
+				margin-left: -30px;
+			}
+			&:after {
+				opacity: 1;
+				margin-left: 15px;
+			}
+		}
+	}
+}
+
+#salon_outline {
+	.colLayout {
+		.map {
+			opacity: 0;
+			transform: translateY(40px);
+			transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+		}
+		.textBox {
+			opacity: 0;
+			transform: translateX(40px);
+			transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+		}
+		&.on {
+			.map {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+			.textBox {
+				opacity: 1;
+				transform: translateX(0px);
+			}
+		}
+	}
+}
+
+#salon_about {
+	.titleStyle01 {
+		opacity: 0;
+		transform: translateX(40px);
+		transition: opacity 1.6s ease-in-out 0.7s, transform 1.6s ease-in-out 0.7s;
+	}
+	.img {
+		opacity: 0;
+		transform: translate(-120px, 80px);
+		transition: opacity 1.6s ease-in-out, transform 1.6s ease-in-out;
+		&:after {
+			opacity: 0;
+			transform: translate(120px, 120px);
+			transition: opacity 1.6s ease-in-out, transform 1.6s ease-in-out;
+		}
+	}
+	&.on {
+		.titleStyle01 {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+		.img {
+			opacity: 1;
+			transform: translate(0px, 0px);
+			&:after {
+				opacity: 1;
+				transform: translate(0px, 0px);
+			}
+		}
+	}
+}
+
+#salon_about {
+	.textArea {
+		opacity: 0;
+		transition: opacity 1.6s ease-in-out;
+		&.on {
+			opacity: 1;
+		}
+	}
+}
+
+
+.salon_works {
+	.titleStyle02 {
+		opacity: 0;
+		transform: translateX(-40px);
+		transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+		&:before {
+			width: 0;
+			transition: opacity 1s ease-in-out 0.6s, width 0.9s ease-in-out 0.6s;
+		}
+		&.on {
+			opacity: 1;
+			transform: translateX(0px);
+			&:before {
+				width: 50px;
+				@include min-screen($tab) {
+					width: 80px;
+				}
+				@include min-screen(1180px) {
+					width: 140px;
+				}
+			}
+		}
+	}
+
+	.colLayout01 {
+		.textBox {
+			opacity: 0;
+			transform: translate(-30px, 30px) scale(1.05);
+			transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+			.number {
+				.txt {
+					background-color: transparent;
+					transition: background-color 1s ease-in-out 0.5s;
+				}
+				.num {
+					background-color: transparent;
+					transition: background-color 1s ease-in-out 0.5s;
+				}
+			}
+		}
+		.img {
+			opacity: 0;
+			transform: translateY(40px);
+			transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+		}
+		&.on {
+			.textBox {
+				opacity: 1;
+				transform: translate(0px, 0px) scale(1);
+				.number {
+					.txt {
+						background-color: #F0EDDC;
+					}
+					.num {
+						background-color: #F0EDDC;
+					}
+				}
+			}
+			.img {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+	}
+}
+
+#salon_about2 {
+	.vertical {
+		opacity: 0;
+		transform: translateX(40px);
+		transition: opacity 1.6s ease-in-out 0.7s, transform 1.6s ease-in-out 0.7s;
+	}
+	.img {
+		opacity: 0;
+		transform: translate(-120px, 80px);
+		transition: opacity 1.6s ease-in-out, transform 1.6s ease-in-out;
+		&:after {
+			opacity: 0;
+			transform: translate(120px, 120px);
+			transition: opacity 1.6s ease-in-out, transform 1.6s ease-in-out;
+		}
+	}
+	&.on {
+		.vertical {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+		.img {
+			opacity: 1;
+			transform: translate(0px, 0px);
+			&:after {
+				opacity: 1;
+				transform: translate(0px, 0px);
+			}
+		}
+	}
+}
+
+
+#salon_reco {
+	&:before {
+		width: 100% !important;
+		transition: width 1s ease-in-out;
+	}
+	.titleStyle01 {
+		.title {
+			opacity: 0;
+			transform: translateX(40px);
+			transition: opacity 1.6s ease-in-out, transform 1.6s ease-in-out;
+		}
+		.note {
+			opacity: 0;
+			transition: opacity 1.3s ease-in-out 1s;
+		}
+	}
+	&.on {
+		&:before {
+			width: 50% !important;
+		}
+		.title {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+		.note {
+			opacity: 1;
+		}
+	}
+
+	.checkBox {
+		.titleStyle04 {
+			opacity: 0;
+			transition: opacity 1.3s ease-in-out;
+		}
+		ul {
+			li {
+				opacity: 0;
+				transform: scale(1.1);
+				@for $i from 1 through 10 {
+					&:nth-child(#{$i}) {
+						transition: opacity 1s linear ($i - 1)*0.08s,
+						transform 1.4s cubic-bezier(0.075, 0.82, 0.165, 1) ($i - 1)*0.08s;
+					}
+				}
+			}
+		}
+		&.on {
+			.titleStyle04 {
+				opacity: 1;
+			}
+			ul {
+				li {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+		}
+	}
+}
+
+#shop_interior,
+#salon_interior {
+	.titleStyle01 {
+		opacity: 0;
+		transform: translateX(-50px);
+		transition: opacity 1s ease-in-out 0.6s, transform 1s ease-in-out 0.6s;
+	}
+	.imgBox {
+		&:after {
+			opacity: 0;
+			transform: translate(-80px,80px);
+			transition: opacity 1s ease-in-out 0.6s, transform 1s ease-in-out 0s;
+		}
+	}
+	&.on {
+		.titleStyle01 {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+		.imgBox {
+			&:after {
+				opacity: 1;
+				transform: translate(0px);
+			}
+		}
+	}
+	.imgBox {
+		.img {
+			opacity: 0;
+			transition: opacity 1s ease-in-out 0.6s, transform 1s ease-in-out 0s;
+			@for $i from 1 through 12 {
+				&:nth-child(#{$i}) {
+						transition: opacity 1.2s linear ($i - 1)*0.1s;
+				}
+			}
+		}
+		&.on {
+			.img {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+#salon_garden {
+	.titleStyle01 {
+		opacity: 0;
+		transform: translateX(50px);
+		transition: opacity 1s ease-in-out 0.6s, transform 1s ease-in-out 0.6s;
+	}
+	.textBox {
+		background-color: transparent;
+		transition: opacity 1s ease-in-out 0;
+		.textArea {
+			opacity: 0;
+			transition: opacity 1s ease-in-out 1s;
+		}
+	}
+	&.on {
+		.titleStyle01 {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+		.textBox {
+			background-color: #F8F6EA;
+			.textArea {
+				opacity: 1;
+			}
+		}
+	}
+	.imgArea {
+		.img {
+			opacity: 0;
+			transition: opacity 1s ease-in-out 0.6s, transform 1s ease-in-out 0s;
+			@for $i from 1 through 12 {
+				&:nth-child(#{$i}) {
+					transition: opacity 0.5s linear ($i - 1)*0.2s;
+				}
+			}
+		}
+		&.on {
+			.img {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+#salon_menu {
+	.headImg {
+		.titleStyle01 {
+			opacity: 0;
+			transform: translateX(50px);
+			transition: opacity 1s ease-in-out 0.6s, transform 1s ease-in-out 0.6s;
+		}
+		.img {
+			opacity: 0;
+			transform: translate(-80px,80px);
+			transition: opacity 1.4s ease-in-out, transform 1.4s ease-in-out;
+		}
+		&.on {
+			.titleStyle01 {
+				opacity: 1;
+				transform: translateX(0px);
+			}
+			.img {
+				opacity: 1;
+				transform: translate(0px, 0px);
+			}
+		}
+	}
+
+	.saleBox {
+		.row {
+			opacity: 0;
+			transform: translateY(30px) scale(1.1);
+			transition: opacity 1.5s linear,
+			transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+		}
+		&.on {
+			.row {
+				opacity: 1;
+				transform: translateY(0px) scale(1);
+			}
+		}
+	}
+}
+
+
+.priceBoxArea {
+	.priceBox {
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+		&.on {
+			opacity: 1;
+		}
+	}
+}
+
+
+#salon_style {
+	.titleStyle01 {
+		opacity: 0;
+		transform: translateX(-50px);
+		transition: opacity 1.4s ease-in-out, transform 1.4s ease-in-out;
+	}
+	.textBox {
+		opacity: 0;
+		transform: translate(-80px,80px);
+		transition: opacity 1.4s ease-in-out, transform 1.4s ease-in-out;
+		> *:not(.titleStyle01) {
+			opacity: 0;
+			transition: opacity 1.4s ease-in-out 1s, transform 1.4s ease-in-out 1s;
+		}
+	}
+	&.on {
+		.titleStyle01 {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+		.textBox {
+			opacity: 1;
+			transform: translate(0px,0px);
+			> *:not(.titleStyle01) {
+				opacity: 1;
+			}
+		}
+	}
+
+	.imgBox {
+		position: relative;
+		z-index: 2;
+		.img {
+			opacity: 0;
+			transition: opacity 1s ease-in-out 0.6s, transform 1s ease-in-out 0s;
+			@for $i from 1 through 12 {
+				&:nth-child(#{$i}) {
+						transition: opacity 1.2s linear ($i - 1)*0.1s;
+				}
+			}
+		}
+		&.on {
+			.img {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+
+#salon_voice {
+	&:before {
+		width: 100% !important;
+		transition: width 1s ease-in-out;
+	}
+	.title {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+	}
+	.note {
+		opacity: 0;
+		transition: opacity 1.3s ease-in-out 1s;
+	}
+	&.on {
+		&:before {
+			width: 50% !important;
+		}
+		.title {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		.note {
+			opacity: 1;
+		}
+	}
+
+	.voiceArea {
+		.colLayout {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+			&.on {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+	}
+}
+
+
+/* =============================================
+- SHOP
+================================================ */
+
+
+#shop_outline {
+	.colLayout {
+		.map {
+			opacity: 0;
+			transform: translateY(40px);
+			transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+		}
+		.textBox {
+			opacity: 0;
+			transform: translateX(40px);
+			transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+		}
+		&.on {
+			.map {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+			.textBox {
+				opacity: 1;
+				transform: translateX(0px);
+			}
+		}
+	}
+}
+
+#shop_about {
+	.img {
+		opacity: 0;
+		transform: translate(-120px, 80px);
+		transition: opacity 1.6s ease-in-out, transform 1.6s ease-in-out;
+		&:after {
+			opacity: 0;
+			transform: translate(120px, 120px);
+			transition: opacity 1.6s ease-in-out, transform 1.6s ease-in-out;
+		}
+	}
+	&.on {
+		.img {
+			opacity: 1;
+			transform: translate(0px, 0px);
+			&:after {
+				opacity: 1;
+				transform: translate(0px, 0px);
+			}
+		}
+	}
+}
+
+#shop_works {
+	.titleStyle02 {
+		opacity: 0;
+		transform: translateX(-40px);
+		transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+		&:before {
+			width: 0;
+			transition: opacity 1s ease-in-out 0.6s, width 0.9s ease-in-out 0.6s;
+		}
+		&.on {
+			opacity: 1;
+			transform: translateX(0px);
+			&:before {
+				width: 50px;
+				@include min-screen($tab) {
+					width: 80px;
+				}
+				@include min-screen(1180px) {
+					width: 140px;
+				}
+			}
+		}
+	}
+
+	.colLayout01 {
+		.textBox {
+			opacity: 0;
+			transform: translate(-30px, 30px) scale(1.05);
+			transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+			.number {
+				.txt {
+					background-color: transparent;
+					transition: background-color 1s ease-in-out 0.5s;
+				}
+				.num {
+					background-color: transparent;
+					transition: background-color 1s ease-in-out 0.5s;
+				}
+			}
+		}
+		.img {
+			opacity: 0;
+			transform: translateY(40px);
+			transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+		}
+		&.on {
+			.textBox {
+				opacity: 1;
+				transform: translate(0px, 0px) scale(1);
+				.number {
+					.txt {
+						background-color: #E5F8FC;
+					}
+					.num {
+						background-color: #E5F8FC;
+					}
+				}
+			}
+			.img {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+	}
+}
+
+
+
+#shop_brand {
+	&:before {
+		width: 100% !important;
+		transition: width 1s ease-in-out;
+	}
+	.titleStyle01 {
+		.title {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+		}
+		.note {
+			opacity: 0;
+			transition: opacity 1.3s ease-in-out 1s;
+		}
+	}
+	&.on {
+		&:before {
+			width: 50% !important;
+		}
+		.title {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+		.note {
+			opacity: 1;
+		}
+	}
+
+	.brandArea {
+		.brand {
+			opacity: 0;
+			@for $i from 1 through 80 {
+				&:nth-child(#{$i}) {
+					transition: opacity 1s linear ($i - 1)*0.1s;
+				}
+			}
+		}
+		&.on {
+			.brand {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+
+/* =============================================
+- STAFF
+================================================ */
+
+#innerVisual {
+	.headTextArea {
+		.title, .sub {
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+		}
+		&.on {
+			.title, .sub {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.staffArea {
+	.box {
+		opacity: 0;
+		transform: translateX(20px);
+		transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+		.textArea {
+			opacity: 0;
+			transform: translateX(10px);
+			transition: opacity 1.3s ease-in-out 0.4s, transform 1.3s ease-in-out 0.4s;
+		}
+
+		&.on {
+			opacity: 1;
+			transform: translateX(0px);
+			.textArea {
+				opacity: 1;
+				transform: translateX(0px);
+			}
+		}
+	}
+}
+
+#staff_single {
+	.img {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+	}
+	.textBox {
+		opacity: 0;
+		transform: translateX(40px);
+		transition: opacity 1.3s ease-in-out 0.4s, transform 1.3s ease-in-out 0.4s;
+	}
+	&.on {
+		.img {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		.textBox {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+}
+
+/* =============================================
+- TOPICS
+================================================ */
+
+#topics {
+	.post {
+		opacity:0;
+		transform: translateY(20px);
+		&.on {
+			opacity:1;
+			transform: translateY(0px);
+			transition: opacity 1s ease-in-out 0.4s, transform 1s ease-in-out 0.4s;
+		}
+	}
+}
+
+
+/* =============================================
+- ACCESS
+================================================ */
+
+#access {
+	.mapArea {
+		opacity:0;
+		transform: translateY(20px);
+		&.on {
+			opacity:1;
+			transform: translateY(0px);
+			transition: opacity 1s ease-in-out 0.4s, transform 1s ease-in-out 0.4s;
+		}
+	}
+	.addressArea {
+		.item {
+			opacity:0;
+			transform: translateY(20px);
+			&.on {
+				opacity:1;
+				transform: translateY(0px);
+				transition: opacity 1s ease-in-out 0.4s, transform 1s ease-in-out 0.4s;
+			}
+		}
+	}
+}
+
+/* =============================================
+- PRIVACY
+================================================ */
+
+#privacy {
+	opacity:0;
+	transform: translateY(20px);
+	&.on {
+		opacity:1;
+		transform: translateY(0px);
+		transition: opacity 1s ease-in-out 0.4s, transform 1s ease-in-out 0.4s;
+	}
+}
+
+/* =============================================
+- CONTACT
+================================================ */
+
+#contact {
+	opacity:0;
+	transform: translateY(20px);
+	&.on {
+		opacity:1;
+		transform: translateY(0px);
+		transition: opacity 1s ease-in-out 0.4s, transform 1s ease-in-out 0.4s;
+	}
+}
+
+/* =============================================
+- SITEMAP
+================================================ */
+
+#sitemap {
+	.row {
+		opacity:0;
+		transform: translateY(20px);
+		&.on {
+			opacity:1;
+			transform: translateY(0px);
+			transition: opacity 1s ease-in-out 0.4s, transform 1s ease-in-out 0.4s;
+		}
+	}
+}
+
+/* =============================================
+- COMPANY
+================================================ */
+
+#company {
+	opacity:0;
+	transform: translateY(20px);
+	&.on {
+		opacity:1;
+		transform: translateY(0px);
+		transition: opacity 1s ease-in-out 0.4s, transform 1s ease-in-out 0.4s;
+	}
+}
+
+
+/* =============================================
+- FAQ
+================================================ */
+
+.faqList {
+	dl {
+		opacity:0;
+		transform: translateY(20px);
+		&.on {
+			opacity:1;
+			transform: translateY(0px);
+			transition: opacity 1s ease-in-out 0.4s, transform 1s ease-in-out 0.4s;
+		}
+	}
+}
+
+
+}

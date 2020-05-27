@@ -1,0 +1,52 @@
+extends ./_inc/_layout_inner.pug
+
+append vars
+	include ./_inc/_config.pug
+	- var key = 'privacy';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+
+
+append innerVisual
+
+	#innerVisual
+		.headTextArea
+			h1.title PRIVACY POLICY
+			p.sub 個人情報保護方針
+
+
+
+block contents
+	section#privacy
+		.inner
+
+			.column
+				.textArea
+					p 本サイトは、株式会社 トリコ インダストリーズが運営しています。
+					p 株式会社 トリコ インダストリーズは、お客様のプライバシーを尊重し、個人情報を保護するために細心の注意を払い管理いたします。
+				.textArea
+					p 2016年4月1日
+					p 株式会社 トリコ インダストリーズ　#[br.sp]代表取締役社長　村島有治
+
+
+			.column
+				ol
+					li 1．お客様の個人情報は利用の目的を明らかにし、アナウンスしたうえで収集いたします。またその個人情報はアナウンスした範囲で利用いたします。
+					li 2．当社が本ウェブ上等において、収集したお客様の個人情報に関する照会（開示）・訂正等をご希望される場合は、#[br.pc]下記のお問合せ窓口までご連絡いただければ、論理上の合理的な範囲で対応をさせていただきます。
+					li 3．お客様の個人情報および個人情報が蓄積されたデータベースを、不正なアクセス・漏洩等から保護するため、必要#[br.pc]な内部規則および管理体制を整備し、適切な方法で管理いたします。
+					li 4．当社は、プライバシーポリシーを、事前の予告なく変更することがありますので、本ウェブサイト利用の際には、#[br.pc]本ページの最新の内容をご確認ください。
+
+
+			.column
+				.textArea
+					p ＜個人情報に関するお問い合わせ窓口＞
+					p 株式会社 トリコ インダストリーズ
+					p 電話：06-6568-0731
+					p E-mail ：info@torico.co.jp
+					p 受付時間：9:00～17:00（土曜日・日曜日、祝祭日、年末年始、お盆等当社が定める休日を除く）

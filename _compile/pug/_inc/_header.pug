@@ -1,0 +1,77 @@
+-
+	var navi = [
+		{
+			pageName: 'サロン',
+			subPageName: 'SALON',
+			key: 'salon',
+			pageDir: 'salon.html',
+			status: true
+		},
+		{
+			pageName: 'ショップ',
+			subPageName: 'SHOP',
+			key: 'shop',
+			pageDir: 'shop.html',
+			status: true
+		},
+		{
+			pageName: 'スタッフ',
+			subPageName: 'STAFF',
+			key: 'staff',
+			pageDir: 'staff/',
+			status: true
+		},
+		{
+			pageName: '採用',
+			subPageName: 'RECRUITE',
+			key: 'recruit',
+			pageDir: 'recruit/',
+			status: true
+		},
+		{
+			pageName: 'トピックス',
+			subPageName: 'TOPICS',
+			key: 'topics',
+			pageDir: 'topics.html',
+			status: true
+		},
+		{
+			pageName: 'アクセス',
+			subPageName: 'ACCESS',
+			key: 'access',
+			pageDir: 'access.html',
+			status: true
+		}
+	]
+	
+header#header
+	.header_row
+		h1.logo
+			a(href=page.path)
+				img(src=page.path+"assets/images/logo.png" srcset=page.path+"assets/images/logo.png 1x,"+page.path+"assets/images/logo@2x.png 2x" alt="個室型ヘアサロンとショップ アロッタ - alotta -")
+
+		.navigation
+			.inner
+				nav
+					ul.gnav
+						- for (var x = 0; x < navi.length; x++)
+							if navi[x]['status']==true
+								if navi[x]['key']==key
+									li.active: a(href=page.path+navi[x]['pageDir'])
+										span.jp #{navi[x]['pageName']}
+										span.en #{navi[x]['subPageName']}
+								else
+									li: a(href=page.path+navi[x]['pageDir'])
+										span.jp #{navi[x]['pageName']}
+										span.en #{navi[x]['subPageName']}
+
+		.link_reserve
+			a(href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000346915" target="_blank")
+				span.jp 予約
+				span.en RESERVE
+
+		#nav_btn
+			button(type="button")
+				span
+				span
+				span

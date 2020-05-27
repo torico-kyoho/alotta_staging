@@ -1,0 +1,193 @@
+extends ./_inc/_layout.pug
+
+append vars
+	include ./_inc/_config.pug
+	- var key = 'top';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/slick.min.js")
+	script(type='text/javascript' src=page.path+"assets/js/visual.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/top.css")
+
+
+	
+block contents
+	#visual
+		#loading
+			.left
+			.right
+		#slider
+			div#sldeLeft.sliderBox
+				.box(style="background-image: url(./assets/images/visual/slide_l_img01.jpg)")
+				.box(style="background-image: url(./assets/images/visual/slide_l_img02.jpg)")
+			div#sldeRight.sliderBox
+				.box(style="background-image: url(./assets/images/visual/slide_r_img01.jpg)")
+				.box(style="background-image: url(./assets/images/visual/slide_r_img02.jpg)")
+		#copy
+			.inner
+				.box
+					p.icon: img(src=page.path+"assets/images/visual/visual_text_icon.png" srcset=page.path+"assets/images/visual/visual_text_icon.png 1x,"+page.path+"assets/images/visual/visual_text_icon@2x.png 2x" alt="") 
+					h1: img(src=page.path+"assets/images/visual/visual_text_01.png" srcset=page.path+"assets/images/visual/visual_text_01.png 1x,"+page.path+"assets/images/visual/visual_text_01@2x.png 2x" alt="個室型ヘアサロン アロッタ")
+					h2: img(src=page.path+"assets/images/visual/visual_text_02.png" srcset=page.path+"assets/images/visual/visual_text_02.png 1x,"+page.path+"assets/images/visual/visual_text_02@2x.png 2x" alt="商品機器・商品のメーカー兼 商社が直営している個室型ヘアサロンとショップ")
+					
+				#hoverBtn
+					a.salon(href=page.path+"salon.html")
+						span HAIR SALON
+					a.shop(href=page.path+"shop.html")
+						span BEAUTY SHOP
+		#scrollBtn
+			span SCROLL
+	
+
+
+
+
+	section#about
+		.inner
+			.slonmap
+				figure
+					img(src=page.path+"assets/images/top/salon_map.png" srcset=page.path+"assets/images/top/salon_map.png 1x,"+page.path+"assets/images/top/salon_map@2x.png 2x" alt="個室型ヘアサロン&直営ショップ")
+
+			.topTitleStyle01
+				p.note ABOUT
+				h2.title 美容機器商社・美容メーカー#[br.none][Torico Industries]の#[br]直営ヘアサロン &amp; 直営ショップ
+
+			.alotta_info
+				.box.salon
+					.box_header
+						p.sub
+							span.icon
+								img(src=page.path+"assets/images/icon-square01.png" srcset=page.path+"assets/images/icon-square01.png 1x,"+page.path+"assets/images/icon-square01@2x.png 2x" alt="")
+							|HAIR SALON
+						h2.title 完全個室型ヘアサロン
+					.box_body
+						p 施術を行うお部屋は全10室。すべて完全個室となっており、各個室内にカット台とシャンプー台を完備。担当するスタイリストとアシスタント以外が立ち入ることはありませんので、周りを気にすることなく、リラックスしてお過ごしいただけます。日常から切り離された庭の見える個室で、髪だけでなく、心も整えるヘアサロンです。
+						.btnArea
+							a.btnStyle01(href="./salon.html") ヘアサロンについて
+				.box.shop
+					.box_header
+						p.sub
+							span.icon
+								img(src=page.path+"assets/images/icon-square02.png" srcset=page.path+"assets/images/icon-square02.png 1x,"+page.path+"assets/images/icon-square02@2x.png 2x" alt="")
+							|BEUTY SHOP
+						h2.title サロン専売品販売ショップ
+					.box_body
+						p alottaを運営するトリコインダストリーズは、国内外のさまざまな美容用品を取り扱う商社であり、自社開発も行うメーカーでもあります。美容用品を知り尽くした私たちが、美容師やメイクアップアーティストといったプロが使用するために開発されたサロン専売品を厳選。お悩みをお伺いしながら、お客様一人ひとりに最適な商品をご提案します。
+						.btnArea
+							a.btnStyle01(href="./shop.html") ショップについて
+
+
+
+
+
+	section#hair_salon
+		.inner
+
+			.titleStyle01.scissors
+				h2.title HAIR SALON
+				p.note ヘアサロン
+
+			.imgArea
+				.img: img(src=page.path+"assets/images/top/hair_img01.jpg" alt="")
+
+
+
+	section#hair_salonbox
+		.inner
+
+
+			.colLayout_type01.col
+
+				.imgArea
+					.img: img(src=page.path+"assets/images/top/hair_img02.jpg" alt="")
+
+				.textBox
+					.titleStyle03
+						h3.midashi マイペースに#[br]美しくなる
+						p.note MY SPACE &amp; MY PACE
+
+					.textArea
+						p 完全個室の施術スペースは、お客様だけのプライベート空間。他の人の目を気にすることなく、なりたい自分になれる場所です。髪型や髪質、髪のクセ、スタイリングなど、髪に関するお悩みを、気兼ねなくスタイリストにご相談ください。美容には、ゆったりと心からくつろぐ時間も大切です。
+
+					.btn: a.arrow(href="./salon.html#salon_works01") MORE
+
+
+			.colLayout_type02.col
+
+				.imgArea
+					.img: img(src=page.path+"assets/images/top/hair_img03.jpg" alt="")
+
+				.textBox
+					.titleStyle03
+						h3.midashi “最新”と“最高”に#[br]出会う場所
+						p.note NEWEST &amp; HIGHEST
+
+					.textArea
+						p 国内外のさまざまな美容用品を知り尽くすトリコインダストリーズ直営サロンのため、最新の美容機器やヘアケア用品を取り揃えています。製品知識をきちんと習得し、メーカーやディストリビューターの認定を受けたスタイリストが、最新の美容用品と最高の技術をお客様にご提供します。
+
+					.btn: a.arrow(href="./salon.html#salon_about2") MORE
+
+
+
+			.btnArea
+				a.btnStyle01(href="./salon.html") ヘアサロンについて
+
+
+
+
+	section#beauty_shop
+		.inner
+
+			.titleStyle01
+				h2.title BEAUTY SHOP
+				p.note 直営ショップ
+
+			.imgArea
+				.img: img(src=page.path+"assets/images/top/beauty_img01.jpg" alt="")
+
+
+
+
+	section#beauty_shopbox
+		.inner
+
+
+			.colLayout_type01.col
+
+				.imgArea
+					.img: img(src=page.path+"assets/images/top/beauty_img02.jpg" alt="")
+
+				.textBox
+					.titleStyle03
+						h3.midashi 5,000アイテム以上の#[br]プロユース品が勢揃い
+						p.note MORE THAN 5000 ITEMS.
+
+					.textArea
+						p 各美容品メーカーが日々研究を重ね、新たな商品を次々に開発しているため、プロユースのサロン専売品と言っても、数えきれないほどの商品が世の中にはあります。alottaでは常に美容業界の最新情報を収集し、取り扱う商品を厳選。常時5,000アイテム以上をサロン併設ショップで販売しています。
+
+
+					.btn: a.arrow(href="./shop.html#shop_works") MORE
+
+
+			.colLayout_type02.col
+
+				.imgArea
+					.img: img(src=page.path+"assets/images/top/beauty_img03.jpg" alt="")
+
+				.textBox
+					.titleStyle03
+						h3.midashi プロのコンシェルジュが#[br]あなたにあった#[br.pc]商品をご提案
+						p.note HAIR CONCIERGE
+
+					.textArea
+						p サロン専売品はプロ仕様で、確かに高品質ではありますが、一概にどれが優れているというものではありません。一つひとつに特徴があり、その特徴を充分に理解して使用しなければ、効果を得ることはできないのです。私たちはお話をじっくり伺い、プロの視点でお客様の髪に合ったものをご提案いたします。
+
+					.btn: a.arrow(href="./shop.html#jump02") MORE
+
+
+
+			//- .btnArea
+			//- 	a.btnStyle01(href="./shop.html") サロン専売品販売ショップについて

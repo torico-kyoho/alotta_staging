@@ -1,0 +1,95 @@
+extends ../_inc/_layout_form.pug
+
+append vars
+	include ../_inc/_config.pug
+	- var key = 'form';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+	script(src="//ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8")
+	script(type='text/javascript' src="./js/form.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+
+
+append innerVisual
+
+	//- #innerVisual
+	//- 	.headTextArea
+	//- 		h1.title CONTACT
+	//- 		p.sub お問い合わせ
+
+
+
+block contents
+	section#contact_form
+		.inner
+
+			.formHead
+				h1.title CONTACT FORM
+
+				
+			.formContent
+				form(method="post" action="")
+
+					dl
+						dt #[span.requre 必須]#[p お名前]
+						dd
+							.col.col01
+								.input: input.fm.name1(type="text" name="name1" size="60" value="" placeholder="例：山田")
+								.input: input.fm.name2(type="text" name="name2" size="60" value="" placeholder="例：花子")
+
+					dl
+						dt #[span.requre 必須]#[p ふりがな]
+						dd
+							.col.col02
+								.input: input.fm.kana1(type="text" name="kana1" size="60" value="" placeholder="例：やまだ")
+								.input: input.fm.kana2(type="text" name="kana2" size="60" value="" placeholder="例：はなこ")
+
+
+					dl
+						dt #[span.requre 必須]#[p メールアドレス]
+						dd: input.fm.mail(type="text" name="mail" size="60" value="" placeholder="例：info@alotta-hair.com")
+
+					dl
+						dt #[span.requre 必須]#[p メールアドレス(確認)]
+						dd: input.fm.remail(type="text" name="remail" size="60" value="" placeholder="例：info@alotta-hair.com")
+
+					dl
+						dt: p 郵便番号
+						dd
+							.addressWrap
+								.input: input.fm.number(type="text" name="number" size="60" value="" placeholder="例：184-0004")
+								.btnaddress 住所検索
+
+					dl
+						dt: p 住所
+						dd
+							.row
+								.input: input.fm.address1(type="text" name="address1" size="60" value="" placeholder="例：東京都武蔵野市吉祥寺本町2-17-7")
+								.input: input.fm.address2(type="text" name="address2" size="60" value="" placeholder="")
+
+
+					dl
+						dt: p  連絡希望日時
+						dd
+							.input: input.fm.date(type="text" name="date" size="60" value="" placeholder="例：1月1日 午後1時以降")
+							p.note 電話での連絡をご希望の方は希望日時をご記入ください。
+
+
+
+					dl
+						dt #[span.requre 必須]#[p ご質問内容]
+						dd: textarea.fm.textarea(name="textarea" cols="50" rows="5" placeholder="例：ご質問内容を入力してください。")
+
+
+
+
+					.btnArea
+						input(type="hidden" name="token" value!="<?PHP echo $_SESSION['token']; ?>")
+						button.btnStyle02.btnBack.gray.back(type="submit" name="submitConfirm" value=""): span: span 入力画面に戻る
+						button.btnStyle02.btnConfirm(type="submit" name="submitConfirm" value=""): span: span 内容を確認する
+						button.btnStyle02.btnSend(type="submit" name="submitConfirm" value=""): span: span 上記内容で送信する

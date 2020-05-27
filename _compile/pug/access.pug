@@ -1,0 +1,74 @@
+extends ./_inc/_layout_inner.pug
+
+append vars
+	include ./_inc/_config.pug
+	- var key = 'access';
+	- var page = pages[key];
+
+append js
+	script(type='text/javascript' src=page.path+"assets/js/inner.js")
+
+append css
+	link(rel="stylesheet", href=page.path+"assets/css/inner.css")
+
+
+
+append innerVisual
+
+	#innerVisual
+		.headTextArea
+			h1.title ACCESS
+			p.sub アクセス
+
+
+
+block contents
+	section#access
+		.inner
+
+
+			.mapArea
+				.infoArea
+					p.name 美容室 alotta 吉祥寺
+					p.address 〒180－0004 東京都武蔵野市吉祥寺本2-17-7#[br]（フォルムトミノ吉祥寺1F）
+					p.root 中央線・総武線 吉祥寺駅北口より徒歩6分
+
+					.btnArea: a.arrow(href="https://goo.gl/maps/YWoGHPCzKJKNxACC9" target="_blank") Google Map
+
+				.map: img(src=page.path+"assets/images/info/access_img01.jpg" alt="")
+
+
+
+			.addressArea
+				.item
+					.borderBox
+						.row
+							p.title SALON#[span サロン]
+						.row
+							.phoneArea
+								p.txt ご予約
+								a.phone(href="tel:0120900533") 0120-900-533
+							.phoneArea
+								p.txt お問い合わせ
+								a.phone.sm(href="tel:0422275321") 0422-27-5321
+						
+						.row
+							p.txt 営業時間
+							ul
+								li 【平日・土曜日】10:00〜19:00最終受付
+								li 【日曜日・祝日】10:00〜18:00最終受付
+								li 【定休日】月曜日（祝日、当社指定日を除く）
+						
+
+
+				.item
+					.borderBox
+						.row
+							p.title SHOP#[span サロン専売品販売ショップ]
+						.row
+							p.txt 取り扱い商品に関するお問い合わせ
+							a.phone(href="tel:0422275091") 0422-27-5091
+						.row.col
+							p.txt 営業時間
+							ul
+								li 10:00 ～ 19:30#[br]年末年始休業・夏季休業あり

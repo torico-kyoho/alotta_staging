@@ -1,0 +1,386 @@
+@charset "utf-8";
+
+
+
+/* =============================================
+- staff
+================================================ */
+
+
+
+#staff{
+	padding-top: 0px;
+	.inner{
+		max-width: 910px;
+		margin: 0 auto;
+	}
+	.staffArea{
+		@include flexbox;
+		flex-wrap: wrap;
+		.box{
+			width: 48%;
+			+ .box{
+				margin-left: 4%;
+			}
+			@include max-screen(767px) {
+				&:nth-child(2n+1){
+					margin-left: 0px;
+				}
+				&:nth-child(n+3){
+					margin-top: 30px;
+				}
+			}
+			.textArea{
+				margin-top: 10px;
+				p{
+					line-height: 1.4em;
+				}
+				.name{
+					font-size: 18px;
+					.red{
+						display: inline-block;
+						position: relative;
+						top: -0.15em;
+						font-size: 60%;
+						color: #ED0E0E;
+					}
+				}
+			}
+			.btnArea{
+				margin-top: 10px;
+				.btn{
+					display: inline-block;
+					padding: 2px 5px;
+					font-size: 13px;
+					background-color: #B58D32;
+					width: 100%;
+					text-align: center;
+					color: #fff;
+					@include border-radius(5px);
+
+				}
+			}
+		}
+	}
+}
+
+
+
+
+@include min-screen($tab) {
+	#staff{
+		.staffArea{
+			.box{
+				width: 23.5%;
+				+ .box{
+					margin-left: 2%;
+				}
+				&:nth-child(4n+1){
+					margin-left: 0px;
+				}
+				&:nth-child(n+5){
+					margin-top: 40px;
+				}
+				.textArea{
+					margin-top: 15px;
+					p{
+						line-height: 1.6em;
+					}
+					.position{
+						font-size: 15px;
+						letter-spacing: 0em;
+					}
+					.name{
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+@include min-screen(980px) {
+	#staff{
+		.staffArea{
+			.box{
+				width: 190px;
+				+ .box{
+					margin-left: 50px;
+				}
+				&:nth-child(4n+1){
+					margin-left: 0px;
+				}
+				&:nth-child(n+5){
+					margin-top: 100px;
+				}
+				.img{
+					@include transition(all,0.2s,ease-in-out);
+					&:hover{
+						opacity: 0.8;
+					}
+				}
+				.textArea{
+					margin-top: 25px;
+					.position{
+						font-size: 16px;
+						letter-spacing: -0.02em;
+					}
+					.name{
+						font-size: 23px;
+					}
+				}
+				.btnArea{
+					margin-top: 15px;
+					.btn{
+						font-size: 14px;
+						@include transition(all,0.2s,ease-in-out);
+						&:hover{
+							background-color: #323232;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+/* =============================================
+- staff_single
+================================================ */
+
+
+
+#staff_single{
+	padding-top: 0px;
+
+	.colLayout{
+		.img{
+			text-align: center;
+			@include max-screen(767px) {
+				img{
+					width: 50%;
+				}
+			}
+			.btn{
+				margin-top: 10px;
+				text-align: center;
+				+ .btn{
+					margin-top: 15px;
+				}
+			}
+			@include max-screen(767px) {
+				.btn{
+					margin-top: 20px;
+				}
+				.btnStyle01{
+					padding: 6px 20px 11px 20px;
+					max-width: 240px;
+				}
+			}
+		}
+		.textBox{
+			margin-top: 20px;
+			.nameArea{
+				p{
+					line-height: 1.5em;
+					text-align: center;
+				}
+				@include max-screen(767px) {
+					.position{
+						text-align: center;
+					}
+				}
+				.name{
+					font-size: 18px;
+					.red{
+						display: inline-block;
+						position: relative;
+						top: -0.15em;
+						font-size: 60%;
+						color: #ED0E0E;
+					}
+				}
+			}
+			.infoArea{
+				margin-top: 20px;
+				dl{
+					@include max-screen(767px) {
+						dt{
+							display: block;
+							padding: 3px 10px;
+							background-color: #F0F0F0;
+						}
+						dd{
+							margin-top: 5px;
+						}
+						+ dl{
+							margin-top: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.btnArea{
+		margin-top: 30px;
+		text-align: center;
+		.btn{
+			text-align: center;
+			+.btn{
+				margin-top: 15px;
+			}
+		}
+	}
+}
+
+
+@include min-screen($tab) {
+	#staff_single{
+		.inner{
+			max-width: 910px;
+			margin: 0 auto;
+		}
+		.colLayout{
+			@include flexbox;
+			.img{
+				text-align: center;
+				width: 30%;
+				.btn{
+					margin-top: 20px;
+					+ .btn{
+						margin-top: 20px;
+					}
+				}
+			}
+			.textBox{
+				margin-top: 0px;
+				flex: 1;
+				padding-left: 30px;
+				.nameArea{
+					p{
+						line-height: 1.5em;
+						text-align: left;
+					}
+					.position{
+						font-size: 16px;
+					}
+					.name{
+						font-size: 23px;
+					}
+				}
+				.infoArea{
+					margin-top: 20px;
+					dl{
+						@include flexbox;
+						@include align-items(flex-start);
+						padding-bottom: 10px;
+						border-bottom: 1px solid #C8C8C8;
+						dt{
+							width: 150px;
+						}
+						dd{
+							flex: 1;
+						}
+						+ dl{
+							margin-top: 10px;
+						}
+						&:first-child{
+							border-top: 1px solid #C8C8C8;
+							padding-top: 10px;
+						}
+					}
+				}
+			}
+		}
+		.btnArea{
+			margin-top: 80px;
+			@include flexbox;
+			@include justify-content(center);
+			.btn{
+				width: 48%;
+				+.btn{
+					margin-top: 0px;
+					margin-left: 4%;
+				}
+			}
+		}
+	}
+}
+
+
+
+@include min-screen(980px) {
+	#staff_single{
+		.colLayout{
+			.img{
+				width: 286px;
+				.btn{
+					margin-top: 30px;
+				}
+			}
+			.textBox{
+				padding-left: 55px;
+				.nameArea{
+					p{
+						line-height: 1.7em;
+					}
+					.position{
+						font-size: 18px;
+					}
+					.name{
+						font-size: 25px;
+					}
+				}
+				.infoArea{
+					margin-top: 30px;
+					dl{
+						padding-bottom: 15px;
+						dt{
+							width: 200px;
+						}
+						dd{
+							flex: 1;
+						}
+						+ dl{
+							margin-top: 15px;
+						}
+						&:first-child{
+							padding-top: 15px;
+						}
+					}
+				}
+			}
+		}
+		.btnArea{
+			margin-top: 130px;
+			.btn{
+				width: 435px;
+				+.btn{
+					margin-left: 40px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+// IE10 ~ IE11
+
+_:-ms-input-placeholder, :root #staff .staffArea .box .btnArea .btn {
+	@include min-screen($tab) {
+		padding-top: 5px;
+		padding-bottom: 0;
+	}
+}

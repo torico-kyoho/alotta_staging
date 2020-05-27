@@ -1,0 +1,558 @@
+@charset "UTF-8";
+
+
+
+small{
+	font-size: 10px;
+	position: relative;
+	top: -0.3em;
+}
+
+
+
+
+
+/*
+    Style01
+========================================================= */
+
+
+.titleStyle01{
+	margin-bottom: 30px;
+	.title{
+		font-size: 30px;
+		line-height: 1.3em;
+		font-family: $montserrat;
+		color: rgba(255,255,255,1);
+		@include font-smoothing();
+		letter-spacing: 0.08em;
+		text-shadow:
+			#282828 1px 1px 0px, #282828 -1px -1px 0px,
+			#282828 -1px 1px 0px, #282828 1px -1px 0px,
+			#282828 0px 1px 0px, #282828 0px -1px 0px,
+			#282828 -1px 0px 0px, #282828 1px 0px 0px;
+	}
+	.note{
+		color: #707070;
+	}
+	&.scissors{
+		padding-top: 30px;
+		position: relative;
+		&:before{
+			content: "";
+			width: 19px;
+			height: 27px;
+			background-image: url(../images/icon_scissors.png);
+			background-size: cover;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+	}
+	&.door{
+		padding-top: 30px;
+		position: relative;
+		&:before{
+			content: "";
+			width: 20px;
+			height: 28px;
+			background-image: url(../images/icon_door.png);
+			background-size: cover;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+	}
+}
+
+
+
+
+@include min-screen($tab) {
+	.titleStyle01{
+		margin-bottom: 40px;
+		.title{
+			font-size: 50px;
+		}
+	}
+}
+
+
+
+
+@include min-screen(980px) {
+	.titleStyle01{
+		margin-bottom: 50px;
+		.title{
+			font-size: 70px;
+			letter-spacing: 0.08em;
+		}
+	}
+}
+
+
+
+@include min-screen(1180px) {
+	.titleStyle01{
+		.title{
+			font-size: 80px;
+			letter-spacing: 0.1em;
+		}
+	}
+}
+
+
+
+
+
+
+/*
+    Style02
+========================================================= */
+
+
+.titleStyle02{
+	padding-left: 40px;
+	font-size: 18px;
+	position: relative;
+	letter-spacing: 0.05em;
+	margin-bottom: 25px;
+	line-height: 1.5em;
+	&:before{
+		content: "";
+		width: 50px;
+		height: 1px;
+		background-color: #C8C8C8;
+		position: absolute;
+		left: -20px;
+		top: 0.8em;
+	}
+}
+
+
+@include min-screen($tab) {
+	.titleStyle02{
+		padding-left: 65px;
+		font-size: 23px;
+		margin-bottom: 50px;
+		&:before{
+			width: 80px;
+			left: -25px;
+		}
+	}
+}
+
+
+@include min-screen(980px) {
+	.titleStyle02{
+		margin-bottom: 60px;
+		&:before{
+			left: -30px;
+		}
+	}
+}
+
+
+
+@include min-screen(1180px) {
+	.titleStyle02{
+		margin-bottom: 100px;
+		padding-left: 70px;
+		font-size: 30px;
+		&:before{
+			width: 140px;
+			left: -90px;
+		}
+	}
+}
+
+
+
+/*
+    Style03
+========================================================= */
+
+
+.titleStyle03{
+	margin-bottom: 20px;
+	.number{
+		display: inline-block;
+		font-family: $montserrat;
+		margin-bottom: 5px;
+		font-size: 12px;
+		span{
+			display: inline-block;
+			line-height: 1em;
+			padding: 3px 8px;
+			background-color: #F0EDDC;
+		}
+		.num{
+			margin-left: 4px;
+			padding: 3px 7px;
+		}
+	}
+	.midashi{
+		font-size: 18px;
+		line-height: 1.6em;
+	}
+	.title{
+		font-size: 20px;
+		line-height: 1.6em;
+	}
+	.note{
+		margin-top: 10px;
+		font-family: $montserrat;
+		font-size: 13px;
+	}
+}
+
+
+@include min-screen($tab) {
+	.titleStyle03{
+		margin-bottom: 20px;
+		.number{
+			margin-bottom: 10px;
+		}
+		.midashi{
+			font-size: 20px;
+		}
+		.title{
+			font-size: 22px;
+		}
+	}
+}
+
+
+@include min-screen(980px) {
+	.titleStyle03{
+		margin-bottom: 30px;
+		.number{
+			margin-bottom: 15px;
+		}
+		.midashi{
+			font-size: 22px;
+		}
+		.title{
+			font-size: 30px;
+		}
+		.note{
+			margin-top: 25px;
+		}
+	}
+}
+
+
+
+
+
+/*
+    Style04
+========================================================= */
+
+
+.titleStyle04{
+	margin-bottom: 20px;
+	.note{
+		text-align: center;
+		font-family: $montserrat;
+		margin-bottom: 5px;
+	}
+	.title{
+		text-align: center;
+		padding-bottom: 10px;
+		position: relative;
+		font-size: 18px;
+		line-height: 1.4em;
+		&:after{
+			content: "";
+			width: 30px;
+			height: 2px;
+			background-color: #F0EDDC;
+			position: absolute;
+			left: 50%;
+			bottom: 0px;
+			margin-left: -15px;
+		}
+	}
+}
+
+
+
+@include min-screen($tab) {
+	.titleStyle04{
+		margin-bottom: 40px;
+		.note{
+			margin-bottom: 15px;
+		}
+		.title{
+			padding-bottom: 25px;
+			font-size: 24px;
+			&:after{
+				width: 40px;
+				height: 3px;
+				margin-left: -20px;
+			}
+		}
+	}
+}
+
+
+
+
+/*
+    Style05
+========================================================= */
+
+
+.titleStyle05{
+	position: relative;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	.note{
+		text-align: center;
+		font-family: $montserrat;
+		margin-bottom: 10px;
+	}
+	.sub{
+		text-align: center;
+		margin-bottom: 5px;
+	}
+	.title{
+		text-align: center;
+		position: relative;
+		font-size: 18px;
+		line-height: 1.4em;
+	}
+	.square{
+		width: 15px;
+		height: 15px;
+		background-color: #F0EDDC;
+		position: absolute;
+		left: 50%;
+		bottom: 0px;
+		margin-left: -7px;
+		&:after,&:before{
+			content: "";
+			width: 15px;
+			height: 15px;
+			background-color: #F0EDDC;
+			position: absolute;
+			left: 50%;
+			bottom: 0px;
+		}
+		&:before{
+			margin-left: -30px;
+		}
+		&:after{
+			margin-left: 15px;
+		}
+	}
+	&.blue{
+		.square{
+			background-color: #E5F8FC;
+			&:after,&:before{
+				background-color: #E5F8FC;
+			}
+		}
+	}
+	&.typeB{
+		.note{
+			padding-top: 32px;
+			position: relative;
+			&:before{
+				content: "";
+				width: 19px;
+				height: 27px;
+				background-image: url(../images/icon_scissors.png);
+				background-size: cover;
+				position: absolute;
+				left: 50%;
+				top: 0px;
+				margin-left: -10px;
+			}
+		}
+	}
+	&.typeC{
+		.note{
+			padding-top: 32px;
+			position: relative;
+			&:before{
+				content: "";
+				width: 20px;
+				height: 28px;
+				background-image: url(../images/icon_door.png);
+				background-size: cover;
+				position: absolute;
+				left: 50%;
+				top: 0px;
+				margin-left: -10px;
+			}
+		}
+	}
+}
+
+
+
+@include min-screen($tab) {
+	.titleStyle05{
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+		.title{
+			font-size: 24px;
+		}
+		.sub{
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		&.typeB,&.typeC{
+			.note{
+				padding-top: 40px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+
+
+@include min-screen(980px) {
+	.titleStyle05{
+		margin-bottom: 50px;
+		padding-bottom: 55px;
+		.title{
+			font-size: 30px;
+		}
+		.sub{
+			font-size: 24px;
+			margin-bottom: 15px;
+		}
+		&.typeB,&.typeC{
+			.note{
+				margin-bottom: 25px;
+				margin-bottom: 35px;
+			}
+			.title{
+				font-size: 33px;
+			}
+		}
+	}
+}
+
+
+
+
+/*
+    titleStyle06
+========================================================= */
+
+
+
+.titleStyle06{
+	font-size: 18px;
+	font-family: $montserrat;
+	border-bottom: 1px solid #C8C8C8;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+}
+
+
+
+@include min-screen($tab) {
+	.titleStyle06{
+		font-size: 23px;
+	}
+}
+
+
+
+
+
+
+
+/*
+    midashi
+========================================================= */
+
+
+
+.midashiStyle01{
+	font-size: 18px;
+	line-height: 1.7em;
+	margin-bottom: 15px;
+}
+
+
+
+@include min-screen(980px) {
+	.midashiStyle01{
+		font-size: 24px;
+		line-height: 1.8em;
+		margin-bottom: 20px;
+	}
+}
+
+
+
+
+/*
+    midashi
+========================================================= */
+
+
+.midashiStyle02{
+	font-size: 18px;
+	letter-spacing: 0.05em;
+	margin-bottom: 25px;
+	line-height: 1.5em;
+}
+
+
+@include min-screen($tab) {
+	.midashiStyle02{
+		font-size: 23px;
+		margin-bottom: 50px;
+	}
+}
+
+
+@include min-screen(980px) {
+	.midashiStyle02{
+		margin-bottom: 60px;
+	}
+}
+
+
+
+@include min-screen(1180px) {
+	.midashiStyle02{
+		margin-bottom: 100px;
+		font-size: 30px;
+	}
+}
+
+
+
+
+
+
+/*
+    midashi
+========================================================= */
+
+
+
+.midashiStyle03{
+	font-size: 18px;
+	line-height: 1.7em;
+	margin-bottom: 15px;
+}
+
+
+
+@include min-screen(980px) {
+	.midashiStyle03{
+		font-size: 22px;
+		line-height: 1.8em;
+	}
+}
+
